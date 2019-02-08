@@ -89,351 +89,8 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.5, -1.7}, {1.5, 1.5}},
     fast_replaceable_group = "assembling-machine",
-    always_draw_idle_animation = true,
+    --always_draw_idle_animation = true,
     animation =
-    {
-      stripes =
-      {
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--1
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--2
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--3
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--4
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--5
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--6
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--7
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--8
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--9
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--10
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--11
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--12
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--13
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--14
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--15
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--16
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--17
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--18
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--19
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--20
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--21
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--22
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--23
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--24
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--25
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--26
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--27
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--28
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--29
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--30
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--31
-        {
-        filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
-        width_in_frames = 1,
-        height_in_frames = 1,
-        },--32
-      },
-      priority = "high",
-      width = 107,
-      height = 119,
-      frame_count = 32,
-      shift = util.by_pixel(-0.5, -0.5),
-      hr_version =
-      {
-        stripes =
-          {
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--1
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--2
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--3
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--4
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--5
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--6
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--7
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--8
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--9
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--10
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--11
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--12
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--13
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--14
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--15
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--16
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--17
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--18
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--19
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--20
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--21
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--22
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--23
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--24
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--25
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--26
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--27
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--28
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--29
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--30
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--31
-            {
-            filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
-            width_in_frames = 1,
-            height_in_frames = 1,
-            },--32
-          },
-        priority = "high",
-        width = 214,
-        height = 237,
-        frame_count = 32,
-        shift = util.by_pixel(0, -0.75),
-        scale = 0.5
-      }
-    },
-    idle_animation =
     {
       layers =
       {
@@ -453,6 +110,348 @@ data:extend({
             height = 237,
             frame_count = 32,
             line_length = 8,
+            shift = util.by_pixel(0, -0.75),
+            scale = 0.5
+          }
+        },
+        {
+          stripes =
+          {
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--1
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--2
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--3
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--4
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--5
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--6
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--7
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--8
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--9
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--10
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--11
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--12
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--13
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--14
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--15
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--16
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--17
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--18
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--19
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--20
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--21
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--22
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--23
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--24
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--25
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--26
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--27
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--28
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--29
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--30
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--31
+            {
+            filename = "__Absorbed-Beacons__/graphics/assembling-machine-overlay.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+            },--32
+          },
+          priority = "high",
+          width = 107,
+          height = 119,
+          frame_count = 32,
+          shift = util.by_pixel(-0.5, -0.5),
+          hr_version =
+          {
+            stripes =
+              {
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--1
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--2
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--3
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--4
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--5
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--6
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--7
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--8
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--9
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--10
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--11
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--12
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--13
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--14
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--15
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--16
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--17
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--18
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--19
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--20
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--21
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--22
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--23
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--24
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--25
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--26
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--27
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--28
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--29
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--30
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--31
+                {
+                filename = "__Absorbed-Beacons__/graphics/hr-assembling-machine-overlay.png",
+                width_in_frames = 1,
+                height_in_frames = 1,
+                },--32
+              },
+            priority = "high",
+            width = 214,
+            height = 237,
+            frame_count = 32,
             shift = util.by_pixel(0, -0.75),
             scale = 0.5
           }
