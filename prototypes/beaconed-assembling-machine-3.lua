@@ -5,8 +5,7 @@ data:extend({
     enabled = true,
     ingredients =
     {
-      {"assembling-machine-3", 1},
-      {"beacon", 8},
+      {"beaconed-assembling-machine-2", 1},
       {"speed-module-3", 16}
     },
     result = "beaconed-assembling-machine-3"
@@ -16,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "beaconed-assembling-machine-3",
-    icon = "__Absorbed-Beacons__/icons/beaconed-assembling-machine-3.png",
+    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine-3.png",
     icon_size = 32,
     subgroup = "absorbed-beacons-3",
     order = "b",
@@ -29,7 +28,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "beaconed-assembling-machine-3",
-    icon = "__Absorbed-Beacons__/icons/beaconed-assembling-machine-3.png",
+    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine-3.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "assembling-machine-3"},

@@ -1,4 +1,6 @@
 animation_multiplier = 2
+beaconed_assembling_machine_1_animation_speed = 0.37371*animation_multiplier
+beaconed_assembling_machine_2_animation_speed = 0.25*animation_multiplier
 beaconed_assembling_machine_3_animation_speed = 0.15625*animation_multiplier
 data:extend({
   {
@@ -21,5 +23,7 @@ data:extend({
   }
 })
 require ("prototypes.beaconedassemblerpipes")
+require ("prototypes.beaconed-assembling-machine")
+require ("prototypes.beaconed-assembling-machine-2")
 require ("prototypes.beaconed-assembling-machine-3")
 require ("prototypes.fullspeed-productivity-module")
