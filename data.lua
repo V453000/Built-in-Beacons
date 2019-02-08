@@ -18,5 +18,6 @@ data:extend({
     order = "w"
   }
 })
+require ("prototypes.beaconedassemblerpipes")
 require ("prototypes.beaconed-assembling-machine-3")
 require ("prototypes.fullspeed-productivity-module")
