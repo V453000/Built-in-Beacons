@@ -102,6 +102,7 @@ data:extend({
           frame_count = 32,
           line_length = 8,
           shift = util.by_pixel(0, -0.5),
+          animation_speed = beaconed_assembling_machine_3_animation_speed,
           hr_version =
           {
             filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3.png",
@@ -111,6 +112,7 @@ data:extend({
             frame_count = 32,
             line_length = 8,
             shift = util.by_pixel(0, -0.75),
+            animation_speed = beaconed_assembling_machine_3_animation_speed,
             scale = 0.5
           }
         },
@@ -283,6 +285,7 @@ data:extend({
           height = 119,
           frame_count = 32,
           shift = util.by_pixel(-0.5, -0.5),
+          animation_speed = beaconed_assembling_machine_3_animation_speed,
           hr_version =
           {
             stripes =
@@ -453,6 +456,7 @@ data:extend({
             height = 237,
             frame_count = 32,
             shift = util.by_pixel(0, -0.75),
+            animation_speed = beaconed_assembling_machine_3_animation_speed,
             scale = 0.5
           }
         },
@@ -465,6 +469,7 @@ data:extend({
           line_length = 8,
           draw_as_shadow = true,
           shift = util.by_pixel(28, 4),
+          animation_speed = beaconed_assembling_machine_3_animation_speed,
           hr_version =
           {
             filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3-shadow.png",
@@ -475,6 +480,7 @@ data:extend({
             line_length = 8,
             draw_as_shadow = true,
             shift = util.by_pixel(28, 4),
+            animation_speed = beaconed_assembling_machine_3_animation_speed,
             scale = 0.5
           }
         }

@@ -1,3 +1,5 @@
+animation_multiplier = 2
+beaconed_assembling_machine_3_animation_speed = 0.15625*animation_multiplier
 data:extend({
   {
     type = "item-subgroup",
