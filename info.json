@@ -1,0 +1,11 @@
+{
+  "name": "Absorbed-Beacons",
+  "version": "0.1.0",
+  "factorio_version": "0.17",
+  "title": "Absorbed-Beacons",
+  "author": "V453000",
+  "contact": "",
+  "homepage": "",
+  "description": "Production structures simulate being fully beaconed.",
+  "dependencies": ["base"]
+}
