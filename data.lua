@@ -5,6 +5,9 @@ beaconed_electric_furnace_3_animation_speed = 0.14922*animation_multiplier*0.5*0
 beaconed_assembling_machine_1_animation_speed = 0.37371*animation_multiplier
 beaconed_assembling_machine_2_animation_speed = 0.25*animation_multiplier
 beaconed_assembling_machine_3_animation_speed = 0.15625*animation_multiplier
+beaconed_lab_1_animation_speed = 0.10752*animation_multiplier
+beaconed_lab_2_animation_speed = 0.07752*animation_multiplier
+beaconed_lab_3_animation_speed = 0.04975*animation_multiplier
 data:extend({
   {
     type = "technology",
@@ -24,7 +27,11 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-electric-furnace"
-      }
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-lab"
+      },
     },
     prerequisites = {"automation-3", "effect-transmission"},
     unit =
@@ -60,7 +67,11 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-electric-furnace-2"
-      }
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-lab-2"
+      },
     },
     prerequisites = {"fullspeed-productivity-module", "speed-module-2"},
     unit =
@@ -96,6 +107,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-electric-furnace-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-lab-3"
       }
     },
     prerequisites = {"fullspeed-productivity-module-2", "speed-module-3"},
@@ -144,4 +159,7 @@ require ("prototypes.beaconed-assembling-machine-3")
 require ("prototypes.beaconed-electric-furnace")
 require ("prototypes.beaconed-electric-furnace-2")
 require ("prototypes.beaconed-electric-furnace-3")
+require ("prototypes.beaconed-lab")
+require ("prototypes.beaconed-lab-2")
+require ("prototypes.beaconed-lab-3")
 require ("prototypes.fullspeed-productivity-module")

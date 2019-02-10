@@ -505,7 +505,9 @@ data:extend({
     energy_usage = "2646kW",
     module_specification =
     {
-      module_slots = 8
+      module_slots = 8,
+      max_entity_info_module_icons_per_row = 1,
+      max_entity_info_module_icon_rows = 1,
     },
     allowed_effects = {"productivity"}
   },

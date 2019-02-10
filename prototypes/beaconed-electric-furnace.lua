@@ -54,6 +54,8 @@ data:extend({
     module_specification =
     {
       module_slots = 4,
+      max_entity_info_module_icons_per_row = 1,
+      max_entity_info_module_icon_rows = 1,
       module_info_icon_shift = {0, 0.8}
     },
     allowed_effects = {"productivity"},
