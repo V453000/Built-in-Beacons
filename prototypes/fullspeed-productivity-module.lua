@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "fullspeed-productivity-module",
-    enabled = true,
+    enabled = false,
     ingredients =
     {
       {"electronic-circuit", 5},
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "recipe",
     name = "fullspeed-productivity-module-2",
-    enabled = true,
+    enabled = false,
     ingredients =
     {
       {"fullspeed-productivity-module", 10},
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "recipe",
     name = "fullspeed-productivity-module-3",
-    enabled = true,
+    enabled = false,
     ingredients =
     {
       {"fullspeed-productivity-module-2", 10},

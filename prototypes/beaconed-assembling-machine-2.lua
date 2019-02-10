@@ -2,13 +2,20 @@ data:extend({
   {
     type = "recipe",
     name = "beaconed-assembling-machine-2",
-    enabled = true,
+    enabled = false,
+    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine-2.png",
+    icon_size = 32,
+    subgroup = "absorbed-beacons-2",
+    order = "c",
     ingredients =
     {
       {"beaconed-assembling-machine", 1},
       {"speed-module-2", 16}
     },
-    result = "beaconed-assembling-machine-2"
+    results = {
+      {type = "item", name = "beaconed-assembling-machine-2", amount = 1},
+      {type = "item", name = "speed-module", amount = 16}
+    }
   }
 })
 data:extend({
@@ -18,7 +25,7 @@ data:extend({
     icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine-2.png",
     icon_size = 32,
     subgroup = "absorbed-beacons-2",
-    order = "b",
+    order = "c",
     place_result = "beaconed-assembling-machine-2",
     stack_size = 50
   },
