@@ -101,23 +101,23 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2.png",
-          priority = "high",
+          filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png",
+          priority="high",
           width = 108,
-          height = 110,
+          height = 114,
           frame_count = 32,
           line_length = 8,
-          shift = util.by_pixel(0, 4),
+          shift = util.by_pixel(0, 2),
           animation_speed = beaconed_assembling_machine_1_animation_speed,
           hr_version =
           {
-            filename = "__base__/graphics/entity/assembling-machine-2/hr-assembling-machine-2.png",
-            priority = "high",
+            filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png",
+            priority="high",
             width = 214,
-            height = 218,
+            height = 226,
             frame_count = 32,
             line_length = 8,
-            shift = util.by_pixel(0, 4),
+            shift = util.by_pixel(0, 2),
             animation_speed = beaconed_assembling_machine_1_animation_speed,
             scale = 0.5
           }
@@ -290,7 +290,7 @@ data:extend({
           width = 107,
           height = 109,
           frame_count = 32,
-          shift = util.by_pixel(-0.5, -0.5),
+          shift = util.by_pixel(0, 4),
           animation_speed = beaconed_assembling_machine_1_animation_speed,
           hr_version =
           {
@@ -459,33 +459,35 @@ data:extend({
               },
             priority = "high",
             width = 214,
-            height = 237,
+            height = 218,
             frame_count = 32,
-            shift = util.by_pixel(0, -0.75),
+            shift = util.by_pixel(0, 4),
             animation_speed = beaconed_assembling_machine_1_animation_speed,
             scale = 0.5
           }
         },
         {
-          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-shadow.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          frame_count = 32,
-          line_length = 8,
+          filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1-shadow.png",
+          priority="high",
+          width = 95,
+          height = 83,
+          frame_count = 1,
+          line_length = 1,
+          repeat_count = 32,
           draw_as_shadow = true,
-          shift = util.by_pixel(12, 5),
+          shift = util.by_pixel(8.5, 5.5),
           animation_speed = beaconed_assembling_machine_1_animation_speed,
           hr_version =
           {
-            filename = "__base__/graphics/entity/assembling-machine-2/hr-assembling-machine-2-shadow.png",
-            priority = "high",
-            width = 196,
-            height = 163,
-            frame_count = 32,
-            line_length = 8,
+            filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1-shadow.png",
+            priority="high",
+            width = 190,
+            height = 165,
+            frame_count = 1,
+            line_length = 1,
+            repeat_count = 32,
             draw_as_shadow = true,
-            shift = util.by_pixel(12, 4.75),
+            shift = util.by_pixel(8.5, 5),
             animation_speed = beaconed_assembling_machine_1_animation_speed,
             scale = 0.5
           }
