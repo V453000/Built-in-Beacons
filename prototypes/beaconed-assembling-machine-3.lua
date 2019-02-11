@@ -25,7 +25,7 @@ data:extend({
     icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine-3.png",
     icon_size = 32,
     subgroup = "absorbed-beacons-3",
-    order = "c",
+    order = "c[assembling-machine-3]",
     place_result = "beaconed-assembling-machine-3",
     stack_size = 50
   },
