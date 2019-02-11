@@ -10,8 +10,8 @@ data:extend({
     ingredients =
     {
       {"lab", 1},
-      {"beacon", 8},
-      {"speed-module", 16}
+      {"beacon", 7},
+      {"speed-module", 14}
     },
     results = {
       {type = "item", name = "beaconed-lab", amount = 1}
@@ -27,7 +27,7 @@ data:extend({
     subgroup = "absorbed-beacons",
     order = "g[lab]",
     place_result = "beaconed-lab",
-    stack_size = 50
+    stack_size = 10
   },
 })
 data:extend({

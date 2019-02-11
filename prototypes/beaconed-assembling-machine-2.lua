@@ -10,11 +10,11 @@ data:extend({
     ingredients =
     {
       {"beaconed-assembling-machine", 1},
-      {"speed-module-2", 16}
+      {"speed-module-2", 14}
     },
     results = {
       {type = "item", name = "beaconed-assembling-machine-2", amount = 1},
-      {type = "item", name = "speed-module", amount = 16}
+      {type = "item", name = "speed-module", amount = 14}
     }
   }
 })

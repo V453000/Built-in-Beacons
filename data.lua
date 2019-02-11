@@ -5,9 +5,18 @@ beaconed_electric_furnace_3_animation_speed = 0.14922*animation_multiplier*0.5*0
 beaconed_assembling_machine_1_animation_speed = 0.37371*animation_multiplier
 beaconed_assembling_machine_2_animation_speed = 0.25*animation_multiplier
 beaconed_assembling_machine_3_animation_speed = 0.15625*animation_multiplier
+beaconed_chemical_plant_1_animation_speed = 0.16949*animation_multiplier
+beaconed_chemical_plant_2_animation_speed = 0.12048*animation_multiplier
+beaconed_chemical_plant_3_animation_speed = 0.07633*animation_multiplier
+beaconed_oil_refinery_1_animation_speed = 0.2*animation_multiplier
+beaconed_oil_refinery_2_animation_speed = 0.14018*animation_multiplier
+beaconed_oil_refinery_3_animation_speed = 0.08771*animation_multiplier
 beaconed_lab_1_animation_speed = 0.10752*animation_multiplier
 beaconed_lab_2_animation_speed = 0.07752*animation_multiplier
 beaconed_lab_3_animation_speed = 0.04975*animation_multiplier
+beaconed_centrifuge_1_animation_speed = 0.32258*animation_multiplier
+beaconed_centrifuge_2_animation_speed = 0.23255*animation_multiplier
+beaconed_centrifuge_3_animation_speed = 0.04975*animation_multiplier
 data:extend({
   {
     type = "technology",
@@ -27,6 +36,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-electric-furnace"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-chemical-plant"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-oil-refinery"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-centrifuge"
       },
       {
         type = "unlock-recipe",
@@ -70,6 +91,18 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "beaconed-chemical-plant-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-oil-refinery-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-centrifuge-2"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "beaconed-lab-2"
       },
     },
@@ -107,6 +140,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-electric-furnace-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-chemical-plant-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-oil-refinery-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-centrifuge-3"
       },
       {
         type = "unlock-recipe",
@@ -162,4 +207,13 @@ require ("prototypes.beaconed-electric-furnace-3")
 require ("prototypes.beaconed-lab")
 require ("prototypes.beaconed-lab-2")
 require ("prototypes.beaconed-lab-3")
+require ("prototypes.beaconed-chemical-plant")
+require ("prototypes.beaconed-chemical-plant-2")
+require ("prototypes.beaconed-chemical-plant-3")
+require ("prototypes.beaconed-oil-refinery")
+require ("prototypes.beaconed-oil-refinery-2")
+require ("prototypes.beaconed-oil-refinery-3")
+require ("prototypes.beaconed-centrifuge")
+require ("prototypes.beaconed-centrifuge-2")
+require ("prototypes.beaconed-centrifuge-3")
 require ("prototypes.fullspeed-productivity-module")
