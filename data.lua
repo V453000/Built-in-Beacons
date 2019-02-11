@@ -53,6 +53,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "beaconed-lab"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-rocket-silo"
+      },
     },
     prerequisites = {"automation-3", "effect-transmission"},
     unit =
@@ -105,6 +109,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "beaconed-lab-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-rocket-silo-2"
+      },
     },
     prerequisites = {"fullspeed-productivity-module", "speed-module-2"},
     unit =
@@ -156,7 +164,11 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-lab-3"
-      }
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-rocket-silo-3"
+      },
     },
     prerequisites = {"fullspeed-productivity-module-2", "speed-module-3"},
     unit =
@@ -216,4 +228,7 @@ require ("prototypes.beaconed-oil-refinery-3")
 require ("prototypes.beaconed-centrifuge")
 require ("prototypes.beaconed-centrifuge-2")
 require ("prototypes.beaconed-centrifuge-3")
+require ("prototypes.beaconed-rocket-silo")
+require ("prototypes.beaconed-rocket-silo-2")
+require ("prototypes.beaconed-rocket-silo-3")
 require ("prototypes.fullspeed-productivity-module")

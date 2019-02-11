@@ -6,7 +6,7 @@ data:extend({
     icon = "__Absorbed-Beacons__/graphics/icons/beaconed-lab-2.png",
     icon_size = 32,
     subgroup = "absorbed-beacons-2",
-    order = "i",
+    order = "h",
     ingredients =
     {
       {"beaconed-lab", 1},
