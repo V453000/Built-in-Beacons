@@ -17,6 +17,9 @@ beaconed_lab_3_animation_speed = 0.04975*animation_multiplier
 beaconed_centrifuge_1_animation_speed = 0.32258*animation_multiplier
 beaconed_centrifuge_2_animation_speed = 0.23255*animation_multiplier
 beaconed_centrifuge_3_animation_speed = 0.04975*animation_multiplier
+beaconed_electric_drill_1_animation_speed = 0.37037*animation_multiplier
+beaconed_electric_drill_2_animation_speed = 0.28571*animation_multiplier
+beaconed_electric_drill_3_animation_speed = 0.19607*animation_multiplier
 data:extend({
   {
     type = "technology",
@@ -56,6 +59,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-rocket-silo"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-electric-mining-drill"
       },
     },
     prerequisites = {"automation-3", "effect-transmission"},
@@ -113,6 +120,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "beaconed-rocket-silo-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-electric-mining-drill-2"
+      },
     },
     prerequisites = {"fullspeed-productivity-module", "speed-module-2"},
     unit =
@@ -168,6 +179,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "beaconed-rocket-silo-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "beaconed-electric-mining-drill-3"
       },
     },
     prerequisites = {"fullspeed-productivity-module-2", "speed-module-3"},
@@ -231,4 +246,7 @@ require ("prototypes.beaconed-centrifuge-3")
 require ("prototypes.beaconed-rocket-silo")
 require ("prototypes.beaconed-rocket-silo-2")
 require ("prototypes.beaconed-rocket-silo-3")
+require ("prototypes.beaconed-electric-mining-drill")
+require ("prototypes.beaconed-electric-mining-drill-2")
+require ("prototypes.beaconed-electric-mining-drill-3")
 require ("prototypes.fullspeed-productivity-module")
