@@ -13,7 +13,7 @@ data:extend({
       {"speed-module-2", 14}
     },
     results = {
-      {type = "item", name = "beaconed-chemical-plant", amount = 1},
+      {type = "item", name = "beaconed-chemical-plant-2", amount = 1},
       {type = "item", name = "speed-module", amount = 14}
     }
   }
