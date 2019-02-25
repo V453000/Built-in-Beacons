@@ -66,7 +66,7 @@ data:extend({
 
 
     animation = make_4way_animation_from_spritesheet({ layers =
-    {
+    {    
       {
         filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
         width = 337,
@@ -80,6 +80,26 @@ data:extend({
           height = 430,
           frame_count = 1,
           shift = util.by_pixel(0, -7.5),
+          scale = 0.5
+        }
+      },
+      {
+        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
+        width = 512,
+        height = 512,
+        frame_count = 1,
+        shift = util.by_pixel(0, 0),
+        tint = {1,1,1,0},
+        blend_mode = "additive",
+        hr_version =
+        {
+          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
+          width = 1024,
+          height = 1024,
+          frame_count = 1,
+          shift = util.by_pixel(0, 0),
+          tint = {1,1,1,0},
+          blend_mode = "additive",
           scale = 0.5
         }
       },
