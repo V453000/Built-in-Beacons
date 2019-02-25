@@ -89,8 +89,7 @@ data:extend({
         height = 512,
         frame_count = 1,
         shift = util.by_pixel(0, 0),
-        tint = {1,1,1,0},
-        blend_mode = "additive",
+        tint = {0.4,0.2,0,0},
         hr_version =
         {
           filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
@@ -98,8 +97,7 @@ data:extend({
           height = 1024,
           frame_count = 1,
           shift = util.by_pixel(0, 0),
-          tint = {1,1,1,0},
-          blend_mode = "additive",
+          tint = {0.4,0.2,0,0},
           scale = 0.5
         }
       },

@@ -84,6 +84,24 @@ data:extend({
         }
       },
       {
+        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
+        width = 512,
+        height = 512,
+        frame_count = 1,
+        shift = util.by_pixel(0, 0),
+        tint = {0.4,0.4,0,0},
+        hr_version =
+        {
+          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
+          width = 1024,
+          height = 1024,
+          frame_count = 1,
+          shift = util.by_pixel(0, 0),
+          tint = {0.4,0.4,0,0},
+          scale = 0.5
+        }
+      },
+      {
         filename = "__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png",
         width = 337,
         height = 213,
