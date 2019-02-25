@@ -55,8 +55,9 @@ data:extend({
     max_health = 5000,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-4.2, -4.7}, {4.2, 4.7}},
-    selection_box = {{-4.5, -5}, {4.5, 5}},
+    collision_box = {{-4.40, -4.40}, {4.40, 4.40}},
+    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    hole_clipping_box = { {-2.75, -1.15}, {2.75, 2.25} },
     resistances =
     {
       {
@@ -84,43 +85,43 @@ data:extend({
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),
 
-    base_light =
-    {
-      {
-        type = "oriented",
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "extra-high",
-          flags = { "light" },
-          scale = 2,
-          width = 200,
-          height = 200
-        },
-        shift = {0.25, 1.25},
-        size = 1,
-        intensity = 1,
-        rotation_shift = 0.6,
-        color = {r = 0.7, g = 0.9, b = 1.0}
-      },
-      {
-        type = "oriented",
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "extra-high",
-          flags = { "light" },
-          scale = 2,
-          width = 200,
-          height = 200
-        },
-        shift = {-0.25, 1},
-        size = 1,
-        intensity = 1,
-        rotation_shift = 0.5,
-        color = {r = 0.7, g = 0.9, b = 1.0}
-      }
-    },
+    --base_light =
+    --{
+    --  {
+    --    type = "oriented",
+    --    picture =
+    --    {
+    --      filename = "__core__/graphics/light-cone.png",
+    --      priority = "extra-high",
+    --      flags = { "light" },
+    --      scale = 2,
+    --      width = 200,
+    --      height = 200
+    --    },
+    --    shift = {0.25, 1.25},
+    --    size = 1,
+    --    intensity = 1,
+    --    rotation_shift = 0.6,
+    --    color = {r = 0.7, g = 0.9, b = 1.0}
+    --  },
+    --  {
+    --    type = "oriented",
+    --    picture =
+    --    {
+    --      filename = "__core__/graphics/light-cone.png",
+    --      priority = "extra-high",
+    --      flags = { "light" },
+    --      scale = 2,
+    --      width = 200,
+    --      height = 200
+    --    },
+    --    shift = {-0.25, 1},
+    --    size = 1,
+    --    intensity = 1,
+    --    rotation_shift = 0.5,
+    --    color = {r = 0.7, g = 0.9, b = 1.0}
+    --  }
+    --},
     base_engine_light =
     {
       intensity = 1,
@@ -130,90 +131,178 @@ data:extend({
 
     shadow_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/00-shadow/00-silo-shadow.png",
+      filename = "__base__/graphics/entity/rocket-silo/00-rocket-silo-shadow.png",
       priority = "medium",
-      width = 447,
-      height = 351,
+      width = 304,
+      height = 290,
       draw_as_shadow = true,
       slice = 2,
-      shift = {1.5, 0.5}
+      shift = util.by_pixel(8, 2),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-00-rocket-silo-shadow.png",
+        priority = "medium",
+        width = 612,
+        height = 578,
+        draw_as_shadow = true,
+        slice = 2,
+        shift = util.by_pixel(7, 2),
+        scale = 0.5
+      },
     },
-    satellite_shadow_animation =
-    {
-      filename = "__base__/graphics/entity/rocket-silo/00-shadow/00-satellite-shadow.png",
-      priority = "medium",
-      width = 44,
-      height = 22,
-      frame_count = 12,
-      line_length = 4,
-      animation_speed = 0.25,
-      draw_as_shadow = true,
-      shift = {7.875, -2.1875}
-    },
+    --satellite_shadow_animation =
+    --{
+    --  filename = "__base__/graphics/entity/rocket-silo/00-shadow/00-satellite-shadow.png",
+    --  priority = "medium",
+    --  width = 44,
+    --  height = 22,
+    --  frame_count = 12,
+    --  line_length = 4,
+    --  animation_speed = 0.25,
+    --  draw_as_shadow = true,
+    --  shift = {7.875, -2.1875},
+    --  hr_version =
+    --  {
+    --    filename = "__base__/graphics/entity/rocket-silo/00-shadow/hr-00-satellite-shadow.png",
+    --    priority = "medium",
+    --    width = 44,
+    --    height = 22,
+    --    frame_count = 12,
+    --    line_length = 4,
+    --    animation_speed = 0.25,
+    --    draw_as_shadow = true,
+    --    shift = {7.875, -2.1875},
+    --    scale = 0.5
+    --  }
+    --},
 
     hole_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/01-hole/01-hole.png",
-      width = 224,
-      height = 128,
-      shift = {0, 2}
+      filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole.png",
+      width = 202,
+      height = 136,
+      shift = util.by_pixel(-6, 16),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole.png",
+        width = 400,
+        height = 270,
+        shift = util.by_pixel(-5, 16),
+        scale = 0.5
+      }
     },
     hole_light_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/01-hole/01-hole-light.png",
-      width = 224,
-      height = 128,
-      shift = {0, 2}
+      filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole-light.png",
+      width = 202,
+      height = 136,
+      shift = util.by_pixel(-6, 16),
+      tint = {1,1,1,0},
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-01-rocket-silo-hole-light.png",
+        width = 400,
+        height = 270,
+        shift = util.by_pixel(-5, 16),
+        tint = {1,1,1,0},
+        scale = 0.5
+      }
     },
 
     rocket_shadow_overlay_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/03-12-rocket-over/03-rocket-over-shadow-over-rocket.png",
-      width = 224,
-      height = 128,
-      shift = {0, 2}
+      filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-shadow-over-rocket.png",
+      width = 212,
+      height = 142,
+      shift = util.by_pixel(-2, 22),
+      hr_version = {
+        filename = "__base__/graphics/entity/rocket-silo/hr-03-rocket-over-shadow-over-rocket.png",
+        width = 426,
+        height = 288,
+        shift = util.by_pixel(-2, 21),
+        scale = 0.5
+      }
     },
     rocket_glow_overlay_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/03-12-rocket-over/03-rocket-over-glow.png",
+      filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-glow.png",
       blend_mode = "additive",
-      width = 224,
-      height = 128,
-      shift = {0, 2}
+      width = 218,
+      height = 222,
+      shift = util.by_pixel(-4, 36),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-03-rocket-over-glow.png",
+        blend_mode = "additive",
+        width = 434,
+        height = 446,
+        shift = util.by_pixel(-3, 36),
+        scale = 0.5
+      }
     },
 
 
     door_back_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/04-05-doors/04-door-back.png",
-      width = 192,
-      height = 108,
-      shift = {0, 1.53125}
+      filename = "__base__/graphics/entity/rocket-silo/04-door-back.png",
+      width = 158,
+      height = 144,
+      shift = util.by_pixel(36, 12),
+      hr_version = {
+        filename = "__base__/graphics/entity/rocket-silo/hr-04-door-back.png",
+        width = 312,
+        height = 286,
+        shift = util.by_pixel(37, 12),
+        scale = 0.5
+      }
     },
-    door_back_open_offset = {1.75, -1.75},
+    door_back_open_offset = {1.8, -1.8 * 0.43299225},
     door_front_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/04-05-doors/05-door-front.png",
-      width = 192,
-      height = 112,
-      shift = {0, 2.0625}
+      filename = "__base__/graphics/entity/rocket-silo/05-door-front.png",
+      width = 166,
+      height = 152,
+      shift = util.by_pixel(-28, 32),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-05-door-front.png",
+        width = 332,
+        height = 300,
+        shift = util.by_pixel(-28, 33),
+        scale = 0.5
+      }
     },
-    door_front_open_offset = {-1.75, 1.75},
+    door_front_open_offset = {-1.8, 1.8 * 0.43299225},
 
     base_day_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/06-silo-base/06-silo-base-day.png",
-      width = 352,
-      height = 384,
-      shift = {0, 0}
+      filename = "__base__/graphics/entity/rocket-silo/06-rocket-silo.png",
+      width = 300,
+      height = 300,
+      shift = util.by_pixel(2, -2),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-06-rocket-silo.png",
+        width = 608,
+        height = 596,
+        shift = util.by_pixel(3, -1),
+        scale = 0.5
+      }
     },
-    base_night_sprite =
-    {
-      filename = "__base__/graphics/entity/rocket-silo/06-silo-base/06-silo-base-night.png",
-      width = 352,
-      height = 384,
-      shift = {0, 0}
-    },
+    --base_night_sprite =
+    --{
+    --  filename = "__base__/graphics/entity/rocket-silo/06-silo-base/06-silo-base-night.png",
+    --  width = 352,
+    --  height = 384,
+    --  shift = {0, 0},
+    --  hr_version = {
+    --    filename = "__base__/graphics/entity/rocket-silo/06-silo-base/hr-06-silo-base-night.png",
+    --    width = 352,
+    --    height = 384,
+    --    shift = {0, 0},
+    --    scale = 0.5
+    --  }
+    --},
 
 
     red_lights_back_sprites =
@@ -224,43 +313,99 @@ data:extend({
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {1.34375, 0.28125}
+          shift = {1.34375, 0.28125-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {1.34375, 0.28125-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {2.3125, 0.9375}
+          shift = {2.3125, 0.9375-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {2.3125, 0.9375-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {2.65625, 1.90625}
+          shift = {2.65625, 1.90625-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {2.65625, 1.90625-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {-2.65625, 1.90625}
+          shift = {-2.65625, 1.90625-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {-2.65625, 1.90625-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {-2.3125, 0.9375}
+          shift = {-2.3125, 0.9375-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {-2.3125, 0.9375-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {-1.34375, 0.28125}
+          shift = {-1.34375, 0.28125-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {-1.34375, 0.28125-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {0, 0}
+          shift = {0, 0-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {0, 0-1.375},
+            scale = 0.5
+          }
         }
       }
     },
@@ -273,88 +418,182 @@ data:extend({
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {2.3125, 2.8125}
+          shift = {2.3125, 2.8125-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {2.3125, 2.8125-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {1.34375, 3.40625}
+          shift = {1.34375, 3.40625-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {1.34375, 3.40625-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {0, 3.75}
+          shift = {0, 3.75-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {0, 3.75-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {-1.34375, 3.40625}
+          shift = {-1.34375, 3.40625-1.375},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {0, 3.75-1.375},
+            scale = 0.5
+          }
         },
         {
           filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
           width = 32,
           height = 32,
-          shift = {-2.3125, 2.8125}
+          shift = {-2.3125, 2.8125-1.375},
+          hr_version = {
+            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/hr-red-light.png",
+            width = 32,
+            height = 32,
+            shift = {-2.3125, 2.8125-1.375},
+            scale = 0.5
+          }
         }
       }
     },
     satellite_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-arms-back-satellite-animation/satellite.png",
+      filename = "__base__/graphics/entity/rocket-silo/15-rocket-silo-turbine.png",
       priority = "medium",
-      width = 27,
-      height = 28,
-      frame_count = 12,
-      line_length = 4,
-      animation_speed = 0.25,
-      shift = {3.3125, -4.82813}
+      width = 28,
+      height = 46,
+      frame_count = 32,
+      line_length = 8,
+      animation_speed = 0.4,
+      shift = util.by_pixel(-100, 110),
+      hr_version = {
+        filename = "__base__/graphics/entity/rocket-silo/hr-15-rocket-silo-turbine.png",
+        priority = "medium",
+        width = 54,
+        height = 88,
+        frame_count = 32,
+        line_length = 8,
+        animation_speed = 0.4,
+        shift = util.by_pixel(-100, 111),
+        scale = 0.5
+      }
     },
 
     arm_01_back_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-arms-back-satellite-animation/arm-01-back.png",
+      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
       priority = "medium",
-      width = 54,
-      height = 50,
-      frame_count = 12,
-      line_length = 4,
-      animation_speed = 0.2,
-      shift = {-1.34375, -0.875}
+      width = 66,
+      height = 76,
+      frame_count = 32,
+      line_length = 32,
+      animation_speed = 0.3,
+      shift = util.by_pixel(-54, -84),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-08-rocket-silo-arms-back.png",
+        priority = "medium",
+        width = 128,
+        height = 150,
+        frame_count = 32,
+        line_length = 32,
+        animation_speed = 0.3,
+        shift = util.by_pixel(-53, -84),
+        scale = 0.5
+      }
     },
 
     arm_02_right_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/08-arms-back-satellite-animation/arm-02-right.png",
+      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-right.png",
       priority = "medium",
-      width = 81,
-      height = 43,
-      frame_count = 12,
-      line_length = 4,
-      animation_speed = 0.2,
-      shift = {2.71875, 0.96875}
+      width = 94,
+      height = 94,
+      frame_count = 32,
+      line_length = 32,
+      animation_speed = 0.3,
+      shift = util.by_pixel(100, -38),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-08-rocket-silo-arms-right.png",
+        priority = "medium",
+        width = 182,
+        height = 188,
+        frame_count = 32,
+        line_length = 32,
+        animation_speed = 0.3,
+        shift = util.by_pixel(101, -38),
+        scale = 0.5
+      }
     },
 
     arm_03_front_animation =
     {
-      filename = "__base__/graphics/entity/rocket-silo/13-arm-front-red-lights-front/arm-03-front.png",
+      filename = "__base__/graphics/entity/rocket-silo/13-rocket-silo-arms-front.png",
       priority = "medium",
-      width = 54,
-      height = 70,
-      frame_count = 12,
-      line_length = 4,
-      animation_speed = 0.2,
-      shift = {-1.34375, 2.4375}
+      width = 66,
+      height = 114,
+      frame_count = 32,
+      line_length = 32,
+      animation_speed = 0.3,
+      shift = util.by_pixel(-52, 16),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-13-rocket-silo-arms-front.png",
+        priority = "medium",
+        width = 126,
+        height = 228,
+        frame_count = 32,
+        line_length = 32,
+        animation_speed = 0.3,
+        shift = util.by_pixel(-51, 16),
+        scale = 0.5
+      }
     },
 
     base_front_sprite =
     {
-      filename = "__base__/graphics/entity/rocket-silo/14-silo-front/14-silo-front.png",
-      width = 352,
-      height = 96,
-      shift = {0, 3.5}
+      filename = "__base__/graphics/entity/rocket-silo/14-rocket-silo-front.png",
+      width = 292,
+      height = 132,
+      shift = util.by_pixel(-2, 78),
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/rocket-silo/hr-14-rocket-silo-front.png",
+        width = 580,
+        height = 262,
+        shift = util.by_pixel(-1, 78),
+        scale = 0.5
+      }
     },
     silo_fade_out_start_distance = 8,
     silo_fade_out_end_distance = 15,
