@@ -6,6 +6,6 @@
   "author": "V453000",
   "contact": "",
   "homepage": "",
-  "description": "Production structures simulate being fully beaconed.",
+  "description": "Adds production which structures simulate being fully beaconed, and Fullspeed productivity modules for them. Does not change any vanilla entities.",
   "dependencies": ["base"]
 }
