@@ -48,7 +48,7 @@ data:extend({
     energy_source =
     {
       type = "electric",
-      emissions = 0.121,
+      emissions = 0.1,
       drain = "480kW",
       usage_priority = "secondary-input"
     },
@@ -64,17 +64,17 @@ data:extend({
         }
       }
     },
-    energy_usage = "468kW",
-    mining_speed = 1.9,
+    energy_usage = "414kW",
+    mining_speed = 2.8,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    module_specification =
-    {
-      module_slots = 4,
-      max_entity_info_module_icons_per_row = 1,
-      max_entity_info_module_icon_rows = 1,
-    },
-    allowed_effects = {"productivity"},
+    --module_specification =
+    --{
+    --  module_slots = 4,
+    --  max_entity_info_module_icons_per_row = 1,
+    --  max_entity_info_module_icon_rows = 1,
+    --},
+    --allowed_effects = {"productivity"},
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",

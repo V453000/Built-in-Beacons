@@ -878,7 +878,7 @@ data:extend({
     energy_source =
     {
       type = "electric",
-      emissions = 0.13,
+      emissions = 0.1,
       drain = "480kW",
       usage_priority = "secondary-input"
     },
