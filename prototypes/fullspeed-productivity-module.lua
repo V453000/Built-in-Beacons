@@ -19,7 +19,7 @@ data:extend({
     enabled = false,
     ingredients =
     {
-      {"fullspeed-productivity-module", 10},
+      {"fullspeed-productivity-module", 8},
       {"advanced-circuit", 5},
       {"processing-unit", 5}
     },
