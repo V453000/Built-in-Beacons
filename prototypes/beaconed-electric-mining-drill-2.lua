@@ -874,7 +874,7 @@ data:extend({
       }
     },
 
-    mining_speed = 0.875,
+    mining_speed = 1.55,
     energy_source =
     {
       type = "electric",
@@ -885,13 +885,13 @@ data:extend({
     energy_usage = "468kW",
     resource_searching_radius = 2.49,
     vector_to_place_result = {0, -1.85},
-    module_specification =
-    {
-      module_slots = 6,
-      max_entity_info_module_icons_per_row = 1,
-      max_entity_info_module_icon_rows = 1
-    },
-    allowed_effects = {"productivity"},
+    --module_specification =
+    --{
+    --  module_slots = 6,
+    --  max_entity_info_module_icons_per_row = 1,
+    --  max_entity_info_module_icon_rows = 1
+    --},
+    --allowed_effects = {"productivity"},
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
