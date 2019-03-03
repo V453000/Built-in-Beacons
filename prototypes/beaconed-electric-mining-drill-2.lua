@@ -900,6 +900,7 @@ data:extend({
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
     fast_replaceable_group = "mining-drill",
+    next_upgrade = "beaconed-electric-mining-drill-3",
 
     circuit_wire_connection_points = circuit_connector_definitions["electric-mining-drill"].points,
     circuit_connector_sprites = circuit_connector_definitions["electric-mining-drill"].sprites,

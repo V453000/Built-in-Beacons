@@ -81,6 +81,9 @@ data:extend({
     active_energy_usage = "50400kW",
     rocket_entity = "rocket-silo-rocket",
 
+    fast_replaceable_group = "rocket-silo",
+    next_upgrade = "beaconed-rocket-silo-2",
+
     times_to_blink = 3,
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),

@@ -184,7 +184,7 @@ data:extend({
       apparent_volume = 1.5
     },
     fast_replaceable_group = "pumpjack",
-
+    next_upgrade = "beaconed-pumpjack-2",
     circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
     circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance

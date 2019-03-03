@@ -63,7 +63,8 @@ data:extend({
       drain = "4814kW"
     },
     energy_usage = "5208kW",
-
+    fast_replaceable_group = "oil-refinery",
+    next_upgrade = "beaconed-oil-refinery-3",
 
     animation = make_4way_animation_from_spritesheet({ layers =
     {

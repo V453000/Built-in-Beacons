@@ -198,6 +198,7 @@ data:extend({
         }
       }
     },
-    fast_replaceable_group = "furnace"
+    fast_replaceable_group = "furnace",
+    next_upgrade = "beaconed-electric-furnace-3",
   },
 })

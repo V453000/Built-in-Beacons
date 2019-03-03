@@ -95,6 +95,7 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.5, -1.7}, {1.5, 1.5}},
     fast_replaceable_group = "assembling-machine",
+    next_upgrade = "beaconed-assembling-machine-3",
     --always_draw_idle_animation = true,
     animation =
     {

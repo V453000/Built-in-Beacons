@@ -44,6 +44,8 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
+    fast_replaceable_group = "lab",
+    next_upgrade = "beaconed-lab-3",
     on_animation =
     {
       layers =

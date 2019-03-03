@@ -51,7 +51,8 @@ data:extend({
       max_entity_info_module_icon_rows = 1,
     },
     allowed_effects = {"productivity"},
-
+    fast_replaceable_group = "chemical-plant",
+    next_upgrade = "beaconed-chemical-plant-2",
     animation = make_4way_animation_from_spritesheet({ layers =
     {
       {
