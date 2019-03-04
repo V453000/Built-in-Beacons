@@ -2,20 +2,19 @@ data:extend
 {
  {
     -- Radar revealed sector distance
-    type = "int-setting",
-    name = "moar-radar-nearby-reveal-area",
+    type = "bool-setting",
+    name = "absorbed-beacons-graphics-overlays",
     setting_type = "startup",
-    default_value = 3,
-    minimum_value = 1,
+    default_value = true,
     order = "b-a"
   },
-  {
-    -- Radar revealed nearby sector distance
-    type = "int-setting",
-    name = "moar-radar-reveal-area",
-    setting_type = "startup",
-    default_value = 14,
-    minimum_value = 1,
-    order = "b-b"
-  },
+  --{
+  --  -- Radar revealed nearby sector distance
+  --  type = "int-setting",
+  --  name = "moar-radar-reveal-area",
+  --  setting_type = "startup",
+  --  default_value = 14,
+  --  minimum_value = 1,
+  --  order = "b-b"
+  --},
 }
