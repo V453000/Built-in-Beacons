@@ -1,7 +1,7 @@
 animation_multiplier = 2
-beaconed_electric_furnace_1_animation_speed = 0.32258*animation_multiplier*0.5*0.5
-beaconed_electric_furnace_2_animation_speed = 0.23255*animation_multiplier*0.5*0.5
-beaconed_electric_furnace_3_animation_speed = 0.14922*animation_multiplier*0.5*0.5
+beaconed_electric_furnace_1_animation_speed = 0.32258*animation_multiplier*0.5*0.5*0.8
+beaconed_electric_furnace_2_animation_speed = 0.23255*animation_multiplier*0.5*0.5*0.8
+beaconed_electric_furnace_3_animation_speed = 0.14922*animation_multiplier*0.5*0.5*0.8
 beaconed_assembling_machine_1_animation_speed = 0.37371*animation_multiplier
 beaconed_assembling_machine_2_animation_speed = 0.25*animation_multiplier
 beaconed_assembling_machine_3_animation_speed = 0.15625*animation_multiplier

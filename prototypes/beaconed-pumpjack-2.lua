@@ -152,6 +152,31 @@ data:extend({
           },
           {
             priority = "high",
+            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/pumpjack-horsehead-mask.png",
+            line_length = 8,
+            width = 104,
+            height = 102,
+            frame_count = 40,
+            shift = util.by_pixel(-4, -24),
+            --blend_mode = "additive",
+            tint = {0.4,0.4,0,0},
+            animation_speed = beaconed_pumpjack_3_animation_speed,
+            hr_version =
+            {
+              priority = "high",
+              filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/hr-pumpjack-horsehead-mask.png",
+              animation_speed = beaconed_pumpjack_3_animation_speed,
+              scale = 0.5,
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24),
+              tint = {0.4,0.4,0,0},
+            }
+          },
+          {
+            priority = "high",
             filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
             animation_speed = beaconed_pumpjack_2_animation_speed,
             draw_as_shadow = true,

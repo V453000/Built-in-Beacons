@@ -149,8 +149,60 @@ data:extend({
             scale = 0.5
           }
         },
-        light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
+        light = {intensity = 0.7, size = 10, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
       },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+          priority = "high",
+          width = 25,
+          height = 15,
+          frame_count = 12,
+          shift = {0.015625, 0.890625},
+          animation_speed = beaconed_electric_furnace_2_animation_speed,
+          tint = {1,1,1,0},
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+            priority = "high",
+            width = 60,
+            height = 56,
+            frame_count = 12,
+            shift = util.by_pixel(1.75, 32.75),
+            animation_speed = beaconed_electric_furnace_2_animation_speed,
+            tint = {1,1,1,0},
+            scale = 0.5
+          }
+        },
+        --light = {intensity = 0.7, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
+      },
+      --{
+      --  animation =
+      --  {
+      --    filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+      --    priority = "high",
+      --    width = 25,
+      --    height = 15,
+      --    frame_count = 12,
+      --    shift = {0.015625, 0.890625},
+      --    animation_speed = beaconed_electric_furnace_2_animation_speed,
+      --    tint = {1,1,1,0},
+      --    hr_version =
+      --    {
+      --      filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+      --      priority = "high",
+      --      width = 60,
+      --      height = 56,
+      --      frame_count = 12,
+      --      shift = util.by_pixel(1.75, 32.75),
+      --      animation_speed = beaconed_electric_furnace_2_animation_speed,
+      --      tint = {1,1,1,0},
+      --      scale = 0.5
+      --    }
+      --  },
+      --  light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
+      --},
       {
         animation =
         {
