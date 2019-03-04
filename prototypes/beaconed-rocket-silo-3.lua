@@ -511,28 +511,54 @@ data:extend({
     },
 
     arm_01_back_animation =
-    {
-      filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
-      priority = "medium",
-      width = 66,
-      height = 76,
-      frame_count = 32,
-      line_length = 32,
-      animation_speed = 0.3,
-      shift = util.by_pixel(-54, -84),
-      hr_version =
+    --{
       {
-        filename = "__base__/graphics/entity/rocket-silo/hr-08-rocket-silo-arms-back.png",
+        filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
         priority = "medium",
-        width = 128,
-        height = 150,
+        width = 66,
+        height = 76,
         frame_count = 32,
         line_length = 32,
         animation_speed = 0.3,
-        shift = util.by_pixel(-53, -84),
-        scale = 0.5
-      }
-    },
+        shift = util.by_pixel(-54, -84),
+        hr_version =
+        {
+          filename = "__base__/graphics/entity/rocket-silo/hr-08-rocket-silo-arms-back.png",
+          priority = "medium",
+          width = 128,
+          height = 150,
+          frame_count = 32,
+          line_length = 32,
+          animation_speed = 0.3,
+          shift = util.by_pixel(-53, -84),
+          scale = 0.5
+        }
+      },
+      --{
+      --  filename = "__Absorbed-Beacons__/graphics/entity/beaconed-rocket-silo/08-rocket-silo-arms-back-mask.png",
+      --  priority = "medium",
+      --  width = 64,
+      --  height = 75,
+      --  frame_count = 32,
+      --  line_length = 32,
+      --  animation_speed = 0.3,
+      --  shift = util.by_pixel(-53, -83.5),
+      --  tint = {1,1,1,0},
+      --  hr_version =
+      --  {
+      --    filename = "__Absorbed-Beacons__/graphics/entity/beaconed-rocket-silo/hr-08-rocket-silo-arms-back-mask.png",
+      --    priority = "medium",
+      --    width = 127,
+      --    height = 149,
+      --    frame_count = 32,
+      --    line_length = 32,
+      --    animation_speed = 0.3,
+      --    shift = util.by_pixel(-52.75, -83.25),
+      --    tint = {1,1,1,0},
+      --    scale = 0.5
+      --  }
+      --}
+    --},
 
     arm_02_right_animation =
     {
