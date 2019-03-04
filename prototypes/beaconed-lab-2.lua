@@ -51,7 +51,7 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/lab/lab.png",
+          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-lab/lab-yellow.png",
           width = 98,
           height = 87,
           frame_count = 33,
@@ -60,7 +60,7 @@ data:extend({
           shift = util.by_pixel(0, 1.5),
           hr_version =
           {
-            filename = "__base__/graphics/entity/lab/hr-lab.png",
+            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-lab/hr-lab-yellow.png",
             width = 194,
             height = 174,
             frame_count = 33,
