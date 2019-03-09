@@ -54,7 +54,7 @@ data:extend({
     category = "productivity",
     tier = 1,
     order = "a",
-    stack_size = 50,
+    stack_size = 100,
     effect =
     {
       productivity = {bonus = 0.02}
@@ -72,7 +72,7 @@ data:extend({
     category = "productivity",
     tier = 2,
     order = "a",
-    stack_size = 50,
+    stack_size = 100,
     effect =
     {
       productivity = {bonus = 0.03}
@@ -90,7 +90,7 @@ data:extend({
     category = "productivity",
     tier = 3,
     order = "a",
-    stack_size = 50,
+    stack_size = 100,
     effect =
     {
       productivity = {bonus = 0.05}
