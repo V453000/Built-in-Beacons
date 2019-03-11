@@ -102,23 +102,23 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png",
-          priority="high",
+          filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
+          priority = "high",
           width = 108,
-          height = 114,
+          height = 119,
           frame_count = 32,
           line_length = 8,
-          shift = util.by_pixel(0, 2),
+          shift = util.by_pixel(0, -0.5),
           animation_speed = beaconed_assembling_machine_1_animation_speed,
           hr_version =
           {
-            filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png",
-            priority="high",
+            filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3.png",
+            priority = "high",
             width = 214,
-            height = 226,
+            height = 237,
             frame_count = 32,
             line_length = 8,
-            shift = util.by_pixel(0, 2),
+            shift = util.by_pixel(0, -0.75),
             animation_speed = beaconed_assembling_machine_1_animation_speed,
             scale = 0.5
           }
@@ -130,7 +130,7 @@ data:extend({
           frame_count = 1,
           repeat_count = 32,
           shift = util.by_pixel(0, 4),
-          animation_speed = beaconed_assembling_machine_2_animation_speed,
+          animation_speed = beaconed_assembling_machine_1_animation_speed,
           hr_version = {
             filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-1/hr-beaconed-assembling-machine-1-overlay.png",
             priority = "high",
@@ -139,32 +139,52 @@ data:extend({
             frame_count = 1,
             repeat_count = 32,
             shift = util.by_pixel(0, 4),
-            animation_speed = beaconed_assembling_machine_2_animation_speed,
+            animation_speed = beaconed_assembling_machine_1_animation_speed,
             scale = 0.5
           }
         },
         {
-          filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1-shadow.png",
-          priority="high",
-          width = 95,
-          height = 83,
-          frame_count = 1,
-          line_length = 1,
-          repeat_count = 32,
+          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/assembling-machine-3-mask.png",
+          width = 78,
+          height = 96,
+          frame_count = 32,
+          shift = util.by_pixel(-1, -11),
+          tint = {0.4*0.5 ,0.2*0.5 ,0,0},
+          blend_mode = "additive",
+          animation_speed = beaconed_assembling_machine_1_animation_speed,
+          hr_version = {
+            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/hr-assembling-machine-3-mask.png",
+            priority = "high",
+            width = 156,
+            height = 192,
+            frame_count = 32,
+            shift = util.by_pixel(-0.5, -11),
+            tint = {0.4*0.5 ,0.2*0.5 ,0,0},
+            blend_mode = "additive",
+            animation_speed = beaconed_assembling_machine_1_animation_speed,
+            scale = 0.5
+          }
+        },
+        {
+          filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow.png",
+          priority = "high",
+          width = 130,
+          height = 82,
+          frame_count = 32,
+          line_length = 8,
           draw_as_shadow = true,
-          shift = util.by_pixel(8.5, 5.5),
+          shift = util.by_pixel(28, 4),
           animation_speed = beaconed_assembling_machine_1_animation_speed,
           hr_version =
           {
-            filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1-shadow.png",
-            priority="high",
-            width = 190,
-            height = 165,
-            frame_count = 1,
-            line_length = 1,
-            repeat_count = 32,
+            filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3-shadow.png",
+            priority = "high",
+            width = 260,
+            height = 162,
+            frame_count = 32,
+            line_length = 8,
             draw_as_shadow = true,
-            shift = util.by_pixel(8.5, 5),
+            shift = util.by_pixel(28, 4),
             animation_speed = beaconed_assembling_machine_1_animation_speed,
             scale = 0.5
           }

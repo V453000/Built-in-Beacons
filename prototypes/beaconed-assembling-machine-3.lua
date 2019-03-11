@@ -129,7 +129,7 @@ data:extend({
           frame_count = 1,
           repeat_count = 32,
           shift = util.by_pixel(0, 4),
-          animation_speed = beaconed_assembling_machine_2_animation_speed,
+          animation_speed = beaconed_assembling_machine_3_animation_speed,
           hr_version = {
             filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/hr-beaconed-assembling-machine-3-overlay.png",
             priority = "high",
@@ -138,7 +138,29 @@ data:extend({
             frame_count = 1,
             repeat_count = 32,
             shift = util.by_pixel(0, 4),
-            animation_speed = beaconed_assembling_machine_2_animation_speed,
+            animation_speed = beaconed_assembling_machine_3_animation_speed,
+            scale = 0.5
+          }
+        },
+        {
+          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/assembling-machine-3-mask.png",
+          width = 78,
+          height = 96,
+          frame_count = 32,
+          shift = util.by_pixel(-1, -11),
+          tint = {0.6*0.5, 0.75*0.5 ,0,0},
+          blend_mode = "additive",
+          animation_speed = beaconed_assembling_machine_3_animation_speed,
+          hr_version = {
+            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/hr-assembling-machine-3-mask.png",
+            priority = "high",
+            width = 156,
+            height = 192,
+            frame_count = 32,
+            shift = util.by_pixel(-0.5, -11),
+            tint = {0.6*0.5, 0.75*0.5, 0,0},
+            blend_mode = "additive",
+            animation_speed = beaconed_assembling_machine_3_animation_speed,
             scale = 0.5
           }
         },
