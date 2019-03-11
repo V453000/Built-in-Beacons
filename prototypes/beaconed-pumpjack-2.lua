@@ -159,7 +159,7 @@ data:extend({
             frame_count = 40,
             shift = util.by_pixel(-4, -24),
             --blend_mode = "additive",
-            tint = {0.4,0.4,0,0},
+            tint = {0.4*0.8, 0.4*0.8, 0, 0},
             animation_speed = beaconed_pumpjack_3_animation_speed,
             hr_version =
             {
@@ -172,7 +172,7 @@ data:extend({
               height = 202,
               frame_count = 40,
               shift = util.by_pixel(-4, -24),
-              tint = {0.4,0.4,0,0},
+              tint = {0.4*0.8, 0.4*0.8, 0, 0},
             }
           },
           {
