@@ -268,3 +268,22 @@ require ("prototypes.beaconed-pumpjack")
 require ("prototypes.beaconed-pumpjack-2")
 require ("prototypes.beaconed-pumpjack-3")
 require ("prototypes.fullspeed-productivity-module")
+
+data.raw["assembling-machine"]["assembling-machine-3"].fast_replaceable_group = "assembling-machine"
+data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade =  "beaconed-assembling-machine"
+data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group = "centrifuge"
+data.raw["assembling-machine"]["centrifuge"].next_upgrade =  "beaconed-centrifuge"
+data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+data.raw["assembling-machine"]["chemical-plant"].next_upgrade =  "beaconed-chemical-plant"
+data.raw["furnace"]["electric-furnace"].fast_replaceable_group = "furnace"
+data.raw["furnace"]["electric-furnace"].next_upgrade =  "beaconed-electric-furnace"
+data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "mining-drill"
+data.raw["mining-drill"]["electric-mining-drill"].next_upgrade =  "beaconed-electric-mining-drill"
+data.raw["lab"]["lab"].fast_replaceable_group = "lab"
+data.raw["lab"]["lab"].next_upgrade =  "beaconed-lab"
+data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
+data.raw["assembling-machine"]["oil-refinery"].next_upgrade =  "beaconed-oil-refinery"
+data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
+data.raw["mining-drill"]["pumpjack"].next_upgrade =  "beaconed-pumpjack"
+data.raw["rocket-silo"]["rocket-silo"].fast_replaceable_group = "rocket-silo"
+data.raw["rocket-silo"]["rocket-silo"].next_upgrade =  "beaconed-rocket-silo"
