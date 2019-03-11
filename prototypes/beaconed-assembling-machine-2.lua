@@ -150,7 +150,7 @@ data:extend({
           frame_count = 32,
           line_length = 8,
           shift = util.by_pixel(-1, -11),
-          tint = {0.4*0.5 ,0.4*0.5 ,0,0},
+          tint = {0.4*0.75 ,0.35*0.75 ,0,0},
           blend_mode = "additive",
           animation_speed = beaconed_assembling_machine_2_animation_speed,
           hr_version = {
@@ -161,7 +161,7 @@ data:extend({
             frame_count = 32,
             line_length = 8,
             shift = util.by_pixel(-0.5, -11),
-            tint = {0.4*0.5 ,0.4*0.5 ,0,0},
+            tint = {0.4*0.75 ,0.35*0.75 ,0,0},
             blend_mode = "additive",
             animation_speed = beaconed_assembling_machine_2_animation_speed,
             scale = 0.5
