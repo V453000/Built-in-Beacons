@@ -89,7 +89,7 @@ data:extend({
         height = 512,
         frame_count = 1,
         shift = util.by_pixel(0, 0),
-        tint = {0.6,0.7,0,0},
+        tint = {0.6*0.8, 0.75*0.8, 0, 0},
         blend_mode = "additive",
         hr_version =
         {
@@ -98,7 +98,7 @@ data:extend({
           height = 1024,
           frame_count = 1,
           shift = util.by_pixel(0, 0),
-          tint = {0.6,0.75,0,0},
+          tint = {0.6*0.8, 0.75*0.8, 0, 0},
           blend_mode = "additive",
           scale = 0.5
         }
