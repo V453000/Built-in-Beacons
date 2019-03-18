@@ -51,7 +51,7 @@ data:extend({
     },
     fixed_recipe = "rocket-part",
     show_recipe_icon = false,
-    allowed_effects = {"productivity"},
+    allowed_effects = {"productivity", "pollution"},
     minable = {mining_time = 1, result = "beaconed-rocket-silo-3"},
     max_health = 5000,
     corpse = "big-remnants",

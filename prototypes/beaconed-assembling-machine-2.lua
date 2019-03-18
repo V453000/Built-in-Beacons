@@ -201,7 +201,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_second_per_watt = 2 / 375000 * 1.28,
+      emissions_per_second_per_watt = 2 / 375000,
       drain = "3367kW"
     },
     energy_usage = "3975kW",
@@ -211,6 +211,6 @@ data:extend({
       module_info_max_icons_per_row = 1,
       module_info_max_icon_rows = 1,
     },
-    allowed_effects = {"productivity"}
+    allowed_effects = {"productivity", "pollution"}
   },
 })

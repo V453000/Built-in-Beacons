@@ -51,7 +51,7 @@ data:extend({
       module_info_max_icons_per_row = 1,
       module_info_max_icon_rows = 1,
     },
-    allowed_effects = {"productivity"},
+    allowed_effects = {"productivity", "pollution"},
     fast_replaceable_group = "chemical-plant",
     animation = make_4way_animation_from_spritesheet({ layers =
     {
@@ -225,7 +225,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_second_per_watt = 4 / 210000 * 1.3,
+      emissions_per_second_per_watt = 4 / 210000,
       drain = "3367kW"
     },
     energy_usage = "2478kW",

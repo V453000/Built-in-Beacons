@@ -52,7 +52,7 @@ data:extend({
       module_info_max_icon_rows = 1,
     },
     scale_entity_info_icon = true,
-    allowed_effects = {"productivity"},
+    allowed_effects = {"productivity", "pollution"},
     crafting_categories = {"oil-processing"},
     crafting_speed = 8.55,
     has_backer_name = true,
@@ -60,7 +60,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_second_per_watt = 6 / 420000 * 1.3,
+      emissions_per_second_per_watt = 6 / 420000,
       drain = "4814kW"
     },
     energy_usage = "6132kW",

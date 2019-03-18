@@ -57,7 +57,8 @@ data:extend({
     stack_size = 100,
     effect =
     {
-      productivity = {bonus = 0.02}
+      productivity = {bonus = 0.02},
+      pollution = {bonus = 0.03}
     },
     limitation = productivity_module_limitation(),
     limitation_message_key = "production-module-usable-only-on-intermediates"
@@ -75,7 +76,8 @@ data:extend({
     stack_size = 100,
     effect =
     {
-      productivity = {bonus = 0.03}
+      productivity = {bonus = 0.03},
+      pollution = {bonus = 0.04}
     },
     limitation = productivity_module_limitation(),
     limitation_message_key = "production-module-usable-only-on-intermediates"
@@ -93,7 +95,8 @@ data:extend({
     stack_size = 100,
     effect =
     {
-      productivity = {bonus = 0.05}
+      productivity = {bonus = 0.05},
+      pollution = {bonus = 0.05}
     },
     limitation = productivity_module_limitation(),
     limitation_message_key = "production-module-usable-only-on-intermediates"

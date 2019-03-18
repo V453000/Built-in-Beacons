@@ -202,7 +202,7 @@ data:extend({
       "utility-science-pack",
       "space-science-pack"
     },
-    allowed_effects = {"productivity"},
+    allowed_effects = {"productivity", "pollution"},
     module_specification =
     {
       module_slots = 4,

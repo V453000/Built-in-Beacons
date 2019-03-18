@@ -75,7 +75,7 @@ data:extend({
       module_info_max_icons_per_row = 1,
       module_info_max_icon_rows = 1,
     },
-    allowed_effects = {"productivity"},
+    allowed_effects = {"productivity", "pollution"},
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",

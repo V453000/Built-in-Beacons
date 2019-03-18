@@ -59,7 +59,7 @@ data:extend({
       module_info_max_icon_rows = 1,
       module_info_icon_shift = {0, 0.8}
     },
-    allowed_effects = {"productivity"},
+    allowed_effects = {"productivity", "pollution"},
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
     crafting_speed = 8.6,
@@ -69,7 +69,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_second_per_watt = 1 / 180000 * 1.14,
+      emissions_per_second_per_watt = 1 / 180000,
       drain = "3366kW"
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
