@@ -169,6 +169,10 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "maxspeed-beaconed-assembling-machine-3"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "beaconed-electric-furnace-3"
       },
       {
@@ -237,6 +241,12 @@ data:extend({
     name = "absorbed-beacons-3",
     group = "production",
     order = "w"
+  },
+  {
+    type = "item-subgroup",
+    name = "absorbed-beacons-4",
+    group = "production",
+    order = "x"
   }
 })
 require ("prototypes.beaconedassemblerpipes")
@@ -268,6 +278,7 @@ require ("prototypes.beaconed-pumpjack")
 require ("prototypes.beaconed-pumpjack-2")
 require ("prototypes.beaconed-pumpjack-3")
 require ("prototypes.fullspeed-productivity-module")
+require ("prototypes.maxspeed-beaconed-assembling-machine-3")
 
 data.raw["assembling-machine"]["assembling-machine-3"].fast_replaceable_group = "assembling-machine"
 data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade =  "beaconed-assembling-machine"
