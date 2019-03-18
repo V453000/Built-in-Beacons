@@ -17,10 +17,10 @@ Features:
 - Beaconed machines cannot be influenced by other effects than productivity - so vanilla modules cannot be put in them.
 
 Other notes:
+- Mining drills and pumpjacks assume you are putting speed modules in them.
 - Vanilla machines only get values to quick replace correctly to the versions from the mod, which will make their info gui say they are modded.
 
 TODO:
-- apply new pollution values
 - better graphics
 - graphics for miner, centrifuge, rocket silo, chemical plant
 - graphics and animation speeds controllable by mod settings - possibility to look like vanilla and animate as fast as vanilla
