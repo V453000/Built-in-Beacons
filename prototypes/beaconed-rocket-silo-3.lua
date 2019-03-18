@@ -15,7 +15,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-rocket-silo-3", amount = 1},
       {type = "item", name = "speed-module-2", amount = 40}
-    }
+    },
+    allow_as_intermediate = false
   }
 })
 data:extend({
@@ -44,8 +45,8 @@ data:extend({
     module_specification =
     {
       module_slots = 8,
-      max_entity_info_module_icons_per_row = 1,
-      max_entity_info_module_icon_rows = 1,
+      module_info_max_icons_per_row = 1,
+      module_info_max_icon_rows = 1,
       module_info_icon_shift = {0, 4.3}
     },
     fixed_recipe = "rocket-part",

@@ -15,7 +15,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-oil-refinery-2", amount = 1},
       {type = "item", name = "speed-module", amount = 20}
-    }
+    },
+    allow_as_intermediate = false
   }
 })
 data:extend({
@@ -47,8 +48,8 @@ data:extend({
     module_specification =
     {
       module_slots = 6,
-      max_entity_info_module_icons_per_row = 1,
-      max_entity_info_module_icon_rows = 1,
+      module_info_max_icons_per_row = 1,
+      module_info_max_icon_rows = 1,
     },
     scale_entity_info_icon = true,
     allowed_effects = {"productivity"},

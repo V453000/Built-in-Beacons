@@ -15,7 +15,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-pumpjack-3", amount = 1},
       {type = "item", name = "speed-module-2", amount = 2}
-    }
+    },
+    allow_as_intermediate = false
   }
 })
 data:extend({
@@ -71,8 +72,8 @@ data:extend({
     module_specification =
     {
       module_slots = 1,
-      max_entity_info_module_icons_per_row = 1,
-      max_entity_info_module_icon_rows = 1,
+      module_info_max_icons_per_row = 1,
+      module_info_max_icon_rows = 1,
     },
     allowed_effects = {"productivity"},
     radius_visualisation_picture =

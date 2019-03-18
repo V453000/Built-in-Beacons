@@ -15,7 +15,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-lab-3", amount = 1},
       {type = "item", name = "speed-module-2", amount = 14}
-    }
+    },
+    allow_as_intermediate = false
   }
 })
 data:extend({
@@ -205,8 +206,8 @@ data:extend({
     module_specification =
     {
       module_slots = 4,
-      max_entity_info_module_icons_per_row = 1,
-      max_entity_info_module_icon_rows = 1,
+      module_info_max_icons_per_row = 1,
+      module_info_max_icon_rows = 1,
       module_info_icon_shift = {0, 0.9}
     }
   },
