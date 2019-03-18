@@ -204,7 +204,7 @@ data:extend({
       emissions = 0.011,
       drain = "3367kW"
     },
-    energy_usage = "2226kW",
+    energy_usage = "3975kW",
     module_specification =
     {
       module_slots = 8,
