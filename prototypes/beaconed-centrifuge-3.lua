@@ -318,7 +318,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.0192,
+      emissions_per_second_per_watt = 4 / 350000 * 1.2,
       drain = "3372kW"
     },
     energy_usage = "3850kW",

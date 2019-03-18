@@ -69,7 +69,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.0057,
+      emissions_per_second_per_watt = 1 / 180000 * 1.14,
       drain = "3366kW"
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
