@@ -27,4 +27,5 @@ TODO:
 
 Technical limitations:
 - to simulate all configurations of mixed speed+productivity modules, many machines would have to be added which is probably not worth it
-- if module precision was possible to be more detailed than integer numbers, Maxspeed beaconed machines could be simulated differently, and without adding extra entities for them (currently only Fullspeed beaconed assembling machine)
+- if better than integer numbers of % module precision was possible, Maxspeed beaconed machines could be simulated differently, and without adding extra entities for them (currently only Fullspeed beaconed assembling machine)
+- if better than integer numbers of % module precision was possible, Fullspeed productivity module 1 and 2 would have their Pollution increase 0.5% lower.
