@@ -16,7 +16,8 @@ data:extend({
       {type = "item", name = "beaconed-centrifuge-2", amount = 1},
       {type = "item", name = "speed-module", amount = 14}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    main_product = "beaconed-centrifuge-2"
   }
 })
 data:extend({

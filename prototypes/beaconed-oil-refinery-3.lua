@@ -16,7 +16,8 @@ data:extend({
       {type = "item", name = "beaconed-oil-refinery-3", amount = 1},
       {type = "item", name = "speed-module-2", amount = 20}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    main_product = "beaconed-oil-refinery-3"
   }
 })
 data:extend({

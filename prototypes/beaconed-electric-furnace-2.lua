@@ -16,7 +16,8 @@ data:extend({
       {type = "item", name = "beaconed-electric-furnace-2", amount = 1},
       {type = "item", name = "speed-module", amount = 14}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    main_product = "beaconed-electric-furnace-2"
   }
 })
 data:extend({

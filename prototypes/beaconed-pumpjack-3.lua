@@ -16,7 +16,8 @@ data:extend({
       {type = "item", name = "beaconed-pumpjack-3", amount = 1},
       {type = "item", name = "speed-module-2", amount = 2}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    main_product = "beaconed-pumpjack-3"
   }
 })
 data:extend({

@@ -16,7 +16,8 @@ data:extend({
       {type = "item", name = "beaconed-rocket-silo-3", amount = 1},
       {type = "item", name = "speed-module-2", amount = 40}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    main_product = "beaconed-rocket-silo-3"
   }
 })
 data:extend({

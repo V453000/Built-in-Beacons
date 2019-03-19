@@ -16,7 +16,8 @@ data:extend({
       {type = "item", name = "beaconed-chemical-plant-2", amount = 1},
       {type = "item", name = "speed-module", amount = 14}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    main_product = "beaconed-chemical-plant-2"
   }
 })
 data:extend({
