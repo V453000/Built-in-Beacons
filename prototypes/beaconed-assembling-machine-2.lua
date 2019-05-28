@@ -40,7 +40,7 @@ data:extend({
     icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine-2.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "assembling-machine-2"},
+    minable = {mining_time = 0.2, result = "beaconed-assembling-machine-2"},
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
