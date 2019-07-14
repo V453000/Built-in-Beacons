@@ -22,6 +22,18 @@ data:extend({
 })
 data:extend({
   {
+    type = "item",
+    name = "beaconed-centrifuge-3",
+    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-centrifuge-3.png",
+    icon_size = 32,
+    subgroup = "absorbed-beacons-3",
+    order = "g[centrifuge]",
+    place_result = "beaconed-centrifuge-3",
+    stack_size = 50
+  },
+})
+data:extend({
+  {
     type = "recipe",
     name = "beaconed-centrifuge-3",
     enabled = false,
@@ -41,16 +53,4 @@ data:extend({
     allow_as_intermediate = false,
     main_product = "beaconed-centrifuge-3"
   }
-})
-data:extend({
-  {
-    type = "item",
-    name = "beaconed-centrifuge-3",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-centrifuge-3.png",
-    icon_size = 32,
-    subgroup = "absorbed-beacons-3",
-    order = "g[centrifuge]",
-    place_result = "beaconed-centrifuge-3",
-    stack_size = 50
-  },
 })
