@@ -8,13 +8,7 @@ maxspeed_beaconed_assembling_machine_3.energy_source.drain = "3367kW"
 maxspeed_beaconed_assembling_machine_3.energy_usage = "4575kW"
 maxspeed_beaconed_assembling_machine_3.allowed_effects = {"pollution"}
 
-maxspeed_beaconed_assembling_machine_3.module_specification.module_slots = data.raw["assembling-machine"]["assembling-machine-3"].module_specification.module_slots * 2
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  maxspeed_beaconed_assembling_machine_3.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  maxspeed_beaconed_assembling_machine_3.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
-end
+maxspeed_beaconed_assembling_machine_3.module_specification.module_slots = 0
 
 if settings.startup["modded-entity-graphics"].value == true then
 maxspeed_beaconed_assembling_machine_3.animation =
