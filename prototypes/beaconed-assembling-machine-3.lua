@@ -16,33 +16,8 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_assembling_machine_3.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-if settings.startup["modded-entity-graphics"].value == true then
-beaconed_assembling_machine_3.animation =
-{
-  layers =
-  {
-    {
-      filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
-      priority = "high",
-      width = 108,
-      height = 119,
-      frame_count = 32,
-      line_length = 8,
-      shift = util.by_pixel(0, -0.5),
-      animation_speed = beaconed_assembling_machine_3_animation_speed,
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3.png",
-        priority = "high",
-        width = 214,
-        height = 237,
-        frame_count = 32,
-        line_length = 8,
-        shift = util.by_pixel(0, -0.75),
-        animation_speed = beaconed_assembling_machine_3_animation_speed,
-        scale = 0.5
-      }
-    },
+if settings.startup["modded-entity-graphics"].value == "ON" then
+  table.insert(beaconed_assembling_machine_3.animation.layers,
     {
       filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/beaconed-assembling-machine-3-overlay.png",
       width = 107,
@@ -62,7 +37,8 @@ beaconed_assembling_machine_3.animation =
         animation_speed = beaconed_assembling_machine_3_animation_speed,
         scale = 0.5
       }
-    },
+    })
+  table.insert(beaconed_assembling_machine_3.animation.layers,
     {
       filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/assembling-machine-3-mask.png",
       width = 78,
@@ -86,33 +62,16 @@ beaconed_assembling_machine_3.animation =
         animation_speed = beaconed_assembling_machine_3_animation_speed,
         scale = 0.5
       }
-    },
-    {
-      filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow.png",
-      priority = "high",
-      width = 130,
-      height = 82,
-      frame_count = 32,
-      line_length = 8,
-      draw_as_shadow = true,
-      shift = util.by_pixel(28, 4),
-      animation_speed = beaconed_assembling_machine_3_animation_speed,
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3-shadow.png",
-        priority = "high",
-        width = 260,
-        height = 162,
-        frame_count = 32,
-        line_length = 8,
-        draw_as_shadow = true,
-        shift = util.by_pixel(28, 4),
-        animation_speed = beaconed_assembling_machine_3_animation_speed,
-        scale = 0.5
-      }
-    }
-  }
-}
+    })
+end
+
+if settings.startup["modded-entity-graphics"].value ~= "OFF" then
+  for i,layer in pairs(beaconed_assembling_machine_3.animation.layers) do
+    layer.animation_speed = beaconed_assembling_machine_3_animation_speed
+    if (layer.hr_version) then
+      layer.hr_version.animation_speed = beaconed_assembling_machine_3_animation_speed
+    end
+  end
 end
 
 data:extend({
