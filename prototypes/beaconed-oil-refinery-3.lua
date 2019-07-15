@@ -17,64 +17,59 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_oil_refinery_3.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-if settings.startup["modded-entity-graphics"].value == true then
-  beaconed_oil_refinery_3.animation = make_4way_animation_from_spritesheet({ layers =
-  {
+if settings.startup["modded-entity-graphics"].value == "ON" then
+  local merge_layers = function (dest, src)
+    for key, tab in pairs(dest) do
+      if (tab.layers) then
+        for i, layer in pairs(src[key].layers) do
+          table.insert(tab.layers, layer)
+        end
+      end
+    end
+  end
+  merge_layers(beaconed_oil_refinery_3.animation, make_4way_animation_from_spritesheet(
     {
-      filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
-      width = 337,
-      height = 255,
-      frame_count = 1,
-      shift = {2.515625, 0.484375},
-      hr_version =
+      layers =
       {
-        filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery.png",
-        width = 386,
-        height = 430,
-        frame_count = 1,
-        shift = util.by_pixel(0, -7.5),
-        scale = 0.5
-      }
-    },
-    {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
-      width = 512,
-      height = 512,
-      frame_count = 1,
-      shift = util.by_pixel(0, 0),
-      tint = {0.6*0.8, 0.75*0.8, 0, 0},
-      blend_mode = "additive",
-      hr_version =
-      {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
-        width = 1024,
-        height = 1024,
-        frame_count = 1,
-        shift = util.by_pixel(0, 0),
-        tint = {0.6*0.8, 0.75*0.8, 0, 0},
-        blend_mode = "additive",
-        scale = 0.5
-      }
-    },
-    {
-      filename = "__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png",
-      width = 337,
-      height = 213,
-      frame_count = 1,
-      shift = util.by_pixel(82.5, 26.5),
-      draw_as_shadow = true,
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-shadow.png",
-        width = 674,
-        height = 426,
-        frame_count = 1,
-        shift = util.by_pixel(82.5, 26.5),
-        draw_as_shadow = true,
-        scale = 0.5
+        {
+          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
+          width = 512,
+          height = 512,
+          frame_count = 1,
+          shift = util.by_pixel(0, 0),
+          tint = {0.6*0.8, 0.75*0.8, 0, 0},
+          blend_mode = "additive",
+          hr_version =
+          {
+            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
+            width = 1024,
+            height = 1024,
+            frame_count = 1,
+            shift = util.by_pixel(0, 0),
+            tint = {0.6*0.8, 0.75*0.8, 0, 0},
+            blend_mode = "additive",
+            scale = 0.5
+          }
+        }
       }
     }
-  }})
+  )
+)
+end
+
+if settings.startup["modded-entity-graphics"].value ~= "OFF" then
+  local set_animation_speed = function(anim)
+    if anim then
+      anim.animation_speed = beaconed_oil_refinery_3_animation_speed
+      if (anim.hr_version) then
+        anim.hr_version.animation_speed = beaconed_oil_refinery_3_animation_speed
+      end
+    end 
+  end
+
+  for i,layer in pairs(beaconed_oil_refinery_3.working_visualisations) do
+    set_animation_speed(layer.animation)
+  end
 end
 
 data:extend({
