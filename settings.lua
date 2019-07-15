@@ -1,11 +1,12 @@
 data:extend
 {
   {
-    type = "bool-setting",
+    type = "string-setting",
     name = "modded-entity-graphics",
     setting_type = "startup",
-    default_value = true,
-    order = "b-a"
+    default_value = "ON",
+    allowed_values = {"ON", "Animation speed only", "OFF"},
+    order = "a"
   },
   {
     type = "int-setting",
@@ -13,7 +14,7 @@ data:extend
     setting_type = "startup",
     default_value = 0,
     minimum_value = 0,
-    order = "b-a"
+    order = "c"
   },
   {
     type = "int-setting",
@@ -21,6 +22,6 @@ data:extend
     setting_type = "startup",
     default_value = 2,
     minimum_value = 0,
-    order = "b-a"
+    order = "d"
   },
 }
