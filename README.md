@@ -1,4 +1,4 @@
-# Absorbed-Beacons
+# Built-in Beacons
 A Factorio mod. Makes crafting machines act as if they were fully beaconed.
 
 Simulates what would Factorio look like if machines had built-in beacons.
