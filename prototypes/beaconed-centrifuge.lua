@@ -1,6 +1,6 @@
 beaconed_centrifuge = util.table.deepcopy(data.raw["assembling-machine"]["centrifuge"])
 beaconed_centrifuge.name = "beaconed-centrifuge"
-beaconed_centrifuge.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-centrifuge.png"
+beaconed_centrifuge.icon = "__Built-in-Beacons__/graphics/icons/beaconed-centrifuge.png"
 beaconed_centrifuge.minable.result = "beaconed-centrifuge"
 beaconed_centrifuge.next_upgrade = "beaconed-centrifuge-2"
 beaconed_centrifuge.crafting_speed = 3.1
@@ -40,9 +40,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-centrifuge",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-centrifuge.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-centrifuge.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "g[centrifuge]",
     place_result = "beaconed-centrifuge",
     stack_size = 50
@@ -53,9 +53,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-centrifuge",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-centrifuge.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-centrifuge.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "g",
     ingredients =
     {

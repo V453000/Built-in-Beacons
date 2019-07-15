@@ -1,6 +1,6 @@
 beaconed_rocket_silo_2 = util.table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
 beaconed_rocket_silo_2.name = "beaconed-rocket-silo-2"
-beaconed_rocket_silo_2.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-rocket-silo-2.png"
+beaconed_rocket_silo_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-rocket-silo-2.png"
 beaconed_rocket_silo_2.minable.result = "beaconed-rocket-silo-2"
 beaconed_rocket_silo_2.next_upgrade = "beaconed-rocket-silo-3"
 beaconed_rocket_silo_2.crafting_speed = 6.4
@@ -26,9 +26,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-rocket-silo-2",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-rocket-silo-2.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-rocket-silo-2.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-2",
+    subgroup = "built-in-beacons-2",
     order = "e[rocket-silo]",
     place_result = "beaconed-rocket-silo-2",
     stack_size = 1
@@ -39,9 +39,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-rocket-silo-2",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-rocket-silo-2.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-rocket-silo-2.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-2",
+    subgroup = "built-in-beacons-2",
     order = "i",
     ingredients =
     {

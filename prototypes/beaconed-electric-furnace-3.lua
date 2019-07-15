@@ -1,6 +1,6 @@
 beaconed_electric_furnace_3 = util.table.deepcopy(data.raw["furnace"]["electric-furnace"])
 beaconed_electric_furnace_3.name = "beaconed-electric-furnace-3"
-beaconed_electric_furnace_3.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-electric-furnace-3.png"
+beaconed_electric_furnace_3.icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-furnace-3.png"
 beaconed_electric_furnace_3.minable.result = "beaconed-electric-furnace-3"
 beaconed_electric_furnace_3.crafting_speed = 13.4
 beaconed_electric_furnace_3.energy_source.emissions_per_second_per_watt = 1 / 180000
@@ -22,7 +22,7 @@ beaconed_electric_furnace_3.animation =
   layers =
   {
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-electric-furnace-3/beaconed-electric-furnace-3-base.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace-3/beaconed-electric-furnace-3-base.png",
       priority = "high",
       width = 129,
       height = 100,
@@ -30,7 +30,7 @@ beaconed_electric_furnace_3.animation =
       shift = {0.421875, 0},
       hr_version =
       {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-electric-furnace-3/hr-beaconed-electric-furnace-3-base.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace-3/hr-beaconed-electric-furnace-3-base.png",
         priority = "high",
         width = 239,
         height = 219,
@@ -84,9 +84,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-electric-furnace-3",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-electric-furnace-3.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-furnace-3.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-3",
+    subgroup = "built-in-beacons-3",
     order = "b",
     place_result = "beaconed-electric-furnace-3",
     stack_size = 50
@@ -97,9 +97,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-electric-furnace-3",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-electric-furnace-3.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-furnace-3.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-3",
+    subgroup = "built-in-beacons-3",
     order = "b",
     ingredients =
     {

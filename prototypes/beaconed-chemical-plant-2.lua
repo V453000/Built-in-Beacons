@@ -1,6 +1,6 @@
 beaconed_chemical_plant_2 = util.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"])
 beaconed_chemical_plant_2.name = "beaconed-chemical-plant-2"
-beaconed_chemical_plant_2.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-chemical-plant-2.png"
+beaconed_chemical_plant_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-chemical-plant-2.png"
 beaconed_chemical_plant_2.minable.result = "beaconed-chemical-plant-2"
 beaconed_chemical_plant_2.next_upgrade = "beaconed-chemical-plant-3"
 beaconed_chemical_plant_2.crafting_speed = 4.15
@@ -45,9 +45,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-chemical-plant-2",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-chemical-plant-2.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-chemical-plant-2.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-2",
+    subgroup = "built-in-beacons-2",
     order = "e[chemical-plant]",
     place_result = "beaconed-chemical-plant-2",
     stack_size = 10
@@ -58,9 +58,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-chemical-plant-2",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-chemical-plant-2.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-chemical-plant-2.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-2",
+    subgroup = "built-in-beacons-2",
     order = "f",
     ingredients =
     {

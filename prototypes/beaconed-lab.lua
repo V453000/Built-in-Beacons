@@ -1,6 +1,6 @@
 beaconed_lab = util.table.deepcopy(data.raw["lab"]["lab"])
 beaconed_lab.name = "beaconed-lab"
-beaconed_lab.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-lab.png"
+beaconed_lab.icon = "__Built-in-Beacons__/graphics/icons/beaconed-lab.png"
 beaconed_lab.minable.result = "beaconed-lab"
 beaconed_lab.next_upgrade = "beaconed-lab-2"
 beaconed_lab.researching_speed = 3.1
@@ -21,7 +21,7 @@ end
 if settings.startup["modded-entity-graphics"].value == "ON" then
   beaconed_lab.on_animation.layers[1] = 
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-lab/lab-purple.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-lab/lab-purple.png",
       width = 98,
       height = 87,
       frame_count = 33,
@@ -30,7 +30,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       shift = util.by_pixel(0, 1.5),
       hr_version =
       {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-lab/hr-lab-purple.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-lab/hr-lab-purple.png",
         width = 194,
         height = 174,
         frame_count = 33,
@@ -58,9 +58,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-lab",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-lab.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-lab.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "g[lab]",
     place_result = "beaconed-lab",
     stack_size = 10
@@ -71,9 +71,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-lab",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-lab.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-lab.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "h",
     ingredients =
     {

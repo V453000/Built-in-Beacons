@@ -1,6 +1,6 @@
 beaconed_oil_refinery_2 = util.table.deepcopy(data.raw["assembling-machine"]["oil-refinery"])
 beaconed_oil_refinery_2.name = "beaconed-oil-refinery-2"
-beaconed_oil_refinery_2.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-oil-refinery-2.png"
+beaconed_oil_refinery_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-oil-refinery-2.png"
 beaconed_oil_refinery_2.minable.result = "beaconed-oil-refinery-2"
 beaconed_oil_refinery_2.next_upgrade = "beaconed-oil-refinery-3"
 beaconed_oil_refinery_2.crafting_speed = 5.35
@@ -33,7 +33,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       layers =
       {
         {
-          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
+          filename = "__Built-in-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
           width = 512,
           height = 512,
           frame_count = 1,
@@ -41,7 +41,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
           tint = {0.4,0.4,0,0},
           hr_version =
           {
-            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
+            filename = "__Built-in-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
             width = 1024,
             height = 1024,
             frame_count = 1,
@@ -78,9 +78,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-oil-refinery-2",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-oil-refinery-2.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-oil-refinery-2.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-2",
+    subgroup = "built-in-beacons-2",
     order = "d[refinery]",
     place_result = "beaconed-oil-refinery-2",
     stack_size = 10
@@ -91,9 +91,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-oil-refinery-2",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-oil-refinery-2.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-oil-refinery-2.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons-2",
+    subgroup = "built-in-beacons-2",
     order = "e",
     ingredients =
     {

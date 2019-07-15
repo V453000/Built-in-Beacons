@@ -28,7 +28,7 @@ data:extend({
     type = "technology",
     name = "fullspeed-productivity-module",
     icon_size = 128,
-    icon = "__Absorbed-Beacons__/graphics/technology/fullspeed-productivity-module.png",
+    icon = "__Built-in-Beacons__/graphics/technology/fullspeed-productivity-module.png",
     effects =
     {
       {
@@ -92,7 +92,7 @@ data:extend({
     type = "technology",
     name = "fullspeed-productivity-module-2",
     icon_size = 128,
-    icon = "__Absorbed-Beacons__/graphics/technology/fullspeed-productivity-module-2.png",
+    icon = "__Built-in-Beacons__/graphics/technology/fullspeed-productivity-module-2.png",
     effects =
     {
       {
@@ -156,7 +156,7 @@ data:extend({
     type = "technology",
     name = "fullspeed-productivity-module-3",
     icon_size = 128,
-    icon = "__Absorbed-Beacons__/graphics/technology/fullspeed-productivity-module-3.png",
+    icon = "__Built-in-Beacons__/graphics/technology/fullspeed-productivity-module-3.png",
     effects =
     {
       {
@@ -226,25 +226,25 @@ data:extend({
 data:extend({
   {
     type = "item-subgroup",
-    name = "absorbed-beacons",
+    name = "built-in-beacons",
     group = "production",
     order = "u"
   },
   {
     type = "item-subgroup",
-    name = "absorbed-beacons-2",
+    name = "built-in-beacons-2",
     group = "production",
     order = "v"
   },
   {
     type = "item-subgroup",
-    name = "absorbed-beacons-3",
+    name = "built-in-beacons-3",
     group = "production",
     order = "w"
   },
   {
     type = "item-subgroup",
-    name = "absorbed-beacons-4",
+    name = "built-in-beacons-4",
     group = "production",
     order = "x"
   }

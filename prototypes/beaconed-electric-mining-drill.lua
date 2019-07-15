@@ -1,6 +1,6 @@
 beaconed_electric_mining_drill = util.table.deepcopy(data.raw["mining-drill"]["electric-mining-drill"])
 beaconed_electric_mining_drill.name = "beaconed-electric-mining-drill"
-beaconed_electric_mining_drill.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-electric-mining-drill.png"
+beaconed_electric_mining_drill.icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-mining-drill.png"
 beaconed_electric_mining_drill.minable.result = "beaconed-electric-mining-drill"
 beaconed_electric_mining_drill.next_upgrade = "beaconed-electric-mining-drill-2"
 beaconed_electric_mining_drill.mining_speed = 1.2
@@ -25,9 +25,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-electric-mining-drill",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-electric-mining-drill.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-mining-drill.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "a[items]-b[electric-mining-drill]",
     place_result = "beaconed-electric-mining-drill",
     stack_size = 50
@@ -38,9 +38,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-electric-mining-drill",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-electric-mining-drill.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-mining-drill.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "j",
     ingredients =
     {

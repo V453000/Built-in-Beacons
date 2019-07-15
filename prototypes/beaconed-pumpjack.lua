@@ -1,6 +1,6 @@
 beaconed_pumpjack = util.table.deepcopy(data.raw["mining-drill"]["pumpjack"])
 beaconed_pumpjack.name = "beaconed-pumpjack"
-beaconed_pumpjack.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-pumpjack.png"
+beaconed_pumpjack.icon = "__Built-in-Beacons__/graphics/icons/beaconed-pumpjack.png"
 beaconed_pumpjack.minable.result = "beaconed-pumpjack"
 beaconed_pumpjack.next_upgrade = "beaconed-pumpjack-2"
 beaconed_pumpjack.mining_speed = 2.2
@@ -23,7 +23,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_pumpjack.animations.north.layers,
   {
     priority = "high",
-    filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/pumpjack-horsehead-mask.png",
+    filename = "__Built-in-Beacons__/graphics/entity/beaconed-pumpjack/pumpjack-horsehead-mask.png",
     line_length = 8,
     width = 104,
     height = 102,
@@ -35,7 +35,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
     hr_version =
     {
       priority = "high",
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/hr-pumpjack-horsehead-mask.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-pumpjack/hr-pumpjack-horsehead-mask.png",
       animation_speed = beaconed_pumpjack_1_animation_speed,
       scale = 0.5,
       line_length = 8,
@@ -64,9 +64,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-pumpjack",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-pumpjack.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-pumpjack.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "b[fluids]-b[pumpjack]",
     place_result = "beaconed-pumpjack",
     stack_size = 20
@@ -77,9 +77,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-pumpjack",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-pumpjack.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-pumpjack.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "k",
     ingredients =
     {

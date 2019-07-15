@@ -1,6 +1,6 @@
 beaconed_assembling_machine = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"])
 beaconed_assembling_machine.name = "beaconed-assembling-machine"
-beaconed_assembling_machine.icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine.png"
+beaconed_assembling_machine.icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine.png"
 beaconed_assembling_machine.minable.result = "beaconed-assembling-machine"
 beaconed_assembling_machine.next_upgrade = "beaconed-assembling-machine-2"
 beaconed_assembling_machine.crafting_speed = 3.5
@@ -20,7 +20,7 @@ end
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_assembling_machine.animation.layers, 
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-1/beaconed-assembling-machine-1-overlay.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-1/beaconed-assembling-machine-1-overlay.png",
       width = 107,
       height = 109,
       frame_count = 1,
@@ -28,7 +28,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       shift = util.by_pixel(0, 4),
       animation_speed = beaconed_assembling_machine_1_animation_speed,
       hr_version = {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-1/hr-beaconed-assembling-machine-1-overlay.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-1/hr-beaconed-assembling-machine-1-overlay.png",
         priority = "high",
         width = 214,
         height = 218,
@@ -41,7 +41,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
     })
   table.insert(beaconed_assembling_machine.animation.layers, 
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/assembling-machine-3-mask.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/assembling-machine-3-mask.png",
       width = 78,
       height = 96,
       frame_count = 32,
@@ -51,7 +51,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       blend_mode = "additive",
       animation_speed = beaconed_assembling_machine_1_animation_speed,
       hr_version = {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/hr-assembling-machine-3-mask.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/hr-assembling-machine-3-mask.png",
         priority = "high",
         width = 156,
         height = 192,
@@ -82,9 +82,9 @@ data:extend({
   {
     type = "item",
     name = "beaconed-assembling-machine",
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "c[assembling-machine-3]",
     place_result = "beaconed-assembling-machine",
     stack_size = 50
@@ -95,9 +95,9 @@ data:extend({
     type = "recipe",
     name = "beaconed-assembling-machine",
     enabled = false,
-    icon = "__Absorbed-Beacons__/graphics/icons/beaconed-assembling-machine.png",
+    icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine.png",
     icon_size = 32,
-    subgroup = "absorbed-beacons",
+    subgroup = "built-in-beacons",
     order = "c",
     ingredients =
     {

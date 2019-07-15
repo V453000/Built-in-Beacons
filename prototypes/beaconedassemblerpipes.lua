@@ -3,14 +3,14 @@ function beaconedassembler3pipepictures()
   {
     north =
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-N.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-N.png",
       priority = "extra-high",
       width = 35,
       height = 18,
       shift = util.by_pixel(2.5, 14),
       hr_version =
       {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-N.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-N.png",
         priority = "extra-high",
         width = 71,
         height = 38,
@@ -20,14 +20,14 @@ function beaconedassembler3pipepictures()
     },
     east =
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-E.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-E.png",
       priority = "extra-high",
       width = 20,
       height = 38,
       shift = util.by_pixel(-25, 1),
       hr_version =
       {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-E.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-E.png",
         priority = "extra-high",
         width = 42,
         height = 76,
@@ -37,14 +37,14 @@ function beaconedassembler3pipepictures()
     },
     south =
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-S.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-S.png",
       priority = "extra-high",
       width = 44,
       height = 31,
       shift = util.by_pixel(0, -31.5),
       hr_version =
       {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-S.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-S.png",
         priority = "extra-high",
         width = 88,
         height = 61,
@@ -54,14 +54,14 @@ function beaconedassembler3pipepictures()
     },
     west =
     {
-      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-W.png",
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/beaconed-assembling-machine-3-pipe-W.png",
       priority = "extra-high",
       width = 19,
       height = 37,
       shift = util.by_pixel(25.5, 1.5),
       hr_version =
       {
-        filename = "__Absorbed-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-W.png",
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/pipe-connections/hr-beaconed-assembling-machine-3-pipe-W.png",
         priority = "extra-high",
         width = 39,
         height = 73,
