@@ -17,7 +17,7 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_electric_furnace.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-if settings.startup["modded-entity-graphics"].value == true then
+if settings.startup["modded-entity-graphics"].value == "ON" then
 beaconed_electric_furnace.animation =
 {
   layers =
@@ -62,105 +62,20 @@ beaconed_electric_furnace.animation =
     }
   }
 }
-beaconed_electric_furnace.working_visualisations =
-{
-  {
-    animation =
-    {
-      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-      priority = "high",
-      width = 25,
-      height = 15,
-      frame_count = 12,
-      shift = {0.015625, 0.890625},
-      animation_speed = beaconed_electric_furnace_1_animation_speed,
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-        priority = "high",
-        width = 60,
-        height = 56,
-        frame_count = 12,
-        shift = util.by_pixel(1.75, 32.75),
-        animation_speed = beaconed_electric_furnace_1_animation_speed,
-        scale = 0.5
-      }
-    },
-    light = {intensity = 0.55, size = 8, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
-  },
-  {
-    animation =
-    {
-      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-      priority = "high",
-      width = 25,
-      height = 15,
-      frame_count = 12,
-      shift = {0.015625, 0.890625},
-      animation_speed = beaconed_electric_furnace_1_animation_speed,
-      tint = {0.5,0.5,0.5,0},
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-        priority = "high",
-        width = 60,
-        height = 56,
-        frame_count = 12,
-        shift = util.by_pixel(1.75, 32.75),
-        animation_speed = beaconed_electric_furnace_1_animation_speed,
-        tint = {0.5,0.5,0.5,0},
-        scale = 0.5
-      }
-    },
-    --light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
-  },
-  {
-    animation =
-    {
-      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-      priority = "high",
-      width = 19,
-      height = 13,
-      frame_count = 4,
-      shift = {-0.671875, -0.640625},
-      animation_speed = beaconed_electric_furnace_1_animation_speed,
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-        priority = "high",
-        width = 37,
-        height = 25,
-        frame_count = 4,
-        shift = util.by_pixel(-20.5, -18.5),
-        animation_speed = beaconed_electric_furnace_1_animation_speed,
-        scale = 0.5
-      }
-    }
-  },
-  {
-    animation =
-    {
-      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
-      priority = "high",
-      width = 12,
-      height = 9,
-      frame_count = 4,
-      shift = {0.0625, -1.234375},
-      animation_speed = beaconed_electric_furnace_1_animation_speed,
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
-        priority = "high",
-        width = 23,
-        height = 15,
-        frame_count = 4,
-        shift = util.by_pixel(3.5, -38),
-        animation_speed = beaconed_electric_furnace_1_animation_speed,
-        scale = 0.5
-      }
-    }
-  }
-}
+end
+
+if settings.startup["modded-entity-graphics"].value ~= "OFF" then
+  local set_animation_speed = function(anim)
+    if anim then
+      anim.animation_speed = beaconed_electric_furnace_1_animation_speed
+      if (anim.hr_version) then
+        anim.hr_version.animation_speed = beaconed_electric_furnace_1_animation_speed
+      end
+    end 
+  end
+  for i,layer in pairs(beaconed_electric_furnace.working_visualisations) do
+    set_animation_speed(layer.animation)
+  end
 end
 
 data:extend({
