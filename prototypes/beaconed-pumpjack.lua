@@ -19,87 +19,42 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_pumpjack.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-if settings.startup["modded-entity-graphics"].value == true then
-  beaconed_pumpjack.animations =
+if settings.startup["modded-entity-graphics"].value == "ON" then
+  table.insert(beaconed_pumpjack.animations.north.layers,
   {
-    north =
+    priority = "high",
+    filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/pumpjack-horsehead-mask.png",
+    line_length = 8,
+    width = 104,
+    height = 102,
+    frame_count = 40,
+    shift = util.by_pixel(-4, -24),
+    --blend_mode = "additive",
+    tint = {0.4*0.9, 0.2*0.9, 0, 0},
+    animation_speed = beaconed_pumpjack_1_animation_speed,
+    hr_version =
     {
-      layers =
-      {
-        {
-          priority = "high",
-          filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-          line_length = 8,
-          width = 104,
-          height = 102,
-          frame_count = 40,
-          shift = util.by_pixel(-4, -24),
-          animation_speed = beaconed_pumpjack_1_animation_speed,
-          hr_version =
-          {
-            priority = "high",
-            filename = "__base__/graphics/entity/pumpjack/hr-pumpjack-horsehead.png",
-            animation_speed = beaconed_pumpjack_1_animation_speed,
-            scale = 0.5,
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          }
-        },
-        {
-          priority = "high",
-          filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/pumpjack-horsehead-mask.png",
-          line_length = 8,
-          width = 104,
-          height = 102,
-          frame_count = 40,
-          shift = util.by_pixel(-4, -24),
-          --blend_mode = "additive",
-          tint = {0.4*0.9, 0.2*0.9, 0, 0},
-          animation_speed = beaconed_pumpjack_3_animation_speed,
-          hr_version =
-          {
-            priority = "high",
-            filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/hr-pumpjack-horsehead-mask.png",
-            animation_speed = beaconed_pumpjack_3_animation_speed,
-            scale = 0.5,
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24),
-            tint = {0.4*0.9, 0.2*0.9, 0, 0},
-          }
-        },
-        {
-          priority = "high",
-          filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-          animation_speed = beaconed_pumpjack_1_animation_speed,
-          draw_as_shadow = true,
-          line_length = 8,
-          width = 155,
-          height = 41,
-          frame_count = 40,
-          shift = util.by_pixel(17.5, 14.5),
-          hr_version =
-          {
-            priority = "high",
-            filename = "__base__/graphics/entity/pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = beaconed_pumpjack_1_animation_speed,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
-          }
-        }
-      }
+      priority = "high",
+      filename = "__Absorbed-Beacons__/graphics/entity/beaconed-pumpjack/hr-pumpjack-horsehead-mask.png",
+      animation_speed = beaconed_pumpjack_1_animation_speed,
+      scale = 0.5,
+      line_length = 8,
+      width = 206,
+      height = 202,
+      frame_count = 40,
+      shift = util.by_pixel(-4, -24),
+      tint = {0.4*0.9, 0.2*0.9, 0, 0},
     }
-  }
+  })
+end
+
+if settings.startup["modded-entity-graphics"].value ~= "OFF" then
+  for i,layer in pairs(beaconed_pumpjack.animations.north.layers) do
+    layer.animation_speed = beaconed_pumpjack_1_animation_speed
+    if (layer.hr_version) then
+      layer.hr_version.animation_speed = beaconed_pumpjack_1_animation_speed
+    end
+  end
 end
 
 data:extend({
