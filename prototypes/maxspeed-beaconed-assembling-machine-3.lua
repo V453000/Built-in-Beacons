@@ -94,8 +94,9 @@ data:extend({
     order = "c",
     ingredients =
     {
-      {"beaconed-assembling-machine-3", 1},
-      {"speed-module-3", 4}
+      {"assembling-machine-3", 1},
+      {"beacon", 7},
+      {"speed-module-3", 14}
     },
     results = {
       {type = "item", name = "maxspeed-beaconed-assembling-machine-3", amount = 1}
