@@ -96,7 +96,7 @@ data:extend({
     {
       {"assembling-machine-3", 1},
       {"beacon", 7},
-      {"speed-module-3", 14}
+      {"speed-module-3", 18}
     },
     results = {
       {type = "item", name = "maxspeed-beaconed-assembling-machine-3", amount = 1}
