@@ -17,6 +17,7 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_electric_furnace.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
+beaconed_electric_furnace_1_tint = {0.4, 0.2, 0, 0}
 if settings.startup["modded-entity-graphics"].value == "ON" then
 beaconed_electric_furnace.animation =
 {
@@ -41,6 +42,26 @@ beaconed_electric_furnace.animation =
       }
     },
     {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace/beaconed-electric-furnace-overlay.png",
+      priority = "high",
+      width = 101,
+      height = 101,
+      frame_count = 1,
+      shift = util.by_pixel(1, 0),
+      tint = beaconed_electric_furnace_1_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace/hr-beaconed-electric-furnace-overlay.png",
+        priority = "high",
+        width = 201,
+        height = 200,
+        frame_count = 1,
+        shift = util.by_pixel(0.75, 0),
+        tint = beaconed_electric_furnace_1_tint,
+        scale = 0.5
+      }
+    },
+    {
       filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
       priority = "high",
       width = 129,
@@ -57,6 +78,103 @@ beaconed_electric_furnace.animation =
         frame_count = 1,
         draw_as_shadow = true,
         shift = util.by_pixel(11.25, 7.75),
+        scale = 0.5
+      }
+    }
+  }
+}
+
+beaconed_electric_furnace.working_visualisations[2].animation =
+{
+  layers =
+  {
+    {
+      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+      priority = "high",
+      width = 19,
+      height = 13,
+      frame_count = 4,
+      animation_speed = 0.5,
+      shift = {-0.671875, -0.640625},
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+        priority = "high",
+        width = 37,
+        height = 25,
+        frame_count = 4,
+        animation_speed = 0.5,
+        shift = util.by_pixel(-20.5, -18.5),
+        scale = 0.5
+      }
+    },
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace/beaconed-electric-furnace-propeller-1-overlay.png",
+      priority = "high",
+      width = 19,
+      height = 13,
+      frame_count = 4,
+      animation_speed = 0.5,
+      shift = {-0.671875, -0.640625},
+      tint = beaconed_electric_furnace_1_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace/hr-beaconed-electric-furnace-propeller-1-overlay.png",
+        priority = "high",
+        width = 37,
+        height = 25,
+        frame_count = 4,
+        animation_speed = 0.5,
+        shift = util.by_pixel(-20.5, -18.5),
+        tint = beaconed_electric_furnace_1_tint,
+        scale = 0.5
+      }
+    }
+  }
+}
+beaconed_electric_furnace.working_visualisations[3].animation =
+{
+  layers =
+  {
+    {
+      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+      priority = "high",
+      width = 12,
+      height = 9,
+      frame_count = 4,
+      animation_speed = 0.5,
+      shift = {0.0625, -1.234375},
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
+        priority = "high",
+        width = 23,
+        height = 15,
+        frame_count = 4,
+        animation_speed = 0.5,
+        shift = util.by_pixel(3.5, -38),
+        scale = 0.5
+      }
+    },
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace/beaconed-electric-furnace-propeller-2-overlay.png",
+      priority = "high",
+      width = 12,
+      height = 8,
+      frame_count = 4,
+      animation_speed = 0.5,
+      shift = util.by_pixel(3.5, -38.5),
+      tint = beaconed_electric_furnace_1_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-furnace/hr-beaconed-electric-furnace-propeller-2-overlay.png",
+        priority = "high",
+        width = 23,
+        height = 15,
+        frame_count = 4,
+        animation_speed = 0.5,
+        shift = util.by_pixel(3.25, -38.25),
+        tint = beaconed_electric_furnace_1_tint,
         scale = 0.5
       }
     }
