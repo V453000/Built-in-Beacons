@@ -18,6 +18,45 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_chemical_plant_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
+if settings.startup["modded-entity-graphics"].value == "ON" then
+  local merge_layers = function (dest, src)
+    for key, tab in pairs(dest) do
+      if (tab.layers) then
+        for i, layer in pairs(src[key].layers) do
+          table.insert(tab.layers, layer)
+        end
+      end
+    end
+  end
+  merge_layers(beaconed_chemical_plant_2.animation, make_4way_animation_from_spritesheet(
+    {
+      layers =
+      {
+        {
+          filename = "__Built-in-Beacons__/graphics/entity/beaconed-chemical-plant/beaconed-chemical-plant-overlay.png",
+          width = 100,
+          height = 140,
+          frame_count = 24,
+          line_length = 12,
+          shift = util.by_pixel(0, -12),
+          tint = {0.4,0.4,0,0},
+          hr_version =
+          {
+            filename = "__Built-in-Beacons__/graphics/entity/beaconed-chemical-plant/hr-beaconed-chemical-plant-overlay.png",
+            width = 198,
+            height = 280,
+            frame_count = 24,
+            line_length = 12,
+            shift = util.by_pixel(0, -12),
+            tint = {0.4,0.4,0,0},
+            scale = 0.5
+          }
+        }
+      }
+    }
+  )
+)
+end
 
 if settings.startup["modded-entity-graphics"].value ~= "OFF" then
   local set_animation_speed = function(anim)
