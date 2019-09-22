@@ -18,6 +18,86 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_centrifuge_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
+beaconed_centrifuge_2_tint = {0.4, 0.4, 0, 0}
+
+if settings.startup["modded-entity-graphics"].value == "ON" then
+  table.insert(beaconed_centrifuge_2.idle_animation.layers,
+
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/beaconed-centrifuge-A-overlay.png",
+      priority = "high",
+      line_length = 8,
+      width = 56,
+      height = 102,
+      frame_count = 64,
+      shift = util.by_pixel(-24, -1),
+      tint = beaconed_centrifuge_2_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/hr-beaconed-centrifuge-A-overlay.png",
+        priority = "high",
+        scale = 0.5,
+        line_length = 8,
+        width = 111,
+        height = 203,
+        frame_count = 64,
+        shift = util.by_pixel(-23.75, -0.75),
+        tint = beaconed_centrifuge_2_tint
+      }
+    }
+  )
+  table.insert(beaconed_centrifuge_2.idle_animation.layers,
+
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/beaconed-centrifuge-B-overlay.png",
+      priority = "high",
+      line_length = 8,
+      width = 66,
+      height = 105,
+      frame_count = 64,
+      shift = util.by_pixel(17, 0.5),
+      tint = beaconed_centrifuge_2_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/hr-beaconed-centrifuge-B-overlay.png",
+        priority = "high",
+        scale = 0.5,
+        line_length = 8,
+        width = 132,
+        height = 210,
+        frame_count = 64,
+        shift = util.by_pixel(17, 0.5),
+        tint = beaconed_centrifuge_2_tint
+      }
+    }
+  )
+  table.insert(beaconed_centrifuge_2.idle_animation.layers,
+
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/beaconed-centrifuge-C-overlay.png",
+      priority = "high",
+      line_length = 8,
+      width = 96,
+      height = 106,
+      frame_count = 64,
+      shift = util.by_pixel(0, -27),
+      tint = beaconed_centrifuge_2_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/hr-beaconed-centrifuge-C-overlay.png",
+        priority = "high",
+        scale = 0.5,
+        line_length = 8,
+        width = 192,
+        height = 211,
+        frame_count = 64,
+        shift = util.by_pixel(0, -27.25),
+        tint = beaconed_centrifuge_2_tint
+      }
+    }
+  )
+end
+
 if settings.startup["modded-entity-graphics"].value ~= "OFF" then
   for i,layer in pairs(beaconed_centrifuge_2.animation.layers) do
     layer.animation_speed = beaconed_centrifuge_2_animation_speed
