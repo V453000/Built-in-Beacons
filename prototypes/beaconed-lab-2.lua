@@ -11,6 +11,8 @@ beaconed_lab_2.fast_replaceable_group = "lab"
 
 beaconed_lab_2.module_specification.module_slots = data.raw["lab"]["lab"].module_specification.module_slots * 2
 
+beaconed_lab_2_tint = {0.4*0.45, 0.4*0.45, 0, 0}
+
 if settings.startup["show-module-slot-row-length"].value > 0 then
   beaconed_lab_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
 end
@@ -40,6 +42,59 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
         scale = 0.5
       }
     }
+
+    table.insert(beaconed_lab_2.on_animation.layers,
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-lab/beaconed-lab-overlay.png",
+      width = 288,
+      height = 288,
+      frame_count = 1,
+      line_length = 1,
+      repeat_count = 33,
+      animation_speed = 1 / 3,
+      shift = util.by_pixel(0, 8),
+      tint = beaconed_lab_2_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-lab/hr-beaconed-lab-overlay.png",
+        width = 576,
+        height = 576,
+        frame_count = 1,
+        line_length = 1,
+        repeat_count = 33,
+        animation_speed = 1 / 3,
+        shift = util.by_pixel(0, 8),
+        tint = beaconed_lab_2_tint,
+        scale = 0.5
+      }
+    }
+  )
+  table.insert(beaconed_lab_2.off_animation.layers,
+    {
+      filename = "__Built-in-Beacons__/graphics/entity/beaconed-lab/beaconed-lab-overlay.png",
+      width = 288,
+      height = 288,
+      frame_count = 1,
+      line_length = 1,
+      repeat_count = 1,
+      animation_speed = 1 / 3,
+      shift = util.by_pixel(0, 8),
+      tint = beaconed_lab_2_tint,
+      hr_version =
+      {
+        filename = "__Built-in-Beacons__/graphics/entity/beaconed-lab/hr-beaconed-lab-overlay.png",
+        width = 576,
+        height = 576,
+        frame_count = 1,
+        line_length = 1,
+        repeat_count = 1,
+        animation_speed = 1 / 3,
+        shift = util.by_pixel(0, 8),
+        tint = beaconed_lab_2_tint,
+        scale = 0.5
+      }
+    }
+  )
 end
 
 if settings.startup["modded-entity-graphics"].value ~= "OFF" then
