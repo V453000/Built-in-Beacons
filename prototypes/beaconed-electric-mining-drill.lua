@@ -20,7 +20,7 @@ end
 
 beaconed_electric_mining_drill_1_tint = {0.4, 0.2, 0, 0}
 
-if settings.startup["modded-entity-graphics"].value == "X" then
+if settings.startup["modded-entity-graphics"].value == "ON" then
   beaconed_electric_mining_drill.animations = {
     north = {
       layers = {
@@ -31,7 +31,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           width = 98,
           height = 113,
           frame_count = 64,
-          animation_speed = 0.5,
+          animation_speed = beaconed_electric_drill_1_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(0, -8.5),
           run_mode = "forward-then-backward",
@@ -43,7 +43,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             width = 196,
             height = 226,
             frame_count = 64,
-            animation_speed = 0.5,
+            animation_speed = beaconed_electric_drill_1_animation_speed,
             direction_count = 1,
             shift = util.by_pixel(0, -8),
             run_mode = "forward-then-backward",
@@ -59,6 +59,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           shift = util.by_pixel(0, -8),
           animation_speed = beaconed_electric_drill_1_animation_speed,
           tint = beaconed_electric_mining_drill_1_tint,
+          run_mode = "forward-then-backward",
           hr_version = {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-beaconed-electric-mining-drill-N-overlay.png",
             priority = "high",
@@ -68,7 +69,9 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             frame_count = 64,
             shift = util.by_pixel(0, -8),
             animation_speed = beaconed_electric_drill_1_animation_speed,
-            scale = 0.5
+            tint = beaconed_electric_mining_drill_1_tint,
+            scale = 0.5,
+            run_mode = "forward-then-backward",
           }
         }
       }
@@ -82,7 +85,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           width = 105,
           height = 98,
           frame_count = 64,
-          animation_speed = 0.5,
+          animation_speed = beaconed_electric_drill_1_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(3.5, -1),
           run_mode = "forward-then-backward",
@@ -94,7 +97,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             width = 211,
             height = 197,
             frame_count = 64,
-            animation_speed = 0.5,
+            animation_speed = beaconed_electric_drill_1_animation_speed,
             direction_count = 1,
             shift = util.by_pixel(3.75, -1.25),
             run_mode = "forward-then-backward",
@@ -109,6 +112,8 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           frame_count = 64,
           shift = util.by_pixel(4, -1.5),
           animation_speed = beaconed_electric_drill_1_animation_speed,
+          tint = beaconed_electric_mining_drill_1_tint,
+          run_mode = "forward-then-backward",
           hr_version = {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-beaconed-electric-mining-drill-E-overlay.png",
             priority = "high",
@@ -119,6 +124,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             shift = util.by_pixel(3.75, -1.25),
             animation_speed = beaconed_electric_drill_1_animation_speed,
             tint = beaconed_electric_mining_drill_1_tint,
+            run_mode = "forward-then-backward",
             scale = 0.5
           }
         }
@@ -133,7 +139,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           width = 98,
           height = 109,
           frame_count = 64,
-          animation_speed = 0.5,
+          animation_speed = beaconed_electric_drill_1_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(0, -1.5),
           run_mode = "forward-then-backward",
@@ -145,7 +151,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             width = 196,
             height = 219,
             frame_count = 64,
-            animation_speed = 0.5,
+            animation_speed = beaconed_electric_drill_1_animation_speed,
             direction_count = 1,
             shift = util.by_pixel(0, -1.25),
             run_mode = "forward-then-backward",
@@ -160,6 +166,8 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           frame_count = 64,
           shift = util.by_pixel(0, -1),
           animation_speed = beaconed_electric_drill_1_animation_speed,
+          tint = beaconed_electric_mining_drill_1_tint,
+          run_mode = "forward-then-backward",
           hr_version = {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-beaconed-electric-mining-drill-S-overlay.png",
             priority = "high",
@@ -170,6 +178,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             shift = util.by_pixel(0, -1.25),
             animation_speed = beaconed_electric_drill_1_animation_speed,
             tint = beaconed_electric_mining_drill_1_tint,
+            run_mode = "forward-then-backward",
             scale = 0.5
           }
         }
@@ -184,7 +193,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           width = 105,
           height = 98,
           frame_count = 64,
-          animation_speed = 0.5,
+          animation_speed = beaconed_electric_drill_1_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(-3.5, -1),
           run_mode = "forward-then-backward",
@@ -196,7 +205,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             width = 211,
             height = 197,
             frame_count = 64,
-            animation_speed = 0.5,
+            animation_speed = beaconed_electric_drill_1_animation_speed,
             direction_count = 1,
             shift = util.by_pixel(-3.75, -0.75),
             run_mode = "forward-then-backward",
@@ -211,6 +220,8 @@ if settings.startup["modded-entity-graphics"].value == "X" then
           frame_count = 64,
           shift = util.by_pixel(-4, -0.5),
           animation_speed = beaconed_electric_drill_1_animation_speed,
+          tint = beaconed_electric_mining_drill_1_tint,
+          run_mode = "forward-then-backward",
           hr_version = {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-beaconed-electric-mining-drill-W-overlay.png",
             priority = "high",
@@ -221,6 +232,7 @@ if settings.startup["modded-entity-graphics"].value == "X" then
             shift = util.by_pixel(-3.75, -0.75),
             animation_speed = beaconed_electric_drill_1_animation_speed,
             tint = beaconed_electric_mining_drill_1_tint,
+            run_mode = "forward-then-backward",
             scale = 0.5
           }
         }
