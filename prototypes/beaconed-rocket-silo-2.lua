@@ -26,7 +26,7 @@ beaconed_rocket_2.name = "beaconed-rocket-2"
 
 beaconed_rocket_silo_2_tint = {0.4*0.8,0.4*0.8,0,0}
 beaconed_rocket_2_tint = {0.4*0.6,0.4*0.6,0,0}
---[[
+
 if settings.startup["modded-entity-graphics"].value == "ON" then
   beaconed_rocket_silo_2.base_day_sprite = 
   {
@@ -349,7 +349,6 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
     }
   }
 end
---]]
 
 
 
