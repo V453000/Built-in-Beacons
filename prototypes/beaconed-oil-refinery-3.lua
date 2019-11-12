@@ -33,21 +33,19 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       {
         {
           filename = "__Built-in-Beacons__/graphics/entity/beaconed-oil-refinery/beaconed-oil-refinery-overlay.png",
-          width = 512,
-          height = 512,
+          width = 171,
+          height = 171,
           frame_count = 1,
-          shift = util.by_pixel(0, 0),
-          tint = {0.6*0.8, 0.75*0.8, 0, 0},
-          blend_mode = "additive",
+          shift = util.by_pixel(-0.5, -17.5),
+          tint = {0.48,0.6,0,0},
           hr_version =
           {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
-            width = 1024,
-            height = 1024,
+            width = 341,
+            height = 341,
             frame_count = 1,
-            shift = util.by_pixel(0, 0),
-            tint = {0.6*0.8, 0.75*0.8, 0, 0},
-            blend_mode = "additive",
+            shift = util.by_pixel(-0.25, -17.25),
+            tint = {0.48,0.6,0,0},
             scale = 0.5
           }
         }
