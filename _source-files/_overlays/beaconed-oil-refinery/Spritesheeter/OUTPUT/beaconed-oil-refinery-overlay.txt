@@ -1,0 +1,10 @@
+{ 
+  filename = "__base__/graphics/entity/TODO\OUTPUT/beaconed-oil-refinery-overlay.png",
+  line_length = 4,
+  width = 171,
+  height = 171,
+  frame_count = 4,
+  axially_symmetrical = false,
+  direction_count = 1,
+  shift = util.by_pixel(-0.5, -17.5),
+}
