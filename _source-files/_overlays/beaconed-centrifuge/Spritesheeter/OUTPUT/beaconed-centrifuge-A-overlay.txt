@@ -1,0 +1,10 @@
+{ 
+  filename = "__base__/graphics/entity/TODO\OUTPUT/beaconed-centrifuge-A-overlay.png",
+  line_length = 8,
+  width = 50,
+  height = 78,
+  frame_count = 64,
+  axially_symmetrical = false,
+  direction_count = 1,
+  shift = util.by_pixel(-24, -13),
+}
