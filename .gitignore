@@ -1,3 +1,5 @@
 _LUTs/*
 LUT.py
 *.bat
+spritesheeter.py
+*.json
