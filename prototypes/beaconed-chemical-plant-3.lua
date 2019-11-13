@@ -33,20 +33,20 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       {
         {
           filename = "__Built-in-Beacons__/graphics/entity/beaconed-chemical-plant/beaconed-chemical-plant-overlay.png",
-          width = 100,
-          height = 140,
+          width = 98,
+          height = 120,
           frame_count = 24,
           line_length = 12,
-          shift = util.by_pixel(0, -12),
+          shift = util.by_pixel(0, -22),
           tint = {0.6*0.8, 0.75*0.8, 0, 0},
           hr_version =
           {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-chemical-plant/hr-beaconed-chemical-plant-overlay.png",
-            width = 198,
-            height = 280,
+            width = 196,
+            height = 238,
             frame_count = 24,
             line_length = 12,
-            shift = util.by_pixel(0, -12),
+            shift = util.by_pixel(0, -22.5),
             tint = {0.6*0.8, 0.75*0.8, 0, 0},
             scale = 0.5
           }
