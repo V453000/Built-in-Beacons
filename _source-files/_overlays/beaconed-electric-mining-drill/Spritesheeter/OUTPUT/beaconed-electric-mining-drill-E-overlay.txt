@@ -1,0 +1,10 @@
+{ 
+  filename = "__base__/graphics/entity/TODO\beaconed-electric-mining-drill-E-overlay.png",
+  line_length = 8,
+  width = 103,
+  height = 89,
+  frame_count = 64,
+  axially_symmetrical = false,
+  direction_count = 1,
+  shift = util.by_pixel(2.5, -1.5),
+}
