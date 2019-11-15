@@ -250,7 +250,7 @@ data:extend({
     name = "beaconed-electric-mining-drill-2",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-mining-drill-2.png",
     icon_size = 32,
-    subgroup = "built-in-beacons-2",
+    subgroup = "extraction-machine",
     order = "a[items]-b[electric-mining-drill]",
     place_result = "beaconed-electric-mining-drill-2",
     stack_size = 50

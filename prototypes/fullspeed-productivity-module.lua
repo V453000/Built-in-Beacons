@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "fullspeed-productivity-module",
+    subgroup = "built-in-beacons",
     enabled = false,
     ingredients =
     {
@@ -16,6 +17,7 @@ data:extend({
   {
     type = "recipe",
     name = "fullspeed-productivity-module-2",
+    subgroup = "built-in-beacons-2",
     enabled = false,
     ingredients =
     {
@@ -30,6 +32,7 @@ data:extend({
   {
     type = "recipe",
     name = "fullspeed-productivity-module-3",
+    subgroup = "built-in-beacons-3",
     enabled = false,
     ingredients =
     {
@@ -50,7 +53,7 @@ data:extend({
     localised_description = {"item-description.fullspeed-productivity-module"},
     icon = "__Built-in-Beacons__/graphics/icons/fullspeed-productivity-module.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "module",
     category = "productivity",
     tier = 1,
     order = "a",
@@ -69,7 +72,7 @@ data:extend({
     localised_description = {"item-description.fullspeed-productivity-module-2"},
     icon = "__Built-in-Beacons__/graphics/icons/fullspeed-productivity-module-2.png",
     icon_size = 32,
-    subgroup = "built-in-beacons-2",
+    subgroup = "module",
     category = "productivity",
     tier = 2,
     order = "a",
@@ -88,7 +91,7 @@ data:extend({
     localised_description = {"item-description.fullspeed-productivity-module-3"},
     icon = "__Built-in-Beacons__/graphics/icons/fullspeed-productivity-module-3.png",
     icon_size = 32,
-    subgroup = "built-in-beacons-3",
+    subgroup = "module",
     category = "productivity",
     tier = 3,
     order = "a",

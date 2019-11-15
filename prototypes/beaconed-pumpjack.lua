@@ -66,7 +66,7 @@ data:extend({
     name = "beaconed-pumpjack",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-pumpjack.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "extraction-machine",
     order = "b[fluids]-b[pumpjack]",
     place_result = "beaconed-pumpjack",
     stack_size = 20

@@ -86,7 +86,7 @@ data:extend({
     name = "beaconed-chemical-plant",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-chemical-plant.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "production-machine",
     order = "e[chemical-plant]",
     place_result = "beaconed-chemical-plant",
     stack_size = 10

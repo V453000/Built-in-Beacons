@@ -79,7 +79,7 @@ data:extend({
     name = "beaconed-oil-refinery-3",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-oil-refinery-3.png",
     icon_size = 32,
-    subgroup = "built-in-beacons-3",
+    subgroup = "production-machine",
     order = "d[refinery]",
     place_result = "beaconed-oil-refinery-3",
     stack_size = 10

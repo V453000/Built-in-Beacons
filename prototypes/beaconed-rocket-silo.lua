@@ -362,7 +362,7 @@ data:extend({
     name = "beaconed-rocket-silo",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-rocket-silo.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "defensive-structure",
     order = "e[rocket-silo]",
     place_result = "beaconed-rocket-silo",
     stack_size = 1

@@ -77,7 +77,7 @@ data:extend({
     name = "maxspeed-beaconed-assembling-machine-3",
     icon = "__Built-in-Beacons__/graphics/icons/maxspeed-beaconed-assembling-machine-3.png",
     icon_size = 32,
-    subgroup = "built-in-beacons-4",
+    subgroup = "production-machine",
     order = "c[assembling-machine-3]",
     place_result = "maxspeed-beaconed-assembling-machine-3",
     stack_size = 50

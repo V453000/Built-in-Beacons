@@ -119,7 +119,7 @@ data:extend({
     name = "beaconed-centrifuge",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-centrifuge.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "production-machine",
     order = "g[centrifuge]",
     place_result = "beaconed-centrifuge",
     stack_size = 50

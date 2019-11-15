@@ -84,7 +84,7 @@ data:extend({
     name = "beaconed-assembling-machine",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "production-machine",
     order = "c[assembling-machine-3]",
     place_result = "beaconed-assembling-machine",
     stack_size = 50

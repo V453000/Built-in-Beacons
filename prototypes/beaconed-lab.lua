@@ -115,7 +115,7 @@ data:extend({
     name = "beaconed-lab",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-lab.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "production-machine",
     order = "g[lab]",
     place_result = "beaconed-lab",
     stack_size = 10

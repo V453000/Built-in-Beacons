@@ -205,7 +205,7 @@ data:extend({
     name = "beaconed-electric-furnace",
     icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-furnace.png",
     icon_size = 32,
-    subgroup = "built-in-beacons",
+    subgroup = "smelting-machine",
     order = "b",
     place_result = "beaconed-electric-furnace",
     stack_size = 50
