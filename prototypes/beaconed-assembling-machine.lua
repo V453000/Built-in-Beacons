@@ -1,9 +1,21 @@
+local original_assembling_machine_3 = data.raw["assembling-machine"]["assembling-machine-3"]
+local beaconed_data = {
+  machine_crafting_speed     = original_assembling_machine_3.crafting_speed,
+  machine_module_slots       = original_assembling_machine_3.module_specification.module_slots,
+  beacon_count               = global_assembling_machine_beacon_count,
+  beacon_effect              = global_beacon_transmission_effect,
+  beacon_module_slots        = global_beacon_module_slots,
+  beacon_module_speed_bonus  = 0.2,--global_speed_module_1_speed_bonus,
+  machine_module_speed_bonus = global_productivity_module_1_speed_bonus,
+}
+
 beaconed_assembling_machine = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"])
 beaconed_assembling_machine.name = "beaconed-assembling-machine"
 beaconed_assembling_machine.icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine.png"
 beaconed_assembling_machine.minable.result = "beaconed-assembling-machine"
 beaconed_assembling_machine.next_upgrade = "beaconed-assembling-machine-2"
-beaconed_assembling_machine.crafting_speed = 3.5
+--beaconed_assembling_machine.crafting_speed = 3.5
+beaconed_assembling_machine.crafting_speed = beaconed_crafting_speed(beaconed_data)
 beaconed_assembling_machine.energy_source.emissions_per_second_per_watt = 2 / 375000
 beaconed_assembling_machine.energy_source.drain = "3367kW"
 beaconed_assembling_machine.energy_usage = "3225kW"

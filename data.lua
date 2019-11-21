@@ -249,6 +249,7 @@ data:extend({
     order = "x"
   }
 })
+require ("beaconed-functions")
 require ("prototypes.beaconedassemblerpipes")
 require ("prototypes.beaconed-assembling-machine")
 require ("prototypes.beaconed-assembling-machine-2")
