@@ -49,29 +49,16 @@ function beaconed_energy_usage(params)
   local beacon_module_slots               = params.beacon_module_slots or 2
   local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0.5
   local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or -0.15
-
   
   local machine_energy_usage_nokw   = string.gsub(machine_energy_usage, "kW", "")
   local machine_energy_usage_number = tonumber(machine_energy_usage_nokw, 10)
-
-  --error(serpent.block(machine_energy_usage_number))
 
   local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
   local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
   local energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect
   local beaconed_energy_usage              = machine_energy_usage_number * energy_usage_multiplier
   local beaconed_energy_usage_string       = tostring(beaconed_energy_usage) .. "kW"
-  
-  local test = {
-    beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots,
-    machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus,
-    energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect,
-    beaconed_energy_usage              = machine_energy_usage_number * energy_usage_multiplier,
-    beaconed_energy_usage_string       = tostring(beaconed_energy_usage) .. "kW",
-  }
-  --error(serpent.block(test))
 
   --error(serpent.block(beaconed_energy_usage_string))
-  --machine_crafting_speed * (1 + (( (machine_module_slots * machine_module_speed_bonus) + (beacon_count*beacon_module_speed_bonus*beacon_effect*beacon_module_slots) )/100))))
   return beaconed_energy_usage_string
 end
