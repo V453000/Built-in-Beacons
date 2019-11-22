@@ -38,6 +38,7 @@ global_pumpjack_average_beacon_count              = 1--4
 
 beaconed_assembling_machine_1_tint = {0.24 ,0.12 ,0 ,0}
 beaconed_assembling_machine_2_tint = {0.3 ,0.2625,0, 0}
+beaconed_assembling_machine_3_tint = {0.3, 0.375 ,0, 0}
 
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
