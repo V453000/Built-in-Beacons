@@ -37,6 +37,7 @@ global_electric_mining_drill_average_beacon_count = 1--4
 global_pumpjack_average_beacon_count              = 1--4
 
 beaconed_assembling_machine_1_tint = {0.24 ,0.12 ,0 ,0}
+beaconed_assembling_machine_2_tint = {0.3 ,0.2625,0, 0}
 
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
@@ -67,7 +68,7 @@ function beaconed_emissions(params)
   local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
   local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
   local energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect
-  local beaconed_emission                  = machine_emission * energy_usage_multiplier
+  local beaconed_emission                  = machine_emission * energy_usage_multiplier / params.emission_hack
   
   return beaconed_emission
 end
