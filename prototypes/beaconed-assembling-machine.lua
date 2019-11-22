@@ -5,7 +5,7 @@ local beaconed_data = {
   beacon_count               = global_assembling_machine_beacon_count,
   beacon_effect              = global_beacon_transmission_effect,
   beacon_module_slots        = global_beacon_module_slots,
-  beacon_module_speed_bonus  = 0.2,--global_speed_module_1_speed_bonus,
+  beacon_module_speed_bonus  = global_speed_module_1_speed_bonus,
   machine_module_speed_bonus = global_productivity_module_1_speed_bonus,
 }
 
