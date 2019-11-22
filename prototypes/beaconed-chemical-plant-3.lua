@@ -107,7 +107,7 @@ data:extend({
     },
     results = {
       {type = "item", name = "beaconed-chemical-plant-3", amount = 1},
-      {type = "item", name = "speed-module-2", amount = 14}
+      {type = "item", name = "speed-module-2", amount = 14, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-chemical-plant-3"

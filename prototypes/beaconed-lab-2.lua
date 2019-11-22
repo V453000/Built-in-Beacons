@@ -137,7 +137,7 @@ data:extend({
     },
     results = {
       {type = "item", name = "beaconed-lab-2", amount = 1},
-      {type = "item", name = "speed-module", amount = 14}
+      {type = "item", name = "speed-module", amount = 14, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-lab-2"

@@ -101,7 +101,7 @@ data:extend({
     },
     results = {
       {type = "item", name = "beaconed-oil-refinery-3", amount = 1},
-      {type = "item", name = "speed-module-2", amount = 20}
+      {type = "item", name = "speed-module-2", amount = 20, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-oil-refinery-3"

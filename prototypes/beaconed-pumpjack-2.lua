@@ -89,7 +89,7 @@ data:extend({
     },
     results = {
       {type = "item", name = "beaconed-pumpjack-2", amount = 1},
-      {type = "item", name = "speed-module", amount = 2}
+      {type = "item", name = "speed-module", amount = 2, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-pumpjack-2"
