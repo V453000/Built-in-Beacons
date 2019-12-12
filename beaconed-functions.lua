@@ -40,7 +40,7 @@ beaconed_assembling_machine_1_tint = {0.24 ,0.12 ,0 ,0}
 beaconed_assembling_machine_2_tint = {0.3 ,0.2625,0, 0}
 beaconed_assembling_machine_3_tint = {0.3, 0.375 ,0, 0}
 maxspeed_beaconed_assembling_machine_3_tint = {0.05, 0.175 , 0.25, 0}
-
+--[[
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
   local machine_module_slots       = params.module_slots or 4
@@ -64,9 +64,15 @@ function beaconed_emissions(params)
   local beacon_count                      = params.beacon_count or 12
   local beacon_effect                     = params.beacon_effect or 0.5
   local beacon_module_slots               = params.beacon_module_slots or 2
-  local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0.5
-  local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or -0.15
+  local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0
+  local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or 0
+  local machine_module_pollution_bonus    = params.machine_module_pollution_bonus or 0
   local emission_hack                     = params.emission_hack or 1 -- used to compensate for fullspeed productivity modules not having exactly half the effect of base productivity modules
+
+  -- notes
+  
+  --local result = original_emissions * crafting_speed_multiplier * power_consumption_multiplier * pollution_multiplier
+  -------
 
   local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
   local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
@@ -110,4 +116,91 @@ function beaconed_drain(params)
 
   --error(serpent.block(beaconed_drain_string))
   return beaconed_drain_string
+end
+]]--
+
+function beaconed_stats(params)
+  -------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
+  
+  local machine_drain                     = params.machine_drain or "0kW"
+  local average_beacon_count              = params.average_beacon_count or 0
+  
+  local machine_drain_nokw   = string.gsub(machine_drain, "kW", "")
+  local machine_drain_number = tonumber(machine_drain_nokw, 10)
+
+  local beaconed_drain              = machine_drain_number + average_beacon_count * global_beacon_drain
+  local beaconed_drain_string       = tostring(beaconed_drain) .. "kW"
+  --error(serpent.block(beaconed_drain_string))
+  --return beaconed_drain_string
+  
+  -------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
+  
+  local machine_energy_usage              = params.machine_energy_usage or "128kW"
+  local machine_module_slots              = params.module_slots or 4
+  local beacon_count                      = params.beacon_count or 12
+  local beacon_effect                     = params.beacon_effect or 0.5
+  local beacon_module_slots               = params.beacon_module_slots or 2
+  local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0.5
+  local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or -0.15
+  
+  local machine_energy_usage_nokw   = string.gsub(machine_energy_usage, "kW", "")
+  local machine_energy_usage_number = tonumber(machine_energy_usage_nokw, 10)
+
+  local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
+  local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
+  local energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect
+  local beaconed_energy_usage              = machine_energy_usage_number * energy_usage_multiplier
+  local beaconed_energy_usage_string       = tostring(beaconed_energy_usage) .. "kW"
+
+  --error(serpent.block(beaconed_energy_usage_string))
+  --return beaconed_energy_usage_string
+
+  -------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
+
+  local machine_crafting_speed     = params.machine_crafting_speed or 1
+  local machine_module_slots       = params.module_slots or 4
+  local beacon_count               = params.beacon_count or 12
+  local beacon_effect              = params.beacon_effect or 0.5
+  local beacon_module_slots        = params.beacon_module_slots or 2
+  local beacon_module_speed_bonus  = params.beacon_module_speed_bonus or 0.5
+  local machine_module_speed_bonus = params.machine_module_speed_bonus or -0.15
+
+  local beacon_speed_effect         = beacon_count * beacon_module_speed_bonus * beacon_effect * beacon_module_slots
+  local machine_module_speed_effect = machine_module_slots * machine_module_speed_bonus
+  local speed_multiplier            = 1 + machine_module_speed_effect + beacon_speed_effect
+  local beaconed_crafting_speed     = machine_crafting_speed * speed_multiplier
+
+  --return beaconed_crafting_speed
+
+  -------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
+
+  local machine_emission                  = params.machine_emissions or 1
+  local machine_module_slots              = params.module_slots or 4
+  local beacon_count                      = params.beacon_count or 12
+  local beacon_effect                     = params.beacon_effect or 0.5
+  local beacon_module_slots               = params.beacon_module_slots or 2
+  local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0
+  local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or 0
+  local emission_hack                     = params.emission_hack or 1 -- used to compensate for fullspeed productivity modules not having exactly half the effect of base productivity modules
+
+  -- unused
+  local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
+  local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
+  local energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect
+  local beaconed_emissions_per_minute      = machine_emission * energy_usage_multiplier / emission_hack
+
+  -------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
+
+  stats = {}
+  stats.beaconed_drain_string         = beaconed_drain_string
+  stats.beaconed_crafting_speed       = beaconed_crafting_speed
+  stats.beaconed_energy_usage_string  = beaconed_energy_usage_string
+  stats.beaconed_emissions_per_minute = beaconed_emissions_per_minute
+  return stats
+
 end

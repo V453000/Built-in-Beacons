@@ -9,8 +9,8 @@ local beaconed_data = {
   beacon_effect                     = global_beacon_transmission_effect,
   beacon_module_slots               = global_beacon_module_slots,
   beacon_module_speed_bonus         = global_speed_module_1_speed_bonus,
-  machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
   emission_hack                     = 1.03343
 }
@@ -20,10 +20,10 @@ beaconed_assembling_machine.name = "beaconed-assembling-machine"
 beaconed_assembling_machine.icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine.png"
 beaconed_assembling_machine.minable.result = "beaconed-assembling-machine"
 beaconed_assembling_machine.next_upgrade = "beaconed-assembling-machine-2"
-beaconed_assembling_machine.crafting_speed = beaconed_crafting_speed(beaconed_data)--3.5
-beaconed_assembling_machine.energy_source.emissions_per_minute = beaconed_emissions(beaconed_data)
-beaconed_assembling_machine.energy_source.drain = beaconed_drain(beaconed_data)--"3367kW"
-beaconed_assembling_machine.energy_usage = beaconed_energy_usage(beaconed_data)--"3225kW"
+beaconed_assembling_machine.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed--3.5
+beaconed_assembling_machine.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_assembling_machine.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string--"3367kW"
+beaconed_assembling_machine.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string--"3225kW"
 beaconed_assembling_machine.allowed_effects = {"productivity", "pollution"}
 
 beaconed_assembling_machine.module_specification.module_slots = original_assembling_machine_3.module_specification.module_slots * 2

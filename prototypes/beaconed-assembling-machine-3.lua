@@ -9,8 +9,8 @@ local beaconed_data = {
   beacon_effect                     = global_beacon_transmission_effect,
   beacon_module_slots               = global_beacon_module_slots,
   beacon_module_speed_bonus         = global_speed_module_3_speed_bonus,
-  machine_module_speed_bonus        = global_productivity_module_3_speed_bonus,
   beacon_module_energy_usage_bonus  = global_speed_module_3_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_3_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_3_energy_usage_bonus,
   emission_hack                     = 1
 }
@@ -19,10 +19,10 @@ beaconed_assembling_machine_3 = util.table.deepcopy(data.raw["assembling-machine
 beaconed_assembling_machine_3.name = "beaconed-assembling-machine-3"
 beaconed_assembling_machine_3.icon = "__Built-in-Beacons__/graphics/icons/beaconed-assembling-machine-3.png"
 beaconed_assembling_machine_3.minable.result = "beaconed-assembling-machine-3"
-beaconed_assembling_machine_3.crafting_speed = beaconed_crafting_speed(beaconed_data)--8
-beaconed_assembling_machine_3.energy_source.emissions_per_minute = beaconed_emissions(beaconed_data)--2 / 375000
-beaconed_assembling_machine_3.energy_source.drain = beaconed_drain(beaconed_data)--"3367kW"
-beaconed_assembling_machine_3.energy_usage = beaconed_energy_usage(beaconed_data)--"4725kW"
+beaconed_assembling_machine_3.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed--8
+beaconed_assembling_machine_3.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute--2 / 375000
+beaconed_assembling_machine_3.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string--"3367kW"
+beaconed_assembling_machine_3.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string--"4725kW"
 beaconed_assembling_machine_3.allowed_effects = {"productivity", "pollution"}
 
 beaconed_assembling_machine_3.module_specification.module_slots = data.raw["assembling-machine"]["assembling-machine-3"].module_specification.module_slots * 2
