@@ -1,12 +1,29 @@
+local original_centrifuge = data.raw["assembling-machine"]["centrifuge"]
+local beaconed_data = {
+  machine_energy_usage              = original_centrifuge.energy_usage,
+  machine_emissions                 = original_centrifuge.energy_source.emissions_per_minute,
+  machine_crafting_speed            = original_centrifuge.crafting_speed,
+  machine_module_slots              = original_centrifuge.module_specification.module_slots,
+  beacon_count                      = global_centrifuge_beacon_count,
+  average_beacon_count              = global_centrifuge_average_beacon_count,
+  beacon_effect                     = global_beacon_transmission_effect,
+  beacon_module_slots               = global_beacon_module_slots,
+  beacon_module_speed_bonus         = global_speed_module_2_speed_bonus,
+  beacon_module_energy_usage_bonus  = global_speed_module_2_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_2_speed_bonus,
+  machine_module_energy_usage_bonus = global_productivity_module_2_energy_usage_bonus,
+  emission_hack                     = 1
+}
+
 beaconed_centrifuge_2 = util.table.deepcopy(data.raw["assembling-machine"]["centrifuge"])
 beaconed_centrifuge_2.name = "beaconed-centrifuge-2"
 beaconed_centrifuge_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-centrifuge-2.png"
 beaconed_centrifuge_2.minable.result = "beaconed-centrifuge-2"
 beaconed_centrifuge_2.next_upgrade = "beaconed-centrifuge-3"
-beaconed_centrifuge_2.crafting_speed = 4.3
-beaconed_centrifuge_2.energy_source.emissions_per_second_per_watt = 4 / 350000
-beaconed_centrifuge_2.energy_source.drain = "3372kW"
-beaconed_centrifuge_2.energy_usage = "3290kW"
+beaconed_centrifuge_2.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
+beaconed_centrifuge_2.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_centrifuge_2.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
+beaconed_centrifuge_2.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_centrifuge_2.allowed_effects = {"productivity", "pollution"}
 beaconed_centrifuge_2.fast_replaceable_group = "centrifuge"
 
@@ -139,11 +156,11 @@ data:extend({
     ingredients =
     {
       {"beaconed-centrifuge", 1},
-      {"speed-module-2", 14}
+      {"speed-module-2", global_assembling_machine_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-centrifuge-2", amount = 1},
-      {type = "item", name = "speed-module", amount = 14, show_details_in_recipe_tooltip = false}
+      {type = "item", name = "speed-module", amount = global_assembling_machine_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-centrifuge-2"
