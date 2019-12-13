@@ -43,7 +43,7 @@ maxspeed_beaconed_assembling_machine_3_tint = {0.05, 0.175 , 0.25, 0}
 --[[
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
-  local machine_module_slots       = params.module_slots or 4
+  local machine_module_slots       = params.machine_module_slots or 4
   local beacon_count               = params.beacon_count or 12
   local beacon_effect              = params.beacon_effect or 0.5
   local beacon_module_slots        = params.beacon_module_slots or 2
@@ -60,7 +60,7 @@ end
 
 function beaconed_emissions(params)
   local machine_emission                  = params.machine_emissions or 1
-  local machine_module_slots              = params.module_slots or 4
+  local machine_module_slots              = params.machine_module_slots or 4
   local beacon_count                      = params.beacon_count or 12
   local beacon_effect                     = params.beacon_effect or 0.5
   local beacon_module_slots               = params.beacon_module_slots or 2
@@ -84,7 +84,7 @@ end
 
 function beaconed_energy_usage(params)
   local machine_energy_usage              = params.machine_energy_usage or "128kW"
-  local machine_module_slots              = params.module_slots or 4
+  local machine_module_slots              = params.machine_module_slots or 4
   local beacon_count                      = params.beacon_count or 12
   local beacon_effect                     = params.beacon_effect or 0.5
   local beacon_module_slots               = params.beacon_module_slots or 2
@@ -138,7 +138,7 @@ function beaconed_stats(params)
   -------------------------------------------------------------------------------------------------------------------------------
   
   local machine_energy_usage              = params.machine_energy_usage or "128kW"
-  local machine_module_slots              = params.module_slots or 4
+  local machine_module_slots              = params.machine_module_slots or 4
   local beacon_count                      = params.beacon_count or 12
   local beacon_effect                     = params.beacon_effect or 0.5
   local beacon_module_slots               = params.beacon_module_slots or 2
@@ -161,7 +161,7 @@ function beaconed_stats(params)
   -------------------------------------------------------------------------------------------------------------------------------
 
   local machine_crafting_speed     = params.machine_crafting_speed or 1
-  local machine_module_slots       = params.module_slots or 4
+  local machine_module_slots       = params.machine_module_slots or 4
   local beacon_count               = params.beacon_count or 12
   local beacon_effect              = params.beacon_effect or 0.5
   local beacon_module_slots        = params.beacon_module_slots or 2
@@ -179,7 +179,7 @@ function beaconed_stats(params)
   -------------------------------------------------------------------------------------------------------------------------------
 
   local machine_emission                  = params.machine_emissions or 1
-  local machine_module_slots              = params.module_slots or 4
+  local machine_module_slots              = params.machine_module_slots or 4
   local beacon_count                      = params.beacon_count or 12
   local beacon_effect                     = params.beacon_effect or 0.5
   local beacon_module_slots               = params.beacon_module_slots or 2
