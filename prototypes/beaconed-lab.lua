@@ -1,11 +1,28 @@
+local original_lab = data.raw["lab"]["lab"]
+local beaconed_data = {
+  machine_energy_usage              = original_lab.energy_usage,
+  machine_emissions                 = original_lab.energy_source.emissions_per_minute,
+  machine_crafting_speed            = original_lab.researching_speed,
+  machine_module_slots              = original_lab.module_specification.module_slots,
+  beacon_count                      = global_lab_beacon_count,
+  average_beacon_count              = global_lab_average_beacon_count,
+  beacon_effect                     = global_beacon_transmission_effect,
+  beacon_module_slots               = global_beacon_module_slots,
+  beacon_module_speed_bonus         = global_speed_module_1_speed_bonus,
+  beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
+  machine_module_speed_bonus        = global_speed_module_1_speed_bonus,
+  machine_module_energy_usage_bonus = global_speed_module_1_energy_usage_bonus,
+  emission_hack                     = 1
+}
+
 beaconed_lab = util.table.deepcopy(data.raw["lab"]["lab"])
 beaconed_lab.name = "beaconed-lab"
 beaconed_lab.icon = "__Built-in-Beacons__/graphics/icons/beaconed-lab.png"
 beaconed_lab.minable.result = "beaconed-lab"
 beaconed_lab.next_upgrade = "beaconed-lab-2"
-beaconed_lab.researching_speed = 3.1
-beaconed_lab.energy_source.drain = "3360kW"
-beaconed_lab.energy_usage = "468kW"
+beaconed_lab.researching_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
+beaconed_lab.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
+beaconed_lab.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_lab.allowed_effects = {"productivity", "pollution"}
 beaconed_lab.fast_replaceable_group = "lab"
 
@@ -135,8 +152,8 @@ data:extend({
     ingredients =
     {
       {"lab", 1},
-      {"beacon", 7},
-      {"speed-module", 14}
+      {"beacon", global_lab_average_beacon_count},
+      {"speed-module", global_lab_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-lab", amount = 1}
