@@ -12,7 +12,7 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_2_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_2_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_2_energy_usage_bonus,
-  emission_hack                     = 1
+  emission_hack                     = 1.01773
 }
 
 beaconed_centrifuge_2 = util.table.deepcopy(data.raw["assembling-machine"]["centrifuge"])
