@@ -1,12 +1,29 @@
+local original_electric_mining_drill = data.raw["furnace"]["electric-furnace"]
+local beaconed_data = {
+  machine_energy_usage              = original_electric_mining_drill.energy_usage,
+  machine_emissions                 = original_electric_mining_drill.energy_source.emissions_per_minute,
+  machine_crafting_speed            = original_electric_mining_drill.crafting_speed,
+  machine_module_slots              = original_electric_mining_drill.module_specification.module_slots,
+  beacon_count                      = global_electric_mining_drill_beacon_count,
+  average_beacon_count              = global_electric_mining_drill_average_beacon_count,
+  beacon_effect                     = global_beacon_transmission_effect,
+  beacon_module_slots               = global_beacon_module_slots,
+  beacon_module_speed_bonus         = global_speed_module_2_speed_bonus,
+  beacon_module_energy_usage_bonus  = global_speed_module_2_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_2_speed_bonus,
+  machine_module_energy_usage_bonus = global_productivity_module_2_energy_usage_bonus,
+  emission_hack                     = 1
+}
+
 beaconed_electric_mining_drill_2 = util.table.deepcopy(data.raw["mining-drill"]["electric-mining-drill"])
 beaconed_electric_mining_drill_2.name = "beaconed-electric-mining-drill-2"
 beaconed_electric_mining_drill_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-mining-drill-2.png"
 beaconed_electric_mining_drill_2.minable.result = "beaconed-electric-mining-drill-2"
 beaconed_electric_mining_drill_2.next_upgrade = "beaconed-electric-mining-drill-3"
-beaconed_electric_mining_drill_2.mining_speed = 1.55
-beaconed_electric_mining_drill_2.energy_source.emissions_per_second_per_watt = 10 / 90000
-beaconed_electric_mining_drill_2.energy_source.drain = "480kW"
-beaconed_electric_mining_drill_2.energy_usage = "468kW"
+beaconed_electric_mining_drill_2.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
+beaconed_electric_mining_drill_2.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_electric_mining_drill_2.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
+beaconed_electric_mining_drill_2.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_electric_mining_drill_2.allowed_effects = {"productivity", "pollution"}
 
 beaconed_electric_mining_drill_2.module_specification.module_slots = 2
@@ -270,11 +287,11 @@ data:extend({
     ingredients =
     {
       {"beaconed-electric-mining-drill", 1},
-      {"speed-module-2", 2}
+      {"speed-module-2", global_electric_mining_drill_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-electric-mining-drill-2", amount = 1},
-      {type = "item", name = "speed-module", amount = 2, show_details_in_recipe_tooltip = false}
+      {type = "item", name = "speed-module", amount = global_electric_mining_drill_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-electric-mining-drill-2"
