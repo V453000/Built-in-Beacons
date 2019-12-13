@@ -165,8 +165,8 @@ function beaconed_stats(params)
   local beacon_count               = params.beacon_count or 12
   local beacon_effect              = params.beacon_effect or 0.5
   local beacon_module_slots        = params.beacon_module_slots or 2
-  local beacon_module_speed_bonus  = params.beacon_module_speed_bonus or 0.5
-  local machine_module_speed_bonus = params.machine_module_speed_bonus or -0.15
+  local beacon_module_speed_bonus  = params.beacon_module_speed_bonus or 0
+  local machine_module_speed_bonus = params.machine_module_speed_bonus or 0
 
   local beacon_speed_effect         = beacon_count * beacon_module_speed_bonus * beacon_effect * beacon_module_slots
   local machine_module_speed_effect = machine_module_slots * machine_module_speed_bonus
@@ -196,7 +196,7 @@ function beaconed_stats(params)
   -------------------------------------------------------------------------------------------------------------------------------
   -------------------------------------------------------------------------------------------------------------------------------
 
-  stats = {}
+  local stats = {}
   stats.beaconed_drain_string         = beaconed_drain_string
   stats.beaconed_crafting_speed       = beaconed_crafting_speed
   stats.beaconed_energy_usage_string  = beaconed_energy_usage_string
