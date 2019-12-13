@@ -156,11 +156,11 @@ data:extend({
     ingredients =
     {
       {"beaconed-centrifuge-2", 1},
-      {"speed-module-3", global_assembling_machine_average_beacon_count * global_beacon_module_slots}
+      {"speed-module-3", global_centrifuge_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-centrifuge-3", amount = 1},
-      {type = "item", name = "speed-module-2", amount = global_assembling_machine_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
+      {type = "item", name = "speed-module-2", amount = global_centrifuge_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-centrifuge-3"

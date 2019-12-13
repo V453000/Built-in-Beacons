@@ -4,8 +4,8 @@ local beaconed_data = {
   machine_emissions                 = original_chemical_plant.energy_source.emissions_per_minute,
   machine_crafting_speed            = original_chemical_plant.crafting_speed,
   machine_module_slots              = original_chemical_plant.module_specification.module_slots,
-  beacon_count                      = global_assembling_machine_beacon_count,
-  average_beacon_count              = global_assembling_machine_average_beacon_count,
+  beacon_count                      = global_chemical_plant_beacon_count,
+  average_beacon_count              = global_chemical_plant_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
   beacon_module_slots               = global_beacon_module_slots,
   beacon_module_speed_bonus         = global_speed_module_1_speed_bonus,
@@ -123,8 +123,8 @@ data:extend({
     ingredients =
     {
       {"chemical-plant", 1},
-      {"beacon", global_assembling_machine_average_beacon_count},
-      {"speed-module", global_assembling_machine_average_beacon_count * global_beacon_module_slots}
+      {"beacon", global_chemical_plant_average_beacon_count},
+      {"speed-module", global_chemical_plant_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-chemical-plant", amount = 1}

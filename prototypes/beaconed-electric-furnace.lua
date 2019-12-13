@@ -4,8 +4,8 @@ local beaconed_data = {
   machine_emissions                 = original_electric_furnace.energy_source.emissions_per_minute,
   machine_crafting_speed            = original_electric_furnace.crafting_speed,
   machine_module_slots              = original_electric_furnace.module_specification.module_slots,
-  beacon_count                      = global_assembling_machine_beacon_count,
-  average_beacon_count              = global_assembling_machine_average_beacon_count,
+  beacon_count                      = global_electric_furnace_beacon_count,
+  average_beacon_count              = global_electric_furnace_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
   beacon_module_slots               = global_beacon_module_slots,
   beacon_module_speed_bonus         = global_speed_module_1_speed_bonus,
@@ -242,8 +242,8 @@ data:extend({
     ingredients =
     {
       {"electric-furnace", 1},
-      {"beacon", global_assembling_machine_average_beacon_count},
-      {"speed-module", global_assembling_machine_average_beacon_count * global_beacon_module_slots}
+      {"beacon", global_electric_furnace_average_beacon_count},
+      {"speed-module", global_electric_furnace_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-electric-furnace", amount = 1}
