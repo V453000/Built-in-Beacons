@@ -126,7 +126,8 @@ function beaconed_stats(params)
   local machine_drain                     = params.machine_drain or "0kW"
   local average_beacon_count              = params.average_beacon_count or 0
   
-  local machine_drain_nokw   = string.gsub(machine_drain, "kW", "")
+  local machine_drain_noKw   = string.gsub(machine_drain, "KW", "")
+  local machine_drain_nokw   = string.gsub(machine_drain_noKw, "kW", "")
   local machine_drain_number = tonumber(machine_drain_nokw, 10)
 
   local beaconed_drain              = machine_drain_number + average_beacon_count * global_beacon_drain
@@ -145,7 +146,8 @@ function beaconed_stats(params)
   local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0.5
   local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or -0.15
   
-  local machine_energy_usage_nokw   = string.gsub(machine_energy_usage, "kW", "")
+  local machine_energy_usage_noKw   = string.gsub(machine_energy_usage, "KW", "")
+  local machine_energy_usage_nokw   = string.gsub(machine_energy_usage_noKw, "kW", "")
   local machine_energy_usage_number = tonumber(machine_energy_usage_nokw, 10)
 
   local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
