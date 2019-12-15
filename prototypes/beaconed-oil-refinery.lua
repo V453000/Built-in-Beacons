@@ -1,12 +1,29 @@
+local original_oil_refinery = data.raw["assembling-machine"]["oil-refinery"]
+local beaconed_data = {
+  machine_energy_usage              = original_oil_refinery.energy_usage,
+  machine_emissions                 = original_oil_refinery.energy_source.emissions_per_minute,
+  machine_crafting_speed            = original_oil_refinery.crafting_speed,
+  machine_module_slots              = original_oil_refinery.module_specification.module_slots,
+  beacon_count                      = global_oil_refinery_beacon_count,
+  average_beacon_count              = global_oil_refinery_average_beacon_count,
+  beacon_effect                     = global_beacon_transmission_effect,
+  beacon_module_slots               = global_beacon_module_slots,
+  beacon_module_speed_bonus         = global_speed_module_1_speed_bonus,
+  beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
+  machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  emission_hack                     = 1.02614
+}
+
 beaconed_oil_refinery = util.table.deepcopy(data.raw["assembling-machine"]["oil-refinery"])
 beaconed_oil_refinery.name = "beaconed-oil-refinery"
 beaconed_oil_refinery.icon = "__Built-in-Beacons__/graphics/icons/beaconed-oil-refinery.png"
 beaconed_oil_refinery.minable.result = "beaconed-oil-refinery"
 beaconed_oil_refinery.next_upgrade = "beaconed-oil-refinery-2"
-beaconed_oil_refinery.crafting_speed = 3.75
-beaconed_oil_refinery.energy_source.emissions_per_second_per_watt = 6 / 420000
-beaconed_oil_refinery.energy_source.drain = "4814kW"
-beaconed_oil_refinery.energy_usage = "4284kW"
+beaconed_oil_refinery.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
+beaconed_oil_refinery.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_oil_refinery.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
+beaconed_oil_refinery.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_oil_refinery.allowed_effects = {"productivity", "pollution"}
 beaconed_oil_refinery.fast_replaceable_group = "oil-refinery"
 
@@ -101,8 +118,8 @@ data:extend({
     ingredients =
     {
       {"oil-refinery", 1},
-      {"beacon", 10},
-      {"speed-module", 20}
+      {"beacon", global_oil_refinery_average_beacon_count},
+      {"speed-module", global_oil_refinery_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-oil-refinery", amount = 1}
