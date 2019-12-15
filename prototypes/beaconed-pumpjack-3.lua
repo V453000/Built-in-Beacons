@@ -1,11 +1,28 @@
+local original_pumpjack = data.raw["mining-drill"]["pumpjack"]
+local beaconed_data = {
+  machine_energy_usage              = original_pumpjack.energy_usage,
+  machine_emissions                 = original_pumpjack.energy_source.emissions_per_minute,
+  machine_crafting_speed            = original_pumpjack.mining_speed,
+  machine_module_slots              = original_pumpjack.module_specification.module_slots,
+  beacon_count                      = global_pumpjack_beacon_count,
+  average_beacon_count              = global_pumpjack_average_beacon_count,
+  beacon_effect                     = global_beacon_transmission_effect,
+  beacon_module_slots               = global_beacon_module_slots,
+  beacon_module_speed_bonus         = global_speed_module_3_speed_bonus,
+  beacon_module_energy_usage_bonus  = global_speed_module_3_energy_usage_bonus,
+  machine_module_speed_bonus        = global_speed_module_3_speed_bonus,
+  machine_module_energy_usage_bonus = global_speed_module_3_energy_usage_bonus,
+  emission_hack                     = 1
+}
+
 beaconed_pumpjack_3 = util.table.deepcopy(data.raw["mining-drill"]["pumpjack"])
 beaconed_pumpjack_3.name = "beaconed-pumpjack-3"
 beaconed_pumpjack_3.icon = "__Built-in-Beacons__/graphics/icons/beaconed-pumpjack-3.png"
 beaconed_pumpjack_3.minable.result = "beaconed-pumpjack-3"
-beaconed_pumpjack_3.mining_speed = 4
-beaconed_pumpjack_3.energy_source.emissions_per_second_per_watt = 10 / 90000
-beaconed_pumpjack_3.energy_source.drain = "480kW"
-beaconed_pumpjack_3.energy_usage = "468kW"
+beaconed_pumpjack_3.mining_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
+beaconed_pumpjack_3.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_pumpjack_3.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
+beaconed_pumpjack_3.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_pumpjack_3.allowed_effects = {"productivity", "pollution"}
 beaconed_pumpjack_3.fast_replaceable_group = "pumpjack"
 
@@ -86,11 +103,11 @@ data:extend({
     ingredients =
     {
       {"beaconed-pumpjack-2", 1},
-      {"speed-module-3", 2}
+      {"speed-module-3", global_pumpjack_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-pumpjack-3", amount = 1},
-      {type = "item", name = "speed-module-2", amount = 2, show_details_in_recipe_tooltip = false}
+      {type = "item", name = "speed-module-2", amount = global_pumpjack_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
     main_product = "beaconed-pumpjack-3"
