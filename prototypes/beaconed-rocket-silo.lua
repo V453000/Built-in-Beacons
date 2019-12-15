@@ -1,13 +1,33 @@
+local original_rocket_silo = data.raw["rocket-silo"]["rocket-silo"]
+local beaconed_data = {
+  machine_energy_usage              = original_rocket_silo.active_energy_usage,
+  machine_emissions                 = original_rocket_silo.energy_source.emissions_per_minute,
+  machine_crafting_speed            = original_rocket_silo.crafting_speed,
+  machine_module_slots              = original_rocket_silo.module_specification.module_slots,
+  beacon_count                      = global_rocket_silo_beacon_count,
+  average_beacon_count              = global_rocket_silo_average_beacon_count,
+  beacon_effect                     = global_beacon_transmission_effect,
+  beacon_module_slots               = global_beacon_module_slots,
+  beacon_module_speed_bonus         = global_speed_module_1_speed_bonus,
+  beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
+  machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  emission_hack                     = 1
+}
+
 beaconed_rocket_silo = util.table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
 beaconed_rocket_silo.name = "beaconed-rocket-silo"
 beaconed_rocket_silo.icon = "__Built-in-Beacons__/graphics/icons/beaconed-rocket-silo.png"
 beaconed_rocket_silo.minable.result = "beaconed-rocket-silo"
 beaconed_rocket_silo.next_upgrade = "beaconed-rocket-silo-2"
-beaconed_rocket_silo.crafting_speed = 4.4
-beaconed_rocket_silo.energy_usage = "3150kW"
-beaconed_rocket_silo.energy_source.drain = "9608kW"
-beaconed_rocket_silo.lamp_energy_usage = "10kW"
-beaconed_rocket_silo.active_energy_usage = "50400kW"
+beaconed_rocket_silo.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
+beaconed_rocket_silo.active_energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
+beaconed_rocket_silo.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
+--beaconed_rocket_silo.crafting_speed = 4.4
+--beaconed_rocket_silo.energy_usage = "3150kW"
+--beaconed_rocket_silo.energy_source.drain = "9608kW"
+--beaconed_rocket_silo.lamp_energy_usage = "10kW"
+--beaconed_rocket_silo.active_energy_usage = "50400kW"
 beaconed_rocket_silo.allowed_effects = {"productivity", "pollution"}
 beaconed_rocket_silo.fast_replaceable_group = "rocket-silo"
 beaconed_rocket_silo.rocket_entity = "beaconed-rocket"
@@ -382,8 +402,8 @@ data:extend({
     ingredients =
     {
       {"rocket-silo", 1},
-      {"beacon", 20},
-      {"speed-module", 40}
+      {"beacon", global_rocket_silo_average_beacon_count},
+      {"speed-module", global_rocket_silo_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-rocket-silo", amount = 1}
