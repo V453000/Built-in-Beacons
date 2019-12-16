@@ -12,6 +12,9 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_2_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_2_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_2_energy_usage_bonus,
+  original_animation_speed          = 1,
+  tier_animation_speed_multiplier   = global_tier_2_animation_speed_multiplier,
+  custom_animation_speed_multiplier = 1,
   emission_hack                     = 1.03095
 }
 
@@ -33,6 +36,8 @@ end
 if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_assembling_machine_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
+
+local beaconed_assembling_machine_2_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_assembling_machine_2.animation.layers, 

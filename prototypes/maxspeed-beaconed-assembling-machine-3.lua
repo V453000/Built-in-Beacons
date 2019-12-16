@@ -12,6 +12,9 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_3_energy_usage_bonus,
   machine_module_speed_bonus        = global_speed_module_3_speed_bonus,
   machine_module_energy_usage_bonus = global_speed_module_3_energy_usage_bonus,
+  original_animation_speed          = 1,
+  tier_animation_speed_multiplier   = global_tier_4_animation_speed_multiplier,
+  custom_animation_speed_multiplier = 1,
   emission_hack                     = 1
 }
 
@@ -26,6 +29,8 @@ maxspeed_beaconed_assembling_machine_3.energy_usage = beaconed_stats(beaconed_da
 maxspeed_beaconed_assembling_machine_3.allowed_effects = {"pollution"}
 
 maxspeed_beaconed_assembling_machine_3.module_specification.module_slots = 0
+
+local maxspeed_beaconed_assembling_machine_3_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(maxspeed_beaconed_assembling_machine_3.animation.layers, 

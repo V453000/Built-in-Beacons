@@ -36,10 +36,15 @@ global_rocket_silo_average_beacon_count           = 20--20
 global_electric_mining_drill_average_beacon_count = 1--4
 global_pumpjack_average_beacon_count              = 1--4
 
-beaconed_assembling_machine_1_tint = {0.24 ,0.12 ,0 ,0}
-beaconed_assembling_machine_2_tint = {0.3 ,0.2625,0, 0}
-beaconed_assembling_machine_3_tint = {0.3, 0.375 ,0, 0}
+beaconed_assembling_machine_1_tint          = {0.24, 0.12  , 0   , 0}
+beaconed_assembling_machine_2_tint          = {0.3 , 0.2625, 0   , 0}
+beaconed_assembling_machine_3_tint          = {0.3 , 0.375 , 0   , 0}
 maxspeed_beaconed_assembling_machine_3_tint = {0.05, 0.175 , 0.25, 0}
+
+global_tier_1_animation_speed_multiplier = 1.2--1.5
+global_tier_2_animation_speed_multiplier = 1.6--2
+global_tier_3_animation_speed_multiplier = 2.2--3
+global_tier_4_animation_speed_multiplier = 2.8--4
 --[[
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
@@ -198,11 +203,18 @@ function beaconed_stats(params)
   -------------------------------------------------------------------------------------------------------------------------------
   -------------------------------------------------------------------------------------------------------------------------------
 
+  local original_animation_speed            = params.original_animation_speed or 1
+  local tier_animation_speed_multiplier     = params.tier_animation_speed_multiplier or 1
+  local custom_animation_speed_multiplier   = params.custom_animation_speed_multiplier or 1
+  local beaconed_animation_speed_multiplier = tier_animation_speed_multiplier * custom_animation_speed_multiplier / speed_multiplier
+  local beaconed_animation_speed            = original_animation_speed * beaconed_animation_speed_multiplier
+
   local stats = {}
   stats.beaconed_drain_string         = beaconed_drain_string
   stats.beaconed_crafting_speed       = beaconed_crafting_speed
   stats.beaconed_energy_usage_string  = beaconed_energy_usage_string
   stats.beaconed_emissions_per_minute = beaconed_emissions_per_minute
+  stats.beaconed_animation_speed      = beaconed_animation_speed
   return stats
 
 end
