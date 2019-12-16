@@ -12,8 +12,8 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
   machine_module_speed_bonus        = global_speed_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_speed_module_1_energy_usage_bonus,
-  original_animation_speed          = 1,
-  tier_animation_speed_multiplier   = global_tier_1_animation_speed_multiplier,
+  original_animation_speed          = 0.5,
+  tier_animation_speed_multiplier   = global_tier_1_mining_drill_animation_speed_multiplier,
   custom_animation_speed_multiplier = 1,
   emission_hack                     = 1
 }

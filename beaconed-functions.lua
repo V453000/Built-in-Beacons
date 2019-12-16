@@ -72,6 +72,10 @@ global_tier_1_animation_speed_multiplier = 1.2--1.5
 global_tier_2_animation_speed_multiplier = 1.6--2
 global_tier_3_animation_speed_multiplier = 2.2--3
 global_tier_4_animation_speed_multiplier = 2.8--4
+
+global_tier_1_mining_drill_animation_speed_multiplier = 2.4--1.5
+global_tier_2_mining_drill_animation_speed_multiplier = 3.2--2
+global_tier_3_mining_drill_animation_speed_multiplier = 4.4--3
 --[[
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
