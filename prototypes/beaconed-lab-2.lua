@@ -10,8 +10,8 @@ local beaconed_data = {
   beacon_module_slots               = global_beacon_module_slots,
   beacon_module_speed_bonus         = global_speed_module_2_speed_bonus,
   beacon_module_energy_usage_bonus  = global_speed_module_2_energy_usage_bonus,
-  machine_module_speed_bonus        = global_speed_module_2_speed_bonus,
-  machine_module_energy_usage_bonus = global_speed_module_2_energy_usage_bonus,
+  machine_module_speed_bonus        = global_productivity_module_2_speed_bonus,
+  machine_module_energy_usage_bonus = global_productivity_module_2_energy_usage_bonus,
   emission_hack                     = 1
 }
 
