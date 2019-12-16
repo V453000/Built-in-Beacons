@@ -12,8 +12,12 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_2_energy_usage_bonus,
   machine_module_speed_bonus        = global_speed_module_2_speed_bonus,
   machine_module_energy_usage_bonus = global_speed_module_2_energy_usage_bonus,
+  original_animation_speed          = 1,
+  tier_animation_speed_multiplier   = global_tier_2_animation_speed_multiplier,
+  custom_animation_speed_multiplier = 1,
   emission_hack                     = 1
 }
+local beaconed_pumpjack_2_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 beaconed_pumpjack_2 = util.table.deepcopy(data.raw["mining-drill"]["pumpjack"])
 beaconed_pumpjack_2.name = "beaconed-pumpjack-2"

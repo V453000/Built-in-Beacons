@@ -17,6 +17,7 @@ local beaconed_data = {
   custom_animation_speed_multiplier = 1,
   emission_hack                     = 1.03095
 }
+local beaconed_assembling_machine_2_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 beaconed_assembling_machine_2 = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"])
 beaconed_assembling_machine_2.name = "beaconed-assembling-machine-2"
@@ -36,8 +37,6 @@ end
 if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_assembling_machine_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
-
-local beaconed_assembling_machine_2_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_assembling_machine_2.animation.layers, 

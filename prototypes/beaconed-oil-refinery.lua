@@ -12,8 +12,13 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  original_animation_speed          = 1,
+  tier_animation_speed_multiplier   = global_tier_1_animation_speed_multiplier,
+  custom_animation_speed_multiplier = 1,
   emission_hack                     = 1.02614
 }
+local beaconed_oil_refinery_1_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
+
 
 beaconed_oil_refinery = util.table.deepcopy(data.raw["assembling-machine"]["oil-refinery"])
 beaconed_oil_refinery.name = "beaconed-oil-refinery"
@@ -34,6 +39,8 @@ end
 if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_oil_refinery.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
+
+
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   local merge_layers = function (dest, src)

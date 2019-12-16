@@ -12,8 +12,12 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_3_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_3_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_3_energy_usage_bonus,
+  original_animation_speed          = 1,
+  tier_animation_speed_multiplier   = global_tier_3_animation_speed_multiplier,
+  custom_animation_speed_multiplier = 1,
   emission_hack                     = 1
 }
+local beaconed_chemical_plant_3_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 beaconed_chemical_plant_3 = util.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"])
 beaconed_chemical_plant_3.name = "beaconed-chemical-plant-3"

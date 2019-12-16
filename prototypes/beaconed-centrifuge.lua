@@ -12,8 +12,12 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  original_animation_speed          = 1,
+  tier_animation_speed_multiplier   = global_tier_1_animation_speed_multiplier,
+  custom_animation_speed_multiplier = 1,
   emission_hack                     = 1.018065
 }
+local beaconed_centrifuge_1_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 beaconed_centrifuge = util.table.deepcopy(data.raw["assembling-machine"]["centrifuge"])
 beaconed_centrifuge.name = "beaconed-centrifuge"
@@ -34,8 +38,6 @@ end
 if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_centrifuge.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
-
-beaconed_centrifuge_1_tint = {0.4*0.7, 0.2*0.7, 0, 0}
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_centrifuge.idle_animation.layers,
