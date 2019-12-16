@@ -34,7 +34,6 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_electric_furnace.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-beaconed_electric_furnace_1_tint = {0.4, 0.2, 0, 0}
 if settings.startup["modded-entity-graphics"].value == "ON" then
 beaconed_electric_furnace.animation =
 {

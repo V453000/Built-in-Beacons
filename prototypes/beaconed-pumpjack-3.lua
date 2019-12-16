@@ -46,7 +46,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
     frame_count = 40,
     shift = util.by_pixel(-4, -24),
     --blend_mode = "additive",
-    tint = {0.6*0.6, 0.75*0.7, 0, 0},
+    tint = beaconed_pumpjack_3_tint,
     animation_speed = beaconed_pumpjack_3_animation_speed,
     hr_version =
     {
@@ -59,7 +59,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       height = 202,
       frame_count = 40,
       shift = util.by_pixel(-4, -24),
-      tint = {0.6*0.6, 0.75*0.7, 0, 0},
+      tint = beaconed_pumpjack_3_tint,
     }
   })
 end

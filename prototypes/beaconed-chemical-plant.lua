@@ -57,7 +57,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
           frame_count = 24,
           line_length = 12,
           shift = util.by_pixel(0, -22),
-          tint = {0.4,0.2,0,0},
+          tint = beaconed_chemical_plant_1_tint,
           hr_version =
           {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-chemical-plant/hr-beaconed-chemical-plant-overlay.png",
@@ -66,7 +66,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
             frame_count = 24,
             line_length = 12,
             shift = util.by_pixel(0, -22.5),
-            tint = {0.4,0.2,0,0},
+            tint = beaconed_chemical_plant_1_tint,
             scale = 0.5
           }
         }

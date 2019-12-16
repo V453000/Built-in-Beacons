@@ -28,8 +28,6 @@ beaconed_lab_2.fast_replaceable_group = "lab"
 
 beaconed_lab_2.module_specification.module_slots = data.raw["lab"]["lab"].module_specification.module_slots * 2
 
-beaconed_lab_2_tint = {0.4*0.45, 0.4*0.45, 0, 0}
-
 if settings.startup["show-module-slot-row-length"].value > 0 then
   beaconed_lab_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
 end

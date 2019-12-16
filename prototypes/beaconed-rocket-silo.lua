@@ -40,13 +40,8 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_rocket_silo.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-
 beaconed_rocket = util.table.deepcopy(data.raw['rocket-silo-rocket']['rocket-silo-rocket'])
 beaconed_rocket.name = "beaconed-rocket"
-
-beaconed_rocket_silo_1_tint = {0.4,0.2,0,0}
-beaconed_rocket_1_tint = {0.4*0.7,0.2*0.7,0,0}
-
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   beaconed_rocket_silo.base_day_sprite = 

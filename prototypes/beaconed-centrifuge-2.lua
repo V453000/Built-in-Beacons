@@ -35,8 +35,6 @@ if settings.startup["show-module-slot-rows"].value > 0 then
   beaconed_centrifuge_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 end
 
-beaconed_centrifuge_2_tint = {0.4*0.65, 0.4*0.65, 0, 0}
-
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_centrifuge_2.idle_animation.layers,
     {

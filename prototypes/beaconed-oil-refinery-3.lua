@@ -54,7 +54,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
           height = 171,
           frame_count = 1,
           shift = util.by_pixel(-0.5, -17.5),
-          tint = {0.48,0.6,0,0},
+          tint = beaconed_oil_refinery_3_tint,
           hr_version =
           {
             filename = "__Built-in-Beacons__/graphics/entity/beaconed-oil-refinery/hr-beaconed-oil-refinery-overlay.png",
@@ -62,7 +62,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
             height = 341,
             frame_count = 1,
             shift = util.by_pixel(-0.25, -17.25),
-            tint = {0.48,0.6,0,0},
+            tint = beaconed_oil_refinery_3_tint,
             scale = 0.5
           }
         }
