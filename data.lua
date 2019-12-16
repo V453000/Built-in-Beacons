@@ -1,3 +1,5 @@
+global_logging = true
+
 animation_multiplier = 2
 beaconed_electric_furnace_1_animation_speed = 0.32258*animation_multiplier*0.5*0.5*0.8
 beaconed_electric_furnace_2_animation_speed = 0.23255*animation_multiplier*0.5*0.5*0.8

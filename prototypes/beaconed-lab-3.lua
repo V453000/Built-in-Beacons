@@ -163,3 +163,8 @@ data:extend({
     main_product = "beaconed-lab-3"
   }
 })
+
+if global_logging == true then
+  log(serpent.block( beaconed_data ))
+  log(serpent.block( beaconed_stats(beaconed_data) ))
+end

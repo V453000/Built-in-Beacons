@@ -134,3 +134,8 @@ data:extend({
     allow_as_intermediate = false
   }
 })
+
+if global_logging == true then
+  log(serpent.block( beaconed_data ))
+  log(serpent.block( beaconed_stats(beaconed_data) ))
+end
