@@ -68,14 +68,14 @@ beaconed_rocket_1_tint                      = {0.4*0.7,0.2*0.7,0,0}
 beaconed_rocket_2_tint                      = {0.4*0.6,0.4*0.6,0,0}
 beaconed_rocket_3_tint                      = {0.48*0.5, 0.6*0.5, 0, 0}
 
-global_tier_1_animation_speed_multiplier = 1.2--1.5
-global_tier_2_animation_speed_multiplier = 1.6--2
-global_tier_3_animation_speed_multiplier = 2.2--3
-global_tier_4_animation_speed_multiplier = 2.8--4
+global_tier_1_animation_speed_multiplier = 1.5--1.5
+global_tier_2_animation_speed_multiplier = 2--2
+global_tier_3_animation_speed_multiplier = 3--3
+global_tier_4_animation_speed_multiplier = 4--4
 
-global_tier_1_mining_drill_animation_speed_multiplier = 2.4--1.5
-global_tier_2_mining_drill_animation_speed_multiplier = 3.2--2
-global_tier_3_mining_drill_animation_speed_multiplier = 4.4--3
+global_tier_1_mining_drill_animation_speed_multiplier = 4--1.5
+global_tier_2_mining_drill_animation_speed_multiplier = 6--2
+global_tier_3_mining_drill_animation_speed_multiplier = 8--3
 --[[
 function beaconed_crafting_speed(params)
   local machine_crafting_speed     = params.machine_crafting_speed or 1
