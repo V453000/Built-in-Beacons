@@ -90,11 +90,11 @@ if settings.startup["modded-entity-graphics"].value ~= "OFF" then
     end 
   end
   for i,layer in pairs(beaconed_chemical_plant.working_visualisations) do
-    set_animation_speed(layer.animation)
-    --set_animation_speed(layer.north_animation)
-    --set_animation_speed(layer.south_animation)
-    --set_animation_speed(layer.east_animation)
-    --set_animation_speed(layer.west_animation)
+    --set_animation_speed(layer.animation)
+    set_animation_speed(layer.north_animation)
+    set_animation_speed(layer.south_animation)
+    set_animation_speed(layer.east_animation)
+    set_animation_speed(layer.west_animation)
   end
 end
 
