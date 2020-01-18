@@ -17,7 +17,7 @@ local beaconed_data = {
   custom_animation_speed_multiplier = 1,
   emission_hack                     = 1
 }
-local beaconed_lab_1_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
+local beaconed_lab_1_animation_speed = 1/3-- beaconed_stats(beaconed_data).beaconed_animation_speed
 
 beaconed_lab = util.table.deepcopy(data.raw["lab"]["lab"])
 beaconed_lab.name = "beaconed-lab"
@@ -47,7 +47,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       height = 87,
       frame_count = 33,
       line_length = 11,
-      animation_speed = 1 / 3,
+      animation_speed = beaconed_lab_1_animation_speed,
       shift = util.by_pixel(0, 1.5),
       hr_version =
       {
@@ -56,7 +56,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
         height = 174,
         frame_count = 33,
         line_length = 11,
-        animation_speed = 1 / 3,
+        animation_speed = beaconed_lab_1_animation_speed,
         shift = util.by_pixel(0, 1.5),
         scale = 0.5
       }
@@ -70,7 +70,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       frame_count = 1,
       line_length = 1,
       repeat_count = 33,
-      animation_speed = 1 / 3,
+      animation_speed = beaconed_lab_1_animation_speed,
       shift = util.by_pixel(0, 8),
       tint = beaconed_lab_tint,
       hr_version =
@@ -81,7 +81,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
         frame_count = 1,
         line_length = 1,
         repeat_count = 33,
-        animation_speed = 1 / 3,
+        animation_speed = beaconed_lab_1_animation_speed,
         shift = util.by_pixel(0, 8),
         tint = beaconed_lab_tint,
         scale = 0.5
@@ -96,7 +96,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       frame_count = 1,
       line_length = 1,
       repeat_count = 1,
-      animation_speed = 1 / 3,
+      animation_speed = beaconed_lab_1_animation_speed,
       shift = util.by_pixel(0, 8),
       tint = beaconed_lab_tint,
       hr_version =
@@ -107,7 +107,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
         frame_count = 1,
         line_length = 1,
         repeat_count = 1,
-        animation_speed = 1 / 3,
+        animation_speed = beaconed_lab_1_animation_speed,
         shift = util.by_pixel(0, 8),
         tint = beaconed_lab_tint,
         scale = 0.5
