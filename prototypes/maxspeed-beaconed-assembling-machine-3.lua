@@ -33,6 +33,8 @@ maxspeed_beaconed_assembling_machine_3.module_specification.module_slots = 0
 local maxspeed_beaconed_assembling_machine_3_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
+  maxspeed_beaconed_assembling_machine_3.fluid_boxes[1].secondary_draw_order = 2
+  maxspeed_beaconed_assembling_machine_3.fluid_boxes[2].secondary_draw_order = 2
   table.insert(maxspeed_beaconed_assembling_machine_3.animation.layers, 
     {
       filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/beaconed-assembling-machine-3-overlay.png",

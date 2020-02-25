@@ -39,6 +39,8 @@ if settings.startup["show-module-slot-rows"].value > 0 then
 end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
+  beaconed_assembling_machine_2.fluid_boxes[1].secondary_draw_order = 2
+  beaconed_assembling_machine_2.fluid_boxes[2].secondary_draw_order = 2
   table.insert(beaconed_assembling_machine_2.animation.layers, 
   {
     filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-2/beaconed-assembling-machine-2-overlay.png",
