@@ -111,9 +111,11 @@ data:extend({
     subgroup = "production-machine",
     order = "c[assembling-machine-3]",
     place_result = "beaconed-assembling-machine",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-assembling-machine', global_assembling_machine_beacon_count}
   },
 })
+
 data:extend({
   {
     type = "recipe",
@@ -133,7 +135,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-assembling-machine", amount = 1},
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-assembling-machine', global_assembling_machine_beacon_count}
   }
 })
 
