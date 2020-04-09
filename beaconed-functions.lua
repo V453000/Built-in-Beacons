@@ -16,13 +16,17 @@ global_productivity_module_1_energy_usage_bonus = data.raw["module"]["productivi
 global_productivity_module_2_energy_usage_bonus = data.raw["module"]["productivity-module-2"].effect.consumption.bonus --or 0
 global_productivity_module_3_energy_usage_bonus = data.raw["module"]["productivity-module-3"].effect.consumption.bonus --or 0
 
+--3x3
 global_assembling_machine_beacon_count    = 12
 global_electric_furnace_beacon_count      = 12
 global_lab_beacon_count                   = 12
-global_oil_refinery_beacon_count          = 16
 global_chemical_plant_beacon_count        = 12
 global_centrifuge_beacon_count            = 12
+--5x5
+global_oil_refinery_beacon_count          = 16
+--9x9
 global_rocket_silo_beacon_count           = 20
+--mining drills
 global_electric_mining_drill_beacon_count = 4
 global_pumpjack_beacon_count              = 4
 
