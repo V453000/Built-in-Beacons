@@ -30,14 +30,14 @@ beaconed_electric_mining_drill_2.energy_source.drain = beaconed_stats(beaconed_d
 beaconed_electric_mining_drill_2.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_electric_mining_drill_2.allowed_effects = {"productivity", "pollution"}
 
-beaconed_electric_mining_drill_2.module_specification.module_slots = 2
+beaconed_electric_mining_drill_2.module_specification.module_slots = 0
 
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  beaconed_electric_mining_drill_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  beaconed_electric_mining_drill_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
-end
+-- if settings.startup["show-module-slot-row-length"].value > 0 then
+--   beaconed_electric_mining_drill_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+-- end
+-- if settings.startup["show-module-slot-rows"].value > 0 then
+--   beaconed_electric_mining_drill_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+-- end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   beaconed_electric_mining_drill_2.animations = {

@@ -31,14 +31,14 @@ beaconed_pumpjack.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_u
 beaconed_pumpjack.allowed_effects = {"productivity", "pollution"}
 beaconed_pumpjack.fast_replaceable_group = "pumpjack"
 
-beaconed_pumpjack.module_specification.module_slots = 1
+beaconed_pumpjack.module_specification.module_slots = 0
 
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  beaconed_pumpjack.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  beaconed_pumpjack.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
-end
+-- if settings.startup["show-module-slot-row-length"].value > 0 then
+--   beaconed_pumpjack.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+-- end
+-- if settings.startup["show-module-slot-rows"].value > 0 then
+--   beaconed_pumpjack.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+-- end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   table.insert(beaconed_pumpjack.animations.north.layers,
