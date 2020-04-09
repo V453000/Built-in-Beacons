@@ -9,3 +9,4 @@ Date: 2020-04-09
 
   Changes:
     - Generally reduced the average number of beacons per machine a little bit.
+    - Removed module slots from beaconed Pumpjacks and Electric mining drills.
