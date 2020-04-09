@@ -138,7 +138,8 @@ data:extend({
     subgroup = "production-machine",
     order = "g[lab]",
     place_result = "beaconed-lab",
-    stack_size = 10
+    stack_size = 10,
+    localised_description = {'item-description.beaconed-lab', global_lab_beacon_count}
   },
 })
 data:extend({
@@ -160,7 +161,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-lab", amount = 1}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-lab', global_lab_beacon_count}
   }
 })
 

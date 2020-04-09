@@ -105,7 +105,8 @@ data:extend({
     subgroup = "production-machine",
     order = "c[assembling-machine-3]",
     place_result = "maxspeed-beaconed-assembling-machine-3",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.maxspeed-beaconed-assembling-machine-3', global_assembling_machine_beacon_count}
   },
 })
 data:extend({
@@ -126,7 +127,8 @@ data:extend({
     },
     results = {
       {type = "item", name = "maxspeed-beaconed-assembling-machine-3", amount = 1}
-    }
+    },
+    localised_description = {'item-description.maxspeed-beaconed-assembling-machine-3', global_assembling_machine_beacon_count}
   }
 })
 

@@ -109,7 +109,8 @@ data:extend({
     subgroup = "production-machine",
     order = "d[refinery]",
     place_result = "beaconed-oil-refinery",
-    stack_size = 10
+    stack_size = 10,
+    localised_description = {'item-description.beaconed-oil-refinery', global_oil_refinery_beacon_count}
   },
 })
 data:extend({
@@ -132,7 +133,8 @@ data:extend({
       {type = "item", name = "beaconed-oil-refinery", amount = 1}
     },
     allow_as_intermediate = false
-  }
+  },
+  localised_description = {'item-description.beaconed-oil-refinery', global_oil_refinery_beacon_count}
 })
 
 if global_logging == true then

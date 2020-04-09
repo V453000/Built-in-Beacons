@@ -111,7 +111,8 @@ data:extend({
     subgroup = "production-machine",
     order = "c[assembling-machine-3]",
     place_result = "beaconed-assembling-machine-2",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-assembling-machine-2', global_assembling_machine_beacon_count}
   },
 })
 data:extend({
@@ -134,7 +135,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_assembling_machine_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-assembling-machine-2"
+    main_product = "beaconed-assembling-machine-2",
+    localised_description = {'item-description.beaconed-assembling-machine-2', global_assembling_machine_beacon_count}
   }
 })
 

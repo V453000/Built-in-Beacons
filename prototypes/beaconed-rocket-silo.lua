@@ -381,7 +381,8 @@ data:extend({
     subgroup = "defensive-structure",
     order = "e[rocket-silo]",
     place_result = "beaconed-rocket-silo",
-    stack_size = 1
+    stack_size = 1,
+    localised_description = {'item-description.beaconed-rocket-silo', global_rocket_silo_beacon_count}
   },
 })
 data:extend({
@@ -403,7 +404,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-rocket-silo", amount = 1}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-rocket-silo', global_rocket_silo_beacon_count}
   }
 })
 

@@ -138,7 +138,8 @@ data:extend({
     subgroup = "production-machine",
     order = "g[lab]",
     place_result = "beaconed-lab-2",
-    stack_size = 10
+    stack_size = 10,
+    localised_description = {'item-description.beaconed-lab-2', global_lab_beacon_count}
   },
 })
 data:extend({
@@ -161,7 +162,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_lab_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-lab-2"
+    main_product = "beaconed-lab-2",
+    localised_description = {'item-description.beaconed-lab-2', global_lab_beacon_count}
   }
 })
 

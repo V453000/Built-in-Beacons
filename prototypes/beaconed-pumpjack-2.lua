@@ -92,7 +92,8 @@ data:extend({
     subgroup = "extraction-machine",
     order = "b[fluids]-b[pumpjack]",
     place_result = "beaconed-pumpjack-2",
-    stack_size = 20
+    stack_size = 20,
+    localised_description = {'item-description.beaconed-pumpjack-2', global_pumpjack_beacon_count}
   },
 })
 data:extend({
@@ -115,7 +116,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_pumpjack_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-pumpjack-2"
+    main_product = "beaconed-pumpjack-2",
+    localised_description = {'item-description.beaconed-pumpjack-2', global_pumpjack_beacon_count}
   }
 })
 

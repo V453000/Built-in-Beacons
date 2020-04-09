@@ -111,7 +111,8 @@ data:extend({
     subgroup = "production-machine",
     order = "e[chemical-plant]",
     place_result = "beaconed-chemical-plant",
-    stack_size = 10
+    stack_size = 10,
+    localised_description = {'item-description.beaconed-chemical-plant', global_chemical_plant_beacon_count}
   },
 })
 data:extend({
@@ -133,7 +134,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-chemical-plant", amount = 1}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-chemical-plant', global_chemical_plant_beacon_count}
   }
 })
 

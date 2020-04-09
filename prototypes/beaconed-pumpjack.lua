@@ -91,7 +91,8 @@ data:extend({
     subgroup = "extraction-machine",
     order = "b[fluids]-b[pumpjack]",
     place_result = "beaconed-pumpjack",
-    stack_size = 20
+    stack_size = 20,
+    localised_description = {'item-description.beaconed-pumpjack', global_pumpjack_beacon_count}
   },
 })
 data:extend({
@@ -113,7 +114,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-pumpjack", amount = 1}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-pumpjack', global_pumpjack_beacon_count}
   }
 })
 

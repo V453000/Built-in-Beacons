@@ -273,7 +273,8 @@ data:extend({
     subgroup = "extraction-machine",
     order = "a[items]-b[electric-mining-drill]",
     place_result = "beaconed-electric-mining-drill-2",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-electric-mining-drill-2', global_electric_mining_drill_beacon_count}
   },
 })
 data:extend({
@@ -296,7 +297,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_electric_mining_drill_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-electric-mining-drill-2"
+    main_product = "beaconed-electric-mining-drill-2",
+    localised_description = {'item-description.beaconed-electric-mining-drill-2', global_electric_mining_drill_beacon_count}
   }
 })
 

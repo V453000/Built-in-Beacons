@@ -142,7 +142,8 @@ data:extend({
     subgroup = "production-machine",
     order = "g[centrifuge]",
     place_result = "beaconed-centrifuge",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-centrifuge', global_centrifuge_beacon_count}
   },
 })
 data:extend({
@@ -164,7 +165,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-centrifuge", amount = 1},
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-centrifuge', global_centrifuge_beacon_count}
   }
 })
 

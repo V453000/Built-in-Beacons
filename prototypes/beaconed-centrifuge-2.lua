@@ -142,7 +142,8 @@ data:extend({
     subgroup = "production-machine",
     order = "g[centrifuge]",
     place_result = "beaconed-centrifuge-2",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-centrifuge-2', global_centrifuge_beacon_count}
   },
 })
 data:extend({
@@ -165,7 +166,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_centrifuge_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-centrifuge-2"
+    main_product = "beaconed-centrifuge-2",
+    localised_description = {'item-description.beaconed-centrifuge-2', global_centrifuge_beacon_count}
   }
 })
 

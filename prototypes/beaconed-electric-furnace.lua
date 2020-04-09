@@ -229,7 +229,8 @@ data:extend({
     subgroup = "smelting-machine",
     order = "b",
     place_result = "beaconed-electric-furnace",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-electric-furnace', global_electric_furnace_beacon_count}
   },
 })
 data:extend({
@@ -251,7 +252,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-electric-furnace", amount = 1}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-electric-furnace', global_electric_furnace_beacon_count}
   }
 })
 

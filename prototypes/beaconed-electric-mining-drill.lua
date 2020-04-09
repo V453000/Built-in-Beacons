@@ -273,7 +273,8 @@ data:extend({
     subgroup = "extraction-machine",
     order = "a[items]-b[electric-mining-drill]",
     place_result = "beaconed-electric-mining-drill",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-electric-mining-drill', global_electric_mining_drill_beacon_count}
   },
 })
 data:extend({
@@ -295,7 +296,8 @@ data:extend({
     results = {
       {type = "item", name = "beaconed-electric-mining-drill", amount = 1}
     },
-    allow_as_intermediate = false
+    allow_as_intermediate = false,
+    localised_description = {'item-description.beaconed-electric-mining-drill', global_electric_mining_drill_beacon_count}
   }
 })
 

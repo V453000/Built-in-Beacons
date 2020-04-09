@@ -105,7 +105,8 @@ data:extend({
     subgroup = "production-machine",
     order = "d[refinery]",
     place_result = "beaconed-oil-refinery-2",
-    stack_size = 10
+    stack_size = 10,
+    localised_description = {'item-description.beaconed-oil-refinery-2', global_oil_refinery_beacon_count}
   },
 })
 data:extend({
@@ -128,7 +129,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_oil_refinery_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-oil-refinery-2"
+    main_product = "beaconed-oil-refinery-2",
+    localised_description = {'item-description.beaconed-oil-refinery-2', global_oil_refinery_beacon_count}
   }
 })
 

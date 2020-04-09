@@ -229,7 +229,8 @@ data:extend({
     subgroup = "smelting-machine",
     order = "b",
     place_result = "beaconed-electric-furnace-2",
-    stack_size = 50
+    stack_size = 50,
+    localised_description = {'item-description.beaconed-electric-furnace-2', global_electric_furnace_beacon_count}
   },
 })
 data:extend({
@@ -252,7 +253,8 @@ data:extend({
       {type = "item", name = "speed-module", amount = global_electric_furnace_average_beacon_count * global_beacon_module_slots, show_details_in_recipe_tooltip = false}
     },
     allow_as_intermediate = false,
-    main_product = "beaconed-electric-furnace-2"
+    main_product = "beaconed-electric-furnace-2",
+    localised_description = {'item-description.beaconed-electric-furnace-2', global_electric_furnace_beacon_count}
   }
 })
 
