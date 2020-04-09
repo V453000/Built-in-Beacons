@@ -33,34 +33,62 @@ global_pumpjack_beacon_count              = settings.startup["beacons-for-mining
 --averages
 if     settings.startup["beacons-for-assembling-machine"].value == 12 then
   global_assembling_machine_average_beacon_count    = 6
-  global_electric_furnace_average_beacon_count      = 6
-  global_lab_average_beacon_count                   = 6
-  global_chemical_plant_average_beacon_count        = 6
-  global_centrifuge_average_beacon_count            = 6
 elseif settings.startup["beacons-for-assembling-machine"].value == 10 then
   global_assembling_machine_average_beacon_count    = 4
-  global_electric_furnace_average_beacon_count      = 4
-  global_lab_average_beacon_count                   = 4
-  global_chemical_plant_average_beacon_count        = 4
-  global_centrifuge_average_beacon_count            = 4
 elseif settings.startup["beacons-for-assembling-machine"].value == 8 then
   global_assembling_machine_average_beacon_count    = 2
-  global_electric_furnace_average_beacon_count      = 2
-  global_lab_average_beacon_count                   = 2
-  global_chemical_plant_average_beacon_count        = 2
-  global_centrifuge_average_beacon_count            = 2
 elseif settings.startup["beacons-for-assembling-machine"].value == 4 then
   global_assembling_machine_average_beacon_count    = 1
-  global_electric_furnace_average_beacon_count      = 1
-  global_lab_average_beacon_count                   = 1
-  global_chemical_plant_average_beacon_count        = 1
-  global_centrifuge_average_beacon_count            = 1
 else
   global_assembling_machine_average_beacon_count    = 1
+end
+
+if     settings.startup["beacons-for-electric-furnace"].value == 12 then
+  global_electric_furnace_average_beacon_count      = 6
+elseif settings.startup["beacons-for-electric-furnace"].value == 10 then
+  global_electric_furnace_average_beacon_count      = 4
+elseif settings.startup["beacons-for-electric-furnace"].value == 8 then
+  global_electric_furnace_average_beacon_count      = 2
+elseif settings.startup["beacons-for-electric-furnace"].value == 4 then
   global_electric_furnace_average_beacon_count      = 1
+else
+  global_electric_furnace_average_beacon_count      = 1
+end
+
+if     settings.startup["beacons-for-lab"].value == 12 then
+  global_lab_average_beacon_count                   = 6
+elseif settings.startup["beacons-for-lab"].value == 10 then
+  global_lab_average_beacon_count                   = 4
+elseif settings.startup["beacons-for-lab"].value == 8 then
+  global_lab_average_beacon_count                   = 2
+elseif settings.startup["beacons-for-lab"].value == 4 then
   global_lab_average_beacon_count                   = 1
-  global_chemical_plant_average_beacon_count        = 1
+else
+  global_lab_average_beacon_count                   = 1
+end
+
+if     settings.startup["beacons-for-centrifuge"].value == 12 then
+  global_centrifuge_average_beacon_count            = 6
+elseif settings.startup["beacons-for-centrifuge"].value == 10 then
+  global_centrifuge_average_beacon_count            = 4
+elseif settings.startup["beacons-for-centrifuge"].value == 8 then
+  global_centrifuge_average_beacon_count            = 2
+elseif settings.startup["beacons-for-centrifuge"].value == 4 then
   global_centrifuge_average_beacon_count            = 1
+else
+  global_centrifuge_average_beacon_count            = 1
+end
+
+if     settings.startup["beacons-for-chemical-plant"].value == 12 then
+  global_chemical_plant_average_beacon_count        = 6
+elseif settings.startup["beacons-for-chemical-plant"].value == 10 then
+  global_chemical_plant_average_beacon_count        = 4
+elseif settings.startup["beacons-for-chemical-plant"].value == 8 then
+  global_chemical_plant_average_beacon_count        = 2
+elseif settings.startup["beacons-for-chemical-plant"].value == 4 then
+  global_chemical_plant_average_beacon_count        = 1
+else
+  global_chemical_plant_average_beacon_count        = 1
 end
 
 if     settings.startup["beacons-for-oil-refinery"].value == 16 then
@@ -85,12 +113,17 @@ end
 
 if     settings.startup["beacons-for-mining-drill"].value == 8 then
   global_electric_mining_drill_average_beacon_count = 2
-  global_pumpjack_average_beacon_count              = 2
 elseif settings.startup["beacons-for-mining-drill"].value == 4 then
   global_electric_mining_drill_average_beacon_count = 1
-  global_pumpjack_average_beacon_count              = 1
 else
   global_electric_mining_drill_average_beacon_count = 1
+end
+
+if     settings.startup["beacons-for-pumpjack"].value == 8 then
+  global_pumpjack_average_beacon_count              = 2
+elseif settings.startup["beacons-for-pumpjack"].value == 4 then
+  global_pumpjack_average_beacon_count              = 1
+else
   global_pumpjack_average_beacon_count              = 1
 end
 

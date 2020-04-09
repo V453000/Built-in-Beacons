@@ -18,11 +18,43 @@ data:extend
   },
   {
     type = "int-setting",
+    name = "beacons-for-electric-furnace",
+    setting_type = "startup",
+    default_value = 12,
+    allowed_values = {12,10,8,4},
+    order = "b-b"
+  },
+  {
+    type = "int-setting",
+    name = "beacons-for-lab",
+    setting_type = "startup",
+    default_value = 12,
+    allowed_values = {12,10,8,4},
+    order = "b-c"
+  },
+  {
+    type = "int-setting",
+    name = "beacons-for-centrifuge",
+    setting_type = "startup",
+    default_value = 12,
+    allowed_values = {12,10,8,4},
+    order = "b-d"
+  },
+  {
+    type = "int-setting",
+    name = "beacons-for-chemical-plant",
+    setting_type = "startup",
+    default_value = 12,
+    allowed_values = {12,10,8,4},
+    order = "b-e"
+  },
+  {
+    type = "int-setting",
     name = "beacons-for-oil-refinery",
     setting_type = "startup",
     default_value = 16,
     allowed_values = {16,13,10,5},
-    order = "b-b"
+    order = "b-f"
   },
   {
     type = "int-setting",
@@ -30,7 +62,23 @@ data:extend
     setting_type = "startup",
     default_value = 4,
     allowed_values = {8,4},
-    order = "b-c"
+    order = "b-g"
+  },
+  {
+    type = "int-setting",
+    name = "beacons-for-pumpjack",
+    setting_type = "startup",
+    default_value = 4,
+    allowed_values = {8,4},
+    order = "b-h"
+  },
+  {
+    type = "int-setting",
+    name = "beacons-for-pumpjack",
+    setting_type = "startup",
+    default_value = 4,
+    allowed_values = {8,4},
+    order = "b-i"
   },
   {
     type = "int-setting",
@@ -38,7 +86,7 @@ data:extend
     setting_type = "startup",
     default_value = 20,
     allowed_values = {20,12},
-    order = "b-d"
+    order = "b-j"
   },
   {
     type = "int-setting",
