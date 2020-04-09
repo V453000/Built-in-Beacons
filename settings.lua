@@ -18,7 +18,7 @@ data:extend
   },
   {
     type = "int-setting",
-    name = "beacons-for-refinery",
+    name = "beacons-for-oil-refinery",
     setting_type = "startup",
     default_value = 16,
     allowed_values = {16,13,10,5},

@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2020-04-09
+  Uploaded by:
+    - V453000
+
+  Features:
+    - Added mod settings that allow choosing amount of beacons per machine group.
+
+  Changes:
+    - Generally reduced the average number of beacons per machine a little bit.

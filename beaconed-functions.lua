@@ -17,28 +17,82 @@ global_productivity_module_2_energy_usage_bonus = data.raw["module"]["productivi
 global_productivity_module_3_energy_usage_bonus = data.raw["module"]["productivity-module-3"].effect.consumption.bonus --or 0
 
 --3x3
-global_assembling_machine_beacon_count    = 12
-global_electric_furnace_beacon_count      = 12
-global_lab_beacon_count                   = 12
-global_chemical_plant_beacon_count        = 12
-global_centrifuge_beacon_count            = 12
+global_assembling_machine_beacon_count    = settings.startup["beacons-for-assembling-machine"].value
+global_electric_furnace_beacon_count      = settings.startup["beacons-for-assembling-machine"].value
+global_lab_beacon_count                   = settings.startup["beacons-for-assembling-machine"].value
+global_chemical_plant_beacon_count        = settings.startup["beacons-for-assembling-machine"].value
+global_centrifuge_beacon_count            = settings.startup["beacons-for-assembling-machine"].value
 --5x5
-global_oil_refinery_beacon_count          = 16
+global_oil_refinery_beacon_count          = settings.startup["beacons-for-oil-refinery"].value
 --9x9
-global_rocket_silo_beacon_count           = 20
+global_rocket_silo_beacon_count           = settings.startup["beacons-for-rocket-silo"].value
 --mining drills
-global_electric_mining_drill_beacon_count = 4
-global_pumpjack_beacon_count              = 4
+global_electric_mining_drill_beacon_count = settings.startup["beacons-for-mining-drill"].value
+global_pumpjack_beacon_count              = settings.startup["beacons-for-mining-drill"].value
 
-global_assembling_machine_average_beacon_count    = 7--12
-global_electric_furnace_average_beacon_count      = 7--12
-global_lab_average_beacon_count                   = 7--12
-global_oil_refinery_average_beacon_count          = 10--16
-global_chemical_plant_average_beacon_count        = 7--12
-global_centrifuge_average_beacon_count            = 7--12
-global_rocket_silo_average_beacon_count           = 20--20
-global_electric_mining_drill_average_beacon_count = 1--4
-global_pumpjack_average_beacon_count              = 1--4
+--averages
+if     settings.startup["beacons-for-assembling-machine"].value == 12 then
+  global_assembling_machine_average_beacon_count    = 6
+  global_electric_furnace_average_beacon_count      = 6
+  global_lab_average_beacon_count                   = 6
+  global_chemical_plant_average_beacon_count        = 6
+  global_centrifuge_average_beacon_count            = 6
+elseif settings.startup["beacons-for-assembling-machine"].value == 10 then
+  global_assembling_machine_average_beacon_count    = 4
+  global_electric_furnace_average_beacon_count      = 4
+  global_lab_average_beacon_count                   = 4
+  global_chemical_plant_average_beacon_count        = 4
+  global_centrifuge_average_beacon_count            = 4
+elseif settings.startup["beacons-for-assembling-machine"].value == 8 then
+  global_assembling_machine_average_beacon_count    = 2
+  global_electric_furnace_average_beacon_count      = 2
+  global_lab_average_beacon_count                   = 2
+  global_chemical_plant_average_beacon_count        = 2
+  global_centrifuge_average_beacon_count            = 2
+elseif settings.startup["beacons-for-assembling-machine"].value == 4 then
+  global_assembling_machine_average_beacon_count    = 1
+  global_electric_furnace_average_beacon_count      = 1
+  global_lab_average_beacon_count                   = 1
+  global_chemical_plant_average_beacon_count        = 1
+  global_centrifuge_average_beacon_count            = 1
+else
+  global_assembling_machine_average_beacon_count    = 1
+  global_electric_furnace_average_beacon_count      = 1
+  global_lab_average_beacon_count                   = 1
+  global_chemical_plant_average_beacon_count        = 1
+  global_centrifuge_average_beacon_count            = 1
+end
+
+if     settings.startup["beacons-for-oil-refinery"].value == 16 then
+  global_oil_refinery_average_beacon_count          = 8
+elseif settings.startup["beacons-for-oil-refinery"].value == 13 then
+  global_oil_refinery_average_beacon_count          = 6
+elseif settings.startup["beacons-for-oil-refinery"].value == 10 then
+  global_oil_refinery_average_beacon_count          = 3
+elseif settings.startup["beacons-for-oil-refinery"].value == 5 then
+  global_oil_refinery_average_beacon_count          = 2
+else
+  global_oil_refinery_average_beacon_count          = 1
+end
+
+if     settings.startup["beacons-for-rocket-silo"].value == 20 then
+  global_rocket_silo_average_beacon_count           = 20
+elseif settings.startup["beacons-for-rocket-silo"].value == 12 then
+  global_rocket_silo_average_beacon_count           = 12
+else
+  global_rocket_silo_average_beacon_count           = 12
+end
+
+if     settings.startup["beacons-for-mining-drill"].value == 8 then
+  global_electric_mining_drill_average_beacon_count = 2
+  global_pumpjack_average_beacon_count              = 2
+elseif settings.startup["beacons-for-mining-drill"].value == 4 then
+  global_electric_mining_drill_average_beacon_count = 1
+  global_pumpjack_average_beacon_count              = 1
+else
+  global_electric_mining_drill_average_beacon_count = 1
+  global_pumpjack_average_beacon_count              = 1
+end
 
 beaconed_assembling_machine_1_tint          = {0.24, 0.12  , 0   , 0}
 beaconed_assembling_machine_2_tint          = {0.3 , 0.2625, 0   , 0}
