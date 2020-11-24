@@ -113,21 +113,6 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
   )
 end
 
-if settings.startup["modded-entity-graphics"].value ~= "OFF" then
-  for i,layer in pairs(beaconed_centrifuge_3.animation.layers) do
-    layer.animation_speed = beaconed_centrifuge_3_animation_speed
-    if (layer.hr_version) then
-      layer.hr_version.animation_speed = beaconed_centrifuge_3_animation_speed
-    end
-  end
-  for i,layer in pairs(beaconed_centrifuge_3.idle_animation.layers) do
-    layer.animation_speed = beaconed_centrifuge_3_animation_speed
-    if (layer.hr_version) then
-      layer.hr_version.animation_speed = beaconed_centrifuge_3_animation_speed
-    end
-  end
-end
-
 data:extend({
   beaconed_centrifuge_3
 })
