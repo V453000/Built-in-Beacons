@@ -3,3 +3,5 @@ LUT.py
 *.bat
 spritesheeter.py
 *.json
+*/resized/*
+*/mip/*
