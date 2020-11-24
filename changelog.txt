@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2020-11-25
+  Uploaded by:
+    - V453000
+
+  Features:
+    - Updated to work with Factorio 1.1
+
+  Changes:
+    - Reworked entity/item icons to match high resolution icons introduced in 0.18.27.
+    - Removed overlay graphics from Beaconed electric mining drills until I fix them properly.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2020-04-09
   Uploaded by:
