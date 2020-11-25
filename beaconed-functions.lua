@@ -324,7 +324,7 @@ function beaconed_stats(params)
   local beacon_module_slots               = params.beacon_module_slots or 2
   local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0
   local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or 0
-  local machine_module_pollution_bonus    = params.machine_module_pollution_bonus or 666
+  local machine_module_pollution_bonus    = params.machine_module_pollution_bonus or 0
   local emission_hack                     = params.emission_hack or 1 -- used to compensate for fullspeed productivity modules not having exactly half the effect of base productivity modules
 
   -- unused
@@ -332,7 +332,7 @@ function beaconed_stats(params)
   local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
   local energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect
   local pollution_multiplier_from_machine_modules = 1 + machine_module_pollution_bonus * machine_module_slots
-  local beaconed_emissions_per_minute      = 666
+  local beaconed_emissions_per_minute      = 1
   if settings.startup["productivity-mode"].value == 'Modded Modules' then
     beaconed_emissions_per_minute    = machine_emission * energy_usage_multiplier / emission_hack
   else
