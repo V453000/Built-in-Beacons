@@ -15,6 +15,9 @@ global_speed_module_3_energy_usage_bonus = data.raw["module"]["speed-module-3"].
 global_productivity_module_1_energy_usage_bonus = data.raw["module"]["productivity-module"].effect.consumption.bonus --or 0
 global_productivity_module_2_energy_usage_bonus = data.raw["module"]["productivity-module-2"].effect.consumption.bonus --or 0
 global_productivity_module_3_energy_usage_bonus = data.raw["module"]["productivity-module-3"].effect.consumption.bonus --or 0
+global_productivity_module_1_productivity_bonus = data.raw["module"]["productivity-module"].effect.productivity.bonus --or 0
+global_productivity_module_2_productivity_bonus = data.raw["module"]["productivity-module-2"].effect.productivity.bonus --or 0
+global_productivity_module_3_productivity_bonus = data.raw["module"]["productivity-module-3"].effect.productivity.bonus --or 0
 
 --3x3
 global_assembling_machine_beacon_count    = settings.startup["beacons-for-assembling-machine"].value
@@ -335,12 +338,18 @@ function beaconed_stats(params)
   local beaconed_animation_speed_multiplier = tier_animation_speed_multiplier * custom_animation_speed_multiplier / speed_multiplier
   local beaconed_animation_speed            = original_animation_speed * beaconed_animation_speed_multiplier
 
+  -------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
+  local machine_module_productivity_bonus = params.machine_module_productivity_bonus or 6
+  local beaconed_base_productivity = machine_module_slots * machine_module_productivity_bonus
+
   local stats = {}
   stats.beaconed_drain_string         = beaconed_drain_string
   stats.beaconed_crafting_speed       = beaconed_crafting_speed
   stats.beaconed_energy_usage_string  = beaconed_energy_usage_string
   stats.beaconed_emissions_per_minute = beaconed_emissions_per_minute
   stats.beaconed_animation_speed      = beaconed_animation_speed
+  stats.beaconed_base_productivity    = beaconed_base_productivity
   return stats
 
 end

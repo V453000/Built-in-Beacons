@@ -2,11 +2,19 @@ data:extend
 {
   {
     type = "string-setting",
+    name = "productivity-mode",
+    setting_type = "startup",
+    default_value = "Machines",
+    allowed_values = {"Machines", "Modded Modules"},
+    order = "a-a"
+  },
+  {
+    type = "string-setting",
     name = "modded-entity-graphics",
     setting_type = "startup",
     default_value = "ON",
     allowed_values = {"ON", "Animation speed only", "OFF"},
-    order = "a"
+    order = "a-b"
   },
   {
     type = "int-setting",
