@@ -12,6 +12,8 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  machine_module_productivity_bonus = global_productivity_module_1_productivity_bonus,
+  machine_module_pollution_bonus    = global_productivity_module_1_pollution_bonus,
   emission_hack                     = 1
 }
 
@@ -32,12 +34,17 @@ beaconed_rocket_silo.allowed_effects = {"productivity", "pollution"}
 beaconed_rocket_silo.fast_replaceable_group = "rocket-silo"
 beaconed_rocket_silo.rocket_entity = "beaconed-rocket"
 
-beaconed_rocket_silo.module_specification.module_slots = data.raw["rocket-silo"]["rocket-silo"].module_specification.module_slots * 2
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  beaconed_rocket_silo.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  beaconed_rocket_silo.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+if settings.startup["productivity-mode"].value == 'Modded Modules' then
+  beaconed_rocket_silo.module_specification.module_slots = data.raw["rocket-silo"]["rocket-silo"].module_specification.module_slots * 2
+  if settings.startup["show-module-slot-row-length"].value > 0 then
+    beaconed_rocket_silo.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+  end
+  if settings.startup["show-module-slot-rows"].value > 0 then
+    beaconed_rocket_silo.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+  end
+else
+  beaconed_rocket_silo.module_specification.module_slots = 0
+  beaconed_rocket_silo.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
 beaconed_rocket = util.table.deepcopy(data.raw['rocket-silo-rocket']['rocket-silo-rocket'])
