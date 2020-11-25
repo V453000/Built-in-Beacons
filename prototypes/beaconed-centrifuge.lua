@@ -12,6 +12,8 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  machine_module_productivity_bonus = global_productivity_module_1_productivity_bonus,
+  machine_module_pollution_bonus    = global_productivity_module_1_pollution_bonus,
   original_animation_speed          = 1,
   tier_animation_speed_multiplier   = global_tier_1_animation_speed_multiplier,
   custom_animation_speed_multiplier = 1,
@@ -31,12 +33,17 @@ beaconed_centrifuge.energy_usage = beaconed_stats(beaconed_data).beaconed_energy
 beaconed_centrifuge.allowed_effects = {"productivity", "pollution"}
 beaconed_centrifuge.fast_replaceable_group = "centrifuge"
 
-beaconed_centrifuge.module_specification.module_slots = data.raw["assembling-machine"]["centrifuge"].module_specification.module_slots * 2
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  beaconed_centrifuge.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  beaconed_centrifuge.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+if settings.startup["productivity-mode"].value == 'Modded Modules' then
+  beaconed_centrifuge.module_specification.module_slots = data.raw["assembling-machine"]["centrifuge"].module_specification.module_slots * 2
+  if settings.startup["show-module-slot-row-length"].value > 0 then
+    beaconed_centrifuge.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+  end
+  if settings.startup["show-module-slot-rows"].value > 0 then
+    beaconed_centrifuge.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+  end
+else
+  beaconed_centrifuge.module_specification.module_slots = 0
+  beaconed_centrifuge.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
