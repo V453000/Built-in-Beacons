@@ -13,6 +13,7 @@ local beaconed_data = {
   machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
   machine_module_productivity_bonus = global_productivity_module_1_productivity_bonus,
+  machine_module_pollution_bonus    = global_productivity_module_1_pollution_bonus,
   original_animation_speed          = 1,
   tier_animation_speed_multiplier   = global_tier_1_animation_speed_multiplier,
   custom_animation_speed_multiplier = 1,

@@ -18,6 +18,9 @@ global_productivity_module_3_energy_usage_bonus = data.raw["module"]["productivi
 global_productivity_module_1_productivity_bonus = data.raw["module"]["productivity-module"].effect.productivity.bonus --or 0
 global_productivity_module_2_productivity_bonus = data.raw["module"]["productivity-module-2"].effect.productivity.bonus --or 0
 global_productivity_module_3_productivity_bonus = data.raw["module"]["productivity-module-3"].effect.productivity.bonus --or 0
+global_productivity_module_1_pollution_bonus = data.raw["module"]["productivity-module"].effect.pollution.bonus --or 0
+global_productivity_module_2_pollution_bonus = data.raw["module"]["productivity-module-2"].effect.pollution.bonus --or 0
+global_productivity_module_3_pollution_bonus = data.raw["module"]["productivity-module-3"].effect.pollution.bonus --or 0
 
 --3x3
 global_assembling_machine_beacon_count    = settings.startup["beacons-for-assembling-machine"].value
@@ -321,13 +324,20 @@ function beaconed_stats(params)
   local beacon_module_slots               = params.beacon_module_slots or 2
   local beacon_module_energy_usage_bonus  = params.beacon_module_energy_usage_bonus or 0
   local machine_module_energy_usage_bonus = params.machine_module_energy_usage_bonus or 0
+  local machine_module_pollution_bonus    = params.machine_module_pollution_bonus or 666
   local emission_hack                     = params.emission_hack or 1 -- used to compensate for fullspeed productivity modules not having exactly half the effect of base productivity modules
 
   -- unused
   local beacon_energy_usage_effect         = beacon_count * beacon_module_energy_usage_bonus * beacon_effect * beacon_module_slots
   local machine_module_energy_usage_effect = machine_module_slots * machine_module_energy_usage_bonus
   local energy_usage_multiplier            = 1 + machine_module_energy_usage_effect + beacon_energy_usage_effect
-  local beaconed_emissions_per_minute      = machine_emission * energy_usage_multiplier / emission_hack
+  local pollution_multiplier_from_machine_modules = 1 + machine_module_pollution_bonus * machine_module_slots
+  local beaconed_emissions_per_minute      = 666
+  if settings.startup["productivity-mode"].value == 'Modded Modules' then
+    beaconed_emissions_per_minute    = machine_emission * energy_usage_multiplier / emission_hack
+  else
+    beaconed_emissions_per_minute    = machine_emission * energy_usage_multiplier * pollution_multiplier_from_machine_modules
+  end
 
   -------------------------------------------------------------------------------------------------------------------------------
   -------------------------------------------------------------------------------------------------------------------------------
