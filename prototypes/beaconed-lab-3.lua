@@ -12,6 +12,8 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_3_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_3_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_3_energy_usage_bonus,
+  machine_module_productivity_bonus = global_productivity_module_3_productivity_bonus,
+  machine_module_pollution_bonus    = global_productivity_module_3_pollution_bonus,
   original_animation_speed          = 1/3,
   tier_animation_speed_multiplier   = global_tier_3_animation_speed_multiplier,
   custom_animation_speed_multiplier = 1,
@@ -29,13 +31,17 @@ beaconed_lab_3.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usag
 beaconed_lab_3.allowed_effects = {"productivity", "pollution"}
 beaconed_lab_3.fast_replaceable_group = "lab"
 
-beaconed_lab_3.module_specification.module_slots = data.raw["lab"]["lab"].module_specification.module_slots * 2
-
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  beaconed_lab_3.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  beaconed_lab_3.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+if settings.startup["productivity-mode"].value == 'Modded Modules' then
+  beaconed_lab_3.module_specification.module_slots = data.raw["lab"]["lab"].module_specification.module_slots * 2
+  if settings.startup["show-module-slot-row-length"].value > 0 then
+    beaconed_lab_3.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+  end
+  if settings.startup["show-module-slot-rows"].value > 0 then
+    beaconed_lab_3.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+  end
+else
+  beaconed_lab_3.module_specification.module_slots = 0
+  beaconed_lab_3.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
