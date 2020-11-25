@@ -12,6 +12,7 @@ local beaconed_data = {
   beacon_module_energy_usage_bonus  = global_speed_module_1_energy_usage_bonus,
   machine_module_speed_bonus        = global_productivity_module_1_speed_bonus,
   machine_module_energy_usage_bonus = global_productivity_module_1_energy_usage_bonus,
+  machine_module_productivity_bonus = global_productivity_module_1_productivity_bonus,
   original_animation_speed          = 1,
   tier_animation_speed_multiplier   = global_tier_1_animation_speed_multiplier,
   custom_animation_speed_multiplier = 1,
@@ -30,12 +31,17 @@ beaconed_assembling_machine.energy_source.drain = beaconed_stats(beaconed_data).
 beaconed_assembling_machine.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string--"3225kW"
 beaconed_assembling_machine.allowed_effects = {"productivity", "pollution"}
 
-beaconed_assembling_machine.module_specification.module_slots = original_assembling_machine_3.module_specification.module_slots * 2
-if settings.startup["show-module-slot-row-length"].value > 0 then
-  beaconed_assembling_machine.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
-end
-if settings.startup["show-module-slot-rows"].value > 0 then
-  beaconed_assembling_machine.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+if settings.startup["productivity-mode"].value == 'Modded Modules' then
+  beaconed_assembling_machine.module_specification.module_slots = original_assembling_machine_3.module_specification.module_slots * 2
+  if settings.startup["show-module-slot-row-length"].value > 0 then
+    beaconed_assembling_machine.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+  end
+  if settings.startup["show-module-slot-rows"].value > 0 then
+    beaconed_assembling_machine.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+  end
+else
+  beaconed_assembling_machine.module_specification.module_slots = 0
+  beaconed_assembling_machine.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
