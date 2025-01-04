@@ -1,40 +1,40 @@
 global_beacon_transmission_effect = data.raw["beacon"]["beacon"].distribution_effectivity --or 0
-global_beacon_module_slots = data.raw["beacon"]["beacon"].module_specification.module_slots --or 0
+global_beacon_module_slots = data.raw["beacon"]["beacon"].module_slots --or 0
 global_beacon_drain_kw = data.raw["beacon"]["beacon"].energy_usage -- or 0
 global_beacon_drain_nokw   = string.gsub(global_beacon_drain_kw, "kW", "")
 global_beacon_drain = tonumber(global_beacon_drain_nokw, 10)
-global_speed_module_1_speed_bonus = data.raw["module"]["speed-module"].effect.speed.bonus --or 0
-global_speed_module_2_speed_bonus = data.raw["module"]["speed-module-2"].effect.speed.bonus --or 0
-global_speed_module_3_speed_bonus = data.raw["module"]["speed-module-3"].effect.speed.bonus --or 0
-global_productivity_module_1_speed_bonus = data.raw["module"]["productivity-module"].effect.speed.bonus --or 0
-global_productivity_module_2_speed_bonus = data.raw["module"]["productivity-module-2"].effect.speed.bonus --or 0
-global_productivity_module_3_speed_bonus = data.raw["module"]["productivity-module-3"].effect.speed.bonus --or 0
-global_speed_module_1_energy_usage_bonus = data.raw["module"]["speed-module"].effect.consumption.bonus --or 0
-global_speed_module_2_energy_usage_bonus = data.raw["module"]["speed-module-2"].effect.consumption.bonus --or 0
-global_speed_module_3_energy_usage_bonus = data.raw["module"]["speed-module-3"].effect.consumption.bonus --or 0
-global_productivity_module_1_energy_usage_bonus = data.raw["module"]["productivity-module"].effect.consumption.bonus --or 0
-global_productivity_module_2_energy_usage_bonus = data.raw["module"]["productivity-module-2"].effect.consumption.bonus --or 0
-global_productivity_module_3_energy_usage_bonus = data.raw["module"]["productivity-module-3"].effect.consumption.bonus --or 0
-global_productivity_module_1_productivity_bonus = data.raw["module"]["productivity-module"].effect.productivity.bonus --or 0
-global_productivity_module_2_productivity_bonus = data.raw["module"]["productivity-module-2"].effect.productivity.bonus --or 0
-global_productivity_module_3_productivity_bonus = data.raw["module"]["productivity-module-3"].effect.productivity.bonus --or 0
-global_productivity_module_1_pollution_bonus = data.raw["module"]["productivity-module"].effect.pollution.bonus --or 0
-global_productivity_module_2_pollution_bonus = data.raw["module"]["productivity-module-2"].effect.pollution.bonus --or 0
-global_productivity_module_3_pollution_bonus = data.raw["module"]["productivity-module-3"].effect.pollution.bonus --or 0
+global_speed_module_1_speed_bonus = data.raw["module"]["speed-module"].effect.speed --or 0
+global_speed_module_2_speed_bonus = data.raw["module"]["speed-module-2"].effect.speed --or 0
+global_speed_module_3_speed_bonus = data.raw["module"]["speed-module-3"].effect.speed --or 0
+global_productivity_module_1_speed_bonus = data.raw["module"]["productivity-module"].effect.speed --or 0
+global_productivity_module_2_speed_bonus = data.raw["module"]["productivity-module-2"].effect.speed --or 0
+global_productivity_module_3_speed_bonus = data.raw["module"]["productivity-module-3"].effect.speed --or 0
+global_speed_module_1_energy_usage_bonus = data.raw["module"]["speed-module"].effect.consumption --or 0
+global_speed_module_2_energy_usage_bonus = data.raw["module"]["speed-module-2"].effect.consumption --or 0
+global_speed_module_3_energy_usage_bonus = data.raw["module"]["speed-module-3"].effect.consumption --or 0
+global_productivity_module_1_energy_usage_bonus = data.raw["module"]["productivity-module"].effect.consumption --or 0
+global_productivity_module_2_energy_usage_bonus = data.raw["module"]["productivity-module-2"].effect.consumption --or 0
+global_productivity_module_3_energy_usage_bonus = data.raw["module"]["productivity-module-3"].effect.consumption --or 0
+global_productivity_module_1_productivity_bonus = data.raw["module"]["productivity-module"].effect.productivity --or 0
+global_productivity_module_2_productivity_bonus = data.raw["module"]["productivity-module-2"].effect.productivity --or 0
+global_productivity_module_3_productivity_bonus = data.raw["module"]["productivity-module-3"].effect.productivity --or 0
+global_productivity_module_1_pollution_bonus = data.raw["module"]["productivity-module"].effect.pollution --or 0
+global_productivity_module_2_pollution_bonus = data.raw["module"]["productivity-module-2"].effect.pollution --or 0
+global_productivity_module_3_pollution_bonus = data.raw["module"]["productivity-module-3"].effect.pollution --or 0
 
 --3x3
-global_assembling_machine_beacon_count    = settings.startup["beacons-for-assembling-machine"].value
-global_electric_furnace_beacon_count      = settings.startup["beacons-for-assembling-machine"].value
-global_lab_beacon_count                   = settings.startup["beacons-for-assembling-machine"].value
-global_chemical_plant_beacon_count        = settings.startup["beacons-for-assembling-machine"].value
-global_centrifuge_beacon_count            = settings.startup["beacons-for-assembling-machine"].value
+global_assembling_machine_beacon_count    = settings.startup["beacons-for-assembling-machine"].value or 12
+global_electric_furnace_beacon_count      = settings.startup["beacons-for-assembling-machine"].value or 12
+global_lab_beacon_count                   = settings.startup["beacons-for-assembling-machine"].value or 12
+global_chemical_plant_beacon_count        = settings.startup["beacons-for-assembling-machine"].value or 12
+global_centrifuge_beacon_count            = settings.startup["beacons-for-assembling-machine"].value or 12
 --5x5
-global_oil_refinery_beacon_count          = settings.startup["beacons-for-oil-refinery"].value
+global_oil_refinery_beacon_count          = settings.startup["beacons-for-oil-refinery"].value or 16
 --9x9
-global_rocket_silo_beacon_count           = settings.startup["beacons-for-rocket-silo"].value
+global_rocket_silo_beacon_count           = settings.startup["beacons-for-rocket-silo"].value or 20
 --mining drills
-global_electric_mining_drill_beacon_count = settings.startup["beacons-for-mining-drill"].value
-global_pumpjack_beacon_count              = settings.startup["beacons-for-mining-drill"].value
+global_electric_mining_drill_beacon_count = settings.startup["beacons-for-mining-drill"].value or 4
+global_pumpjack_beacon_count              = settings.startup["beacons-for-mining-drill"].value or 4
 
 --averages
 if     settings.startup["beacons-for-assembling-machine"].value == 12 then

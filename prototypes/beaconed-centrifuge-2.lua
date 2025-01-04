@@ -1,9 +1,9 @@
 local original_centrifuge = data.raw["assembling-machine"]["centrifuge"]
 local beaconed_data = {
   machine_energy_usage              = original_centrifuge.energy_usage,
-  machine_emissions                 = original_centrifuge.energy_source.emissions_per_minute,
+  machine_emissions                 = original_centrifuge.energy_source.emissions_per_minute.pollution,
   machine_crafting_speed            = original_centrifuge.crafting_speed,
-  machine_module_slots              = original_centrifuge.module_specification.module_slots,
+  machine_module_slots              = original_centrifuge.module_slots,
   beacon_count                      = global_centrifuge_beacon_count,
   average_beacon_count              = global_centrifuge_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -27,27 +27,27 @@ beaconed_centrifuge_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-centr
 beaconed_centrifuge_2.minable.result = "beaconed-centrifuge-2"
 beaconed_centrifuge_2.next_upgrade = "beaconed-centrifuge-3"
 beaconed_centrifuge_2.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
-beaconed_centrifuge_2.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_centrifuge_2.energy_source.emissions_per_minute.pollution = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
 beaconed_centrifuge_2.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
 beaconed_centrifuge_2.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_centrifuge_2.allowed_effects = {"productivity", "pollution"}
 beaconed_centrifuge_2.fast_replaceable_group = "centrifuge"
 
 if settings.startup["productivity-mode"].value == 'Modded Modules' then
-  beaconed_centrifuge_2.module_specification.module_slots = data.raw["assembling-machine"]["centrifuge"].module_specification.module_slots * 2
+  beaconed_centrifuge_2.module_slots = data.raw["assembling-machine"]["centrifuge"].module_slots * 2
   if settings.startup["show-module-slot-row-length"].value > 0 then
-    beaconed_centrifuge_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+    beaconed_centrifuge_2.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
   end
   if settings.startup["show-module-slot-rows"].value > 0 then
-    beaconed_centrifuge_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+    beaconed_centrifuge_2.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
   end
 else
-  beaconed_centrifuge_2.module_specification.module_slots = 0
+  beaconed_centrifuge_2.module_slots = 0
   beaconed_centrifuge_2.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
-  table.insert(beaconed_centrifuge_2.idle_animation.layers,
+  table.insert(beaconed_centrifuge_2.graphics_set.idle_animation.layers,
     {
       filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/beaconed-centrifuge-A-overlay.png",
       priority = "high",
@@ -71,7 +71,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       }
     }
   )
-  table.insert(beaconed_centrifuge_2.idle_animation.layers,
+  table.insert(beaconed_centrifuge_2.graphics_set.idle_animation.layers,
     {
       filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/beaconed-centrifuge-B-overlay.png",
       priority = "high",
@@ -95,7 +95,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       }
     }
   )
-  table.insert(beaconed_centrifuge_2.idle_animation.layers,
+  table.insert(beaconed_centrifuge_2.graphics_set.idle_animation.layers,
     {
       filename = "__Built-in-Beacons__/graphics/entity/beaconed-centrifuge/beaconed-centrifuge-C-overlay.png",
       priority = "high",
@@ -122,13 +122,13 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
 end
 
 if settings.startup["modded-entity-graphics"].value ~= "OFF" then
-  for i,layer in pairs(beaconed_centrifuge_2.working_visualisations[2].animation.layers) do
+  for i,layer in pairs(beaconed_centrifuge_2.graphics_set.working_visualisations[2].animation.layers) do
     layer.animation_speed = beaconed_centrifuge_2_animation_speed
     if (layer.hr_version) then
       layer.hr_version.animation_speed = beaconed_centrifuge_2_animation_speed
     end
   end
-  for i,layer in pairs(beaconed_centrifuge_2.idle_animation.layers) do
+  for i,layer in pairs(beaconed_centrifuge_2.graphics_set.idle_animation.layers) do
     layer.animation_speed = beaconed_centrifuge_2_animation_speed
     if (layer.hr_version) then
       layer.hr_version.animation_speed = beaconed_centrifuge_2_animation_speed
@@ -150,7 +150,7 @@ data:extend({
     order = "g[centrifuge]",
     place_result = "beaconed-centrifuge-2",
     stack_size = 50,
-    localised_description = {'item-description.beaconed-centrifuge-2', global_centrifuge_beacon_count}
+    localised_description = {'item-description.beaconed-centrifuge-2', tostring(global_centrifuge_beacon_count)}
   },
 })
 data:extend({
@@ -165,8 +165,8 @@ data:extend({
     order = "g",
     ingredients =
     {
-      {"beaconed-centrifuge", 1},
-      {"speed-module-2", global_centrifuge_average_beacon_count * global_beacon_module_slots}
+      {type = "item", name = "beaconed-centrifuge", amount = 1},
+      {type = "item", name = "speed-module-2", amount = global_centrifuge_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-centrifuge-2", amount = 1},
@@ -174,7 +174,7 @@ data:extend({
     },
     allow_as_intermediate = false,
     main_product = "beaconed-centrifuge-2",
-    localised_description = {'item-description.beaconed-centrifuge-2', global_centrifuge_beacon_count}
+    localised_description = {'item-description.beaconed-centrifuge-2', tostring(global_centrifuge_beacon_count)}
   }
 })
 

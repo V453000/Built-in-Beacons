@@ -1,9 +1,9 @@
 local original_electric_furnace = data.raw["furnace"]["electric-furnace"]
 local beaconed_data = {
   machine_energy_usage              = original_electric_furnace.energy_usage,
-  machine_emissions                 = original_electric_furnace.energy_source.emissions_per_minute,
+  machine_emissions                 = original_electric_furnace.energy_source.emissions_per_minute.pollution,
   machine_crafting_speed            = original_electric_furnace.crafting_speed,
-  machine_module_slots              = original_electric_furnace.module_specification.module_slots,
+  machine_module_slots              = original_electric_furnace.module_slots,
   beacon_count                      = global_electric_furnace_beacon_count,
   average_beacon_count              = global_electric_furnace_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -26,26 +26,26 @@ beaconed_electric_furnace_3.name = "beaconed-electric-furnace-3"
 beaconed_electric_furnace_3.icon = "__Built-in-Beacons__/graphics/icons/beaconed-electric-furnace-3.png"
 beaconed_electric_furnace_3.minable.result = "beaconed-electric-furnace-3"
 beaconed_electric_furnace_3.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
-beaconed_electric_furnace_3.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_electric_furnace_3.energy_source.emissions_per_minute.pollution = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
 beaconed_electric_furnace_3.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
 beaconed_electric_furnace_3.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_electric_furnace_3.allowed_effects = {"productivity", "pollution"}
 
 if settings.startup["productivity-mode"].value == 'Modded Modules' then
-  beaconed_electric_furnace_3.module_specification.module_slots = data.raw["furnace"]["electric-furnace"].module_specification.module_slots * 2
+  beaconed_electric_furnace_3.module_slots = data.raw["furnace"]["electric-furnace"].module_slots * 2
   if settings.startup["show-module-slot-row-length"].value > 0 then
-    beaconed_electric_furnace_3.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+    beaconed_electric_furnace_3.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
   end
   if settings.startup["show-module-slot-rows"].value > 0 then
-    beaconed_electric_furnace_3.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+    beaconed_electric_furnace_3.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
   end
 else
-  beaconed_electric_furnace_3.module_specification.module_slots = 0
+  beaconed_electric_furnace_3.module_slots = 0
   beaconed_electric_furnace_3.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
-beaconed_electric_furnace_3.animation =
+beaconed_electric_furnace_3.graphics_set.animation =
 {
   layers =
   {
@@ -110,7 +110,7 @@ beaconed_electric_furnace_3.animation =
   }
 }
 
-beaconed_electric_furnace_3.working_visualisations[2].animation =
+beaconed_electric_furnace_3.graphics_set.working_visualisations[2] =
 {
   layers =
   {
@@ -158,7 +158,7 @@ beaconed_electric_furnace_3.working_visualisations[2].animation =
     }
   }
 }
-beaconed_electric_furnace_3.working_visualisations[3].animation =
+beaconed_electric_furnace_3.graphics_set.working_visualisations[3] =
 {
   layers =
   {
@@ -217,7 +217,7 @@ if settings.startup["modded-entity-graphics"].value ~= "OFF" then
       end
     end 
   end
-  for i,layer in pairs(beaconed_electric_furnace_3.working_visualisations) do
+  for i,layer in pairs(beaconed_electric_furnace_3.graphics_set.working_visualisations) do
     set_animation_speed(layer.animation)
   end
 end
@@ -236,7 +236,7 @@ data:extend({
     order = "b",
     place_result = "beaconed-electric-furnace-3",
     stack_size = 50,
-    localised_description = {'item-description.beaconed-electric-furnace-3', global_electric_furnace_beacon_count}
+    localised_description = {'item-description.beaconed-electric-furnace-3', tostring(global_electric_furnace_beacon_count)}
   },
 })
 data:extend({
@@ -251,8 +251,8 @@ data:extend({
     order = "b",
     ingredients =
     {
-      {"beaconed-electric-furnace-2", 1},
-      {"speed-module-3", global_electric_furnace_average_beacon_count * global_beacon_module_slots}
+      {type = "item", name = "beaconed-electric-furnace-2", amount = 1},
+      {type = "item", name = "speed-module-3", amount = global_electric_furnace_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-electric-furnace-3", amount = 1},
@@ -260,7 +260,7 @@ data:extend({
     },
     allow_as_intermediate = false,
     main_product = "beaconed-electric-furnace-3",
-    localised_description = {'item-description.beaconed-electric-furnace-3', global_electric_furnace_beacon_count}
+    localised_description = {'item-description.beaconed-electric-furnace-3', tostring(global_electric_furnace_beacon_count)}
   }
 })
 

@@ -1,9 +1,9 @@
 local original_rocket_silo = data.raw["rocket-silo"]["rocket-silo"]
 local beaconed_data = {
   machine_energy_usage              = original_rocket_silo.active_energy_usage,
-  machine_emissions                 = original_rocket_silo.energy_source.emissions_per_minute,
+  machine_emissions                 = original_rocket_silo.energy_source.emissions_per_minute or 0,
   machine_crafting_speed            = original_rocket_silo.crafting_speed,
-  machine_module_slots              = original_rocket_silo.module_specification.module_slots,
+  machine_module_slots              = original_rocket_silo.module_slots,
   beacon_count                      = global_rocket_silo_beacon_count,
   average_beacon_count              = global_rocket_silo_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -35,15 +35,15 @@ beaconed_rocket_silo_2.fast_replaceable_group = "rocket-silo"
 beaconed_rocket_silo_2.rocket_entity = "beaconed-rocket-2"
 
 if settings.startup["productivity-mode"].value == 'Modded Modules' then
-  beaconed_rocket_silo_2.module_specification.module_slots = data.raw["rocket-silo"]["rocket-silo"].module_specification.module_slots * 2
+  beaconed_rocket_silo_2.module_slots = data.raw["rocket-silo"]["rocket-silo"].module_slots * 2
   if settings.startup["show-module-slot-row-length"].value > 0 then
-    beaconed_rocket_silo_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+    beaconed_rocket_silo_2.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
   end
   if settings.startup["show-module-slot-rows"].value > 0 then
-    beaconed_rocket_silo_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+    beaconed_rocket_silo_2.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
   end
 else
-  beaconed_rocket_silo_2.module_specification.module_slots = 0
+  beaconed_rocket_silo_2.module_slots = 0
   beaconed_rocket_silo_2.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
@@ -390,7 +390,7 @@ data:extend({
     order = "e[rocket-silo]",
     place_result = "beaconed-rocket-silo-2",
     stack_size = 1,
-    localised_description = {'item-description.beaconed-rocket-silo-2', global_rocket_silo_beacon_count}
+    localised_description = {'item-description.beaconed-rocket-silo-2', tostring(global_rocket_silo_beacon_count)}
   },
 })
 data:extend({
@@ -405,8 +405,8 @@ data:extend({
     order = "i",
     ingredients =
     {
-      {"beaconed-rocket-silo", 1},
-      {"speed-module-2", global_rocket_silo_average_beacon_count * global_beacon_module_slots}
+      {type = "item", name = "beaconed-rocket-silo", amount = 1},
+      {type = "item", name = "speed-module-2", amount = global_rocket_silo_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-rocket-silo-2", amount = 1},
@@ -414,7 +414,7 @@ data:extend({
     },
     allow_as_intermediate = false,
     main_product = "beaconed-rocket-silo-2",
-    localised_description = {'item-description.beaconed-rocket-silo-2', global_rocket_silo_beacon_count}
+    localised_description = {'item-description.beaconed-rocket-silo-2', tostring(global_rocket_silo_beacon_count)}
   }
 })
 

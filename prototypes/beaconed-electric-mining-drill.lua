@@ -1,9 +1,9 @@
 local original_electric_mining_drill = data.raw["mining-drill"]["electric-mining-drill"]
 local beaconed_data = {
   machine_energy_usage              = original_electric_mining_drill.energy_usage,
-  machine_emissions                 = original_electric_mining_drill.energy_source.emissions_per_minute,
+  machine_emissions                 = original_electric_mining_drill.energy_source.emissions_per_minute.pollution,
   machine_crafting_speed            = original_electric_mining_drill.mining_speed,
-  machine_module_slots              = original_electric_mining_drill.module_specification.module_slots,
+  machine_module_slots              = original_electric_mining_drill.module_slots,
   beacon_count                      = global_electric_mining_drill_beacon_count,
   average_beacon_count              = global_electric_mining_drill_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -25,100 +25,61 @@ beaconed_electric_mining_drill.icon = "__Built-in-Beacons__/graphics/icons/beaco
 beaconed_electric_mining_drill.minable.result = "beaconed-electric-mining-drill"
 beaconed_electric_mining_drill.next_upgrade = "beaconed-electric-mining-drill-2"
 beaconed_electric_mining_drill.mining_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
-beaconed_electric_mining_drill.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_electric_mining_drill.energy_source.emissions_per_minute.pollution = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
 beaconed_electric_mining_drill.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
 beaconed_electric_mining_drill.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_electric_mining_drill.allowed_effects = {"productivity", "pollution"}
 
-beaconed_electric_mining_drill.module_specification.module_slots = 0
+beaconed_electric_mining_drill.module_slots = 0
 
 -- if settings.startup["show-module-slot-row-length"].value > 0 then
---   beaconed_electric_mining_drill.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+--   beaconed_electric_mining_drill.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
 -- end
 -- if settings.startup["show-module-slot-rows"].value > 0 then
---   beaconed_electric_mining_drill.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+--   beaconed_electric_mining_drill.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
 -- end
 
 local vertical_overlay_graphics =
 {
   priority = "high",
-  filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/electric-mining-drill-overlay.png",
+  filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-electric-mining-drill-overlay.png",
   line_length = 6,
-  width = 78,
-  height = 82,
+  width = 154,
+  height = 164,
   frame_count = 30,
   animation_speed = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].north_animation.layers[1].animation_speed,
   frame_sequence = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].north_animation.layers[1].frame_sequence,
   tint = beaconed_electric_mining_drill_1_tint,
   shift = util.by_pixel(0, -8),
-  hr_version =
-  {
-    priority = "high",
-    filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-electric-mining-drill-overlay.png",
-    line_length = 6,
-    width = 154,
-    height = 164,
-    frame_count = 30,
-    animation_speed = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].north_animation.layers[1].hr_version.animation_speed,
-    frame_sequence = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].north_animation.layers[1].hr_version.frame_sequence,
-    tint = beaconed_electric_mining_drill_1_tint,
-    shift = util.by_pixel(0, -8),
-    scale = 0.5
-  }
+  scale = 0.5
 }
 local horizontal_overlay_graphics =
 {
   priority = "high",
-  filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/electric-mining-drill-horizontal-overlay.png",
+  filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-electric-mining-drill-horizontal-overlay.png",
   line_length = 6,
-  width = 36,
-  height = 86,
+  width = 72,
+  height = 170,
   frame_count = 30,
   animation_speed = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].east_animation.layers[1].animation_speed,
   frame_sequence = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].east_animation.layers[1].frame_sequence,
   tint = beaconed_electric_mining_drill_1_tint,
   shift = util.by_pixel(2, -9),
-  hr_version =
-  {
-    priority = "high",
-    filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-electric-mining-drill-horizontal-overlay.png",
-    line_length = 6,
-    width = 72,
-    height = 170,
-    frame_count = 30,
-    animation_speed = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].east_animation.layers[1].hr_version.animation_speed,
-    frame_sequence = beaconed_electric_mining_drill.graphics_set.working_visualisations[3].east_animation.layers[1].hr_version.frame_sequence,
-    tint = beaconed_electric_mining_drill_1_tint,
-    shift = util.by_pixel(2, -9),
-    scale = 0.5
-  }
+  scale = 0.5
 }
 local horizontal_front_overlay_graphics =
 {
   priority = "high",
-  filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/electric-mining-drill-horizontal-front-overlay.png",
+  filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-electric-mining-drill-horizontal-front-overlay.png",
   line_length = 6,
-  width = 30,
-  height = 74,
+  width = 58,
+  height = 146,
   frame_count = 30,
   animation_speed = beaconed_electric_mining_drill.graphics_set.working_visualisations[6].east_animation.animation_speed,
   frame_sequence = beaconed_electric_mining_drill.graphics_set.working_visualisations[6].east_animation.frame_sequence,
   tint = beaconed_electric_mining_drill_1_tint,
-  shift = util.by_pixel(-4, 2),
-  hr_version =
-  {
-    priority = "high",
-    filename = "__Built-in-Beacons__/graphics/entity/beaconed-electric-mining-drill/hr-electric-mining-drill-horizontal-front-overlay.png",
-    line_length = 6,
-    width = 58,
-    height = 146,
-    frame_count = 30,
-    animation_speed = beaconed_electric_mining_drill.graphics_set.working_visualisations[6].east_animation.hr_version.animation_speed,
-    frame_sequence = beaconed_electric_mining_drill.graphics_set.working_visualisations[6].east_animation.hr_version.frame_sequence,
-    tint = beaconed_electric_mining_drill_1_tint,
-    shift = util.by_pixel(-4.5, 2),
-    scale = 0.5
-  }
+  shift = util.by_pixel(-4.5, 2),
+  scale = 0.5
 }
 local function create_layers(original, modded)
   local original_layers = original
@@ -157,7 +118,7 @@ data:extend({
     order = "a[items]-b[electric-mining-drill]",
     place_result = "beaconed-electric-mining-drill",
     stack_size = 50,
-    localised_description = {'item-description.beaconed-electric-mining-drill', global_electric_mining_drill_beacon_count}
+    localised_description = {'item-description.beaconed-electric-mining-drill', tostring(global_electric_mining_drill_beacon_count)}
   },
 })
 data:extend({
@@ -172,15 +133,15 @@ data:extend({
     order = "j",
     ingredients =
     {
-      {"electric-mining-drill", 1},
-      {"beacon", global_electric_mining_drill_average_beacon_count},
-      {"speed-module", global_electric_mining_drill_average_beacon_count * global_beacon_module_slots}
+      {type = "item", name = "electric-mining-drill", amount = 1},
+      {type = "item", name = "beacon", amount = global_electric_mining_drill_average_beacon_count},
+      {type = "item", name = "speed-module", amount = global_electric_mining_drill_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-electric-mining-drill", amount = 1}
     },
     allow_as_intermediate = false,
-    localised_description = {'item-description.beaconed-electric-mining-drill', global_electric_mining_drill_beacon_count}
+    localised_description = {'item-description.beaconed-electric-mining-drill', tostring(global_electric_mining_drill_beacon_count)}
   }
 })
 

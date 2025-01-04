@@ -1,9 +1,9 @@
 local original_lab = data.raw["lab"]["lab"]
 local beaconed_data = {
   machine_energy_usage              = original_lab.energy_usage,
-  machine_emissions                 = original_lab.energy_source.emissions_per_minute,
+  machine_emissions                 = original_lab.energy_source.emissions_per_minute or 0,
   machine_crafting_speed            = original_lab.researching_speed,
-  machine_module_slots              = original_lab.module_specification.module_slots,
+  machine_module_slots              = original_lab.module_slots,
   beacon_count                      = global_lab_beacon_count,
   average_beacon_count              = global_lab_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -33,15 +33,15 @@ beaconed_lab.allowed_effects = {"productivity", "pollution"}
 beaconed_lab.fast_replaceable_group = "lab"
 
 if settings.startup["productivity-mode"].value == 'Modded Modules' then
-  beaconed_lab.module_specification.module_slots = data.raw["lab"]["lab"].module_specification.module_slots * 2
+  beaconed_lab.module_slots = data.raw["lab"]["lab"].module_slots * 2
   if settings.startup["show-module-slot-row-length"].value > 0 then
-    beaconed_lab.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+    beaconed_lab.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
   end
   if settings.startup["show-module-slot-rows"].value > 0 then
-    beaconed_lab.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+    beaconed_lab.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
   end
 else
-  beaconed_lab.module_specification.module_slots = 0
+  beaconed_lab.module_slots = 0
   beaconed_lab.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
@@ -145,7 +145,7 @@ data:extend({
     order = "g[lab]",
     place_result = "beaconed-lab",
     stack_size = 10,
-    localised_description = {'item-description.beaconed-lab', global_lab_beacon_count}
+    localised_description = {'item-description.beaconed-lab', tostring(global_lab_beacon_count)}
   },
 })
 data:extend({
@@ -160,15 +160,15 @@ data:extend({
     order = "h",
     ingredients =
     {
-      {"lab", 1},
-      {"beacon", global_lab_average_beacon_count},
-      {"speed-module", global_lab_average_beacon_count * global_beacon_module_slots}
+      {type = "item", name = "lab", amount = 1},
+      {type = "item", name = "beacon", amount = global_lab_average_beacon_count},
+      {type = "item", name = "speed-module", amount = global_lab_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-lab", amount = 1}
     },
     allow_as_intermediate = false,
-    localised_description = {'item-description.beaconed-lab', global_lab_beacon_count}
+    localised_description = {'item-description.beaconed-lab', tostring(global_lab_beacon_count)}
   }
 })
 

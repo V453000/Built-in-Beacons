@@ -1,9 +1,9 @@
 local original_oil_refinery = data.raw["assembling-machine"]["oil-refinery"]
 local beaconed_data = {
   machine_energy_usage              = original_oil_refinery.energy_usage,
-  machine_emissions                 = original_oil_refinery.energy_source.emissions_per_minute,
+  machine_emissions                 = original_oil_refinery.energy_source.emissions_per_minute.pollution,
   machine_crafting_speed            = original_oil_refinery.crafting_speed,
-  machine_module_slots              = original_oil_refinery.module_specification.module_slots,
+  machine_module_slots              = original_oil_refinery.module_slots,
   beacon_count                      = global_oil_refinery_beacon_count,
   average_beacon_count              = global_oil_refinery_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -27,22 +27,22 @@ beaconed_oil_refinery_2.icon = "__Built-in-Beacons__/graphics/icons/beaconed-oil
 beaconed_oil_refinery_2.minable.result = "beaconed-oil-refinery-2"
 beaconed_oil_refinery_2.next_upgrade = "beaconed-oil-refinery-3"
 beaconed_oil_refinery_2.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed
-beaconed_oil_refinery_2.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
+beaconed_oil_refinery_2.energy_source.emissions_per_minute.pollution = beaconed_stats(beaconed_data).beaconed_emissions_per_minute
 beaconed_oil_refinery_2.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string
 beaconed_oil_refinery_2.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string
 beaconed_oil_refinery_2.allowed_effects = {"productivity", "pollution"}
 beaconed_oil_refinery_2.fast_replaceable_group = "oil-refinery"
 
 if settings.startup["productivity-mode"].value == 'Modded Modules' then
-  beaconed_oil_refinery_2.module_specification.module_slots = data.raw["assembling-machine"]["oil-refinery"].module_specification.module_slots * 2
+  beaconed_oil_refinery_2.module_slots = data.raw["assembling-machine"]["oil-refinery"].module_slots * 2
   if settings.startup["show-module-slot-row-length"].value > 0 then
-    beaconed_oil_refinery_2.module_specification.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
+    beaconed_oil_refinery_2.module_info_max_icons_per_row = settings.startup["show-module-slot-row-length"].value
   end
   if settings.startup["show-module-slot-rows"].value > 0 then
-    beaconed_oil_refinery_2.module_specification.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
+    beaconed_oil_refinery_2.module_info_max_icon_rows = settings.startup["show-module-slot-rows"].value
   end
 else
-  beaconed_oil_refinery_2.module_specification.module_slots = 0
+  beaconed_oil_refinery_2.module_slots = 0
   beaconed_oil_refinery_2.base_productivity = beaconed_stats(beaconed_data).beaconed_base_productivity
 end
 
@@ -56,7 +56,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
       end
     end
   end
-  merge_layers(beaconed_oil_refinery_2.animation, make_4way_animation_from_spritesheet(
+  merge_layers(beaconed_oil_refinery_2.graphics_set.animation, make_4way_animation_from_spritesheet(
     {
       layers =
       {
@@ -94,7 +94,7 @@ if settings.startup["modded-entity-graphics"].value ~= "OFF" then
     end 
   end
 
-  for i,layer in pairs(beaconed_oil_refinery_2.working_visualisations) do
+  for i,layer in pairs(beaconed_oil_refinery_2.graphics_set.working_visualisations) do
     set_animation_speed(layer.animation)
   end
 end
@@ -113,7 +113,7 @@ data:extend({
     order = "d[refinery]",
     place_result = "beaconed-oil-refinery-2",
     stack_size = 10,
-    localised_description = {'item-description.beaconed-oil-refinery-2', global_oil_refinery_beacon_count}
+    localised_description = {'item-description.beaconed-oil-refinery-2', tostring(global_oil_refinery_beacon_count)}
   },
 })
 data:extend({
@@ -128,8 +128,8 @@ data:extend({
     order = "e",
     ingredients =
     {
-      {"beaconed-oil-refinery", 1},
-      {"speed-module-2", global_oil_refinery_average_beacon_count * global_beacon_module_slots}
+      {type = "item", name = "beaconed-oil-refinery", amount = 1},
+      {type = "item", name = "speed-module-2", amount = global_oil_refinery_average_beacon_count * global_beacon_module_slots}
     },
     results = {
       {type = "item", name = "beaconed-oil-refinery-2", amount = 1},
@@ -137,7 +137,7 @@ data:extend({
     },
     allow_as_intermediate = false,
     main_product = "beaconed-oil-refinery-2",
-    localised_description = {'item-description.beaconed-oil-refinery-2', global_oil_refinery_beacon_count}
+    localised_description = {'item-description.beaconed-oil-refinery-2', tostring(global_oil_refinery_beacon_count)}
   }
 })
 

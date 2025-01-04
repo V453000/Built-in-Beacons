@@ -1,9 +1,9 @@
 local original_assembling_machine_3 = data.raw["assembling-machine"]["assembling-machine-3"]
 local beaconed_data = {
   machine_energy_usage              = original_assembling_machine_3.energy_usage,
-  machine_emissions                 = original_assembling_machine_3.energy_source.emissions_per_minute,
+  machine_emissions                 = original_assembling_machine_3.energy_source.emissions_per_minute.pollution,
   machine_crafting_speed            = original_assembling_machine_3.crafting_speed,
-  machine_module_slots              = original_assembling_machine_3.module_specification.module_slots,
+  machine_module_slots              = original_assembling_machine_3.module_slots,
   beacon_count                      = global_assembling_machine_beacon_count,
   average_beacon_count              = global_assembling_machine_average_beacon_count,
   beacon_effect                     = global_beacon_transmission_effect,
@@ -23,19 +23,19 @@ maxspeed_beaconed_assembling_machine_3.name = "maxspeed-beaconed-assembling-mach
 maxspeed_beaconed_assembling_machine_3.icon = "__Built-in-Beacons__/graphics/icons/maxspeed-beaconed-assembling-machine-3.png"
 maxspeed_beaconed_assembling_machine_3.minable.result = "maxspeed-beaconed-assembling-machine-3"
 maxspeed_beaconed_assembling_machine_3.crafting_speed = beaconed_stats(beaconed_data).beaconed_crafting_speed--11.25
-maxspeed_beaconed_assembling_machine_3.energy_source.emissions_per_minute = beaconed_stats(beaconed_data).beaconed_emissions_per_minute--2 / 375000
+maxspeed_beaconed_assembling_machine_3.energy_source.emissions_per_minute.pollution = beaconed_stats(beaconed_data).beaconed_emissions_per_minute--2 / 375000
 maxspeed_beaconed_assembling_machine_3.energy_source.drain = beaconed_stats(beaconed_data).beaconed_drain_string--"3367kW"
 maxspeed_beaconed_assembling_machine_3.energy_usage = beaconed_stats(beaconed_data).beaconed_energy_usage_string--"4575kW"
 maxspeed_beaconed_assembling_machine_3.allowed_effects = {"pollution"}
 
-maxspeed_beaconed_assembling_machine_3.module_specification.module_slots = 0
+maxspeed_beaconed_assembling_machine_3.module_slots = 0
 
 local maxspeed_beaconed_assembling_machine_3_animation_speed = beaconed_stats(beaconed_data).beaconed_animation_speed
 
 if settings.startup["modded-entity-graphics"].value == "ON" then
   maxspeed_beaconed_assembling_machine_3.fluid_boxes[1].secondary_draw_order = 2
   maxspeed_beaconed_assembling_machine_3.fluid_boxes[2].secondary_draw_order = 2
-  table.insert(maxspeed_beaconed_assembling_machine_3.animation.layers, 
+  table.insert(maxspeed_beaconed_assembling_machine_3.graphics_set.animation.layers, 
     {
       filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/beaconed-assembling-machine-3-overlay.png",
       width = 107,
@@ -56,7 +56,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
         scale = 0.5
       }
     })
-  table.insert(maxspeed_beaconed_assembling_machine_3.animation.layers, 
+  table.insert(maxspeed_beaconed_assembling_machine_3.graphics_set.animation.layers, 
     {
       filename = "__Built-in-Beacons__/graphics/entity/beaconed-assembling-machine-3/assembling-machine-3-mask.png",
       width = 78,
@@ -84,7 +84,7 @@ if settings.startup["modded-entity-graphics"].value == "ON" then
 end
 
 if settings.startup["modded-entity-graphics"].value ~= "OFF" then
-  for i,layer in pairs(maxspeed_beaconed_assembling_machine_3.animation.layers) do
+  for i,layer in pairs(maxspeed_beaconed_assembling_machine_3.graphics_set.animation.layers) do
     layer.animation_speed = beaconed_assembling_machine_3_animation_speed
     if (layer.hr_version) then
       layer.hr_version.animation_speed = beaconed_assembling_machine_3_animation_speed
@@ -106,7 +106,7 @@ data:extend({
     order = "c[assembling-machine-3]",
     place_result = "maxspeed-beaconed-assembling-machine-3",
     stack_size = 50,
-    localised_description = {'item-description.maxspeed-beaconed-assembling-machine-3', global_assembling_machine_beacon_count}
+    localised_description = {'item-description.maxspeed-beaconed-assembling-machine-3', tostring(global_assembling_machine_beacon_count)}
   },
 })
 data:extend({
@@ -121,14 +121,14 @@ data:extend({
     order = "c",
     ingredients =
     {
-      {"assembling-machine-3", 1},
-      {"beacon", global_assembling_machine_average_beacon_count},
-      {"speed-module-3", global_assembling_machine_average_beacon_count * global_beacon_module_slots + original_assembling_machine_3.module_specification.module_slots}
+      {type = "item", name = "assembling-machine-3", amount = 1},
+      {type = "item", name = "beacon", amount = global_assembling_machine_average_beacon_count},
+      {type = "item", name = "speed-module-3", amount = global_assembling_machine_average_beacon_count * global_beacon_module_slots + original_assembling_machine_3.module_slots}
     },
     results = {
       {type = "item", name = "maxspeed-beaconed-assembling-machine-3", amount = 1}
     },
-    localised_description = {'item-description.maxspeed-beaconed-assembling-machine-3', global_assembling_machine_beacon_count}
+    localised_description = {'item-description.maxspeed-beaconed-assembling-machine-3', tostring(global_assembling_machine_beacon_count)}
   }
 })
 
