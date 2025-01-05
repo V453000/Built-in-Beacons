@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.1
+Version: 0.3.2
 Date: 2025-01-04
   Uploaded by:
     - V453000
 
   Changes:
-    - Updated for version 2.0, but didn't include any Space Age integration.
+    - Updated for version 2.0, but didn't include any Space Age integration or 2.0 beacon changes yet.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
